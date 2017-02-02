@@ -59,6 +59,7 @@ img {
 }
 
 .catalog__item {
+  flex-grow: 1;
   width: 48%;
   margin-right: 10px;
   padding-top: 20px;
