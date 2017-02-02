@@ -66,6 +66,10 @@ img {
   border-radius: 10px;
 }
 
+.catalog__content {
+  height: 482px;
+}
+
 .catalog__title {
   display: inline-block;
   vertical-align: top;
