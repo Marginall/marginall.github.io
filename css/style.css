@@ -121,7 +121,7 @@ img {
   margin: 0;
 }
 
-@media screen and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .wrapper {
     width: 728px;
   }
@@ -152,7 +152,7 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .wrapper {
     width: 320px;
     padding: 10px;
