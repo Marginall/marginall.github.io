@@ -127,7 +127,7 @@ img {
   }
 
   .catalog {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .catalog__item {
