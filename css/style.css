@@ -119,7 +119,7 @@ img {
 
 @media (min-width: 768px) {
   .wrapper {
-    min-width: 748px;
+    width: 748px;
   }
 
   .catalog__title {
