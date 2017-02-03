@@ -122,7 +122,7 @@ img {
 
 @media (max-width: 1149px) {
   .wrapper {
-    width: 758px;
+    min-width: 758px;
     padding-left: 5px;
     padding-right: 5px;
   }
@@ -155,7 +155,7 @@ img {
 
 @media (max-width: 767px) {
   .wrapper {
-    width: 320px;
+    min-width: 320px;
     padding: 10px;
     padding-left: 0;
     padding-right: 0;
