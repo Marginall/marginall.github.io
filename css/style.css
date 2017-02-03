@@ -132,7 +132,7 @@ img {
 
   .catalog__item {
     flex-grow: 0;
-    width: 360px;
+    width: 300px;
   }
 
   .catalog__item-img {
