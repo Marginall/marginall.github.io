@@ -42,6 +42,7 @@ img {
   flex-grow: 1;
   text-align: center;
   color: #fff;
+  font-size: 18px;
 }
 
 .main__title {
@@ -96,6 +97,7 @@ img {
 }
 
 .main-footer__item {
+  display: block;
   width: 100%;
   padding: 20px 15px;
   text-align: center;
@@ -149,9 +151,21 @@ img {
   }
 
   .main-footer__item {
+    flex-grow: 1;
     width: 25%;
-    padding: 20px 15px;
+    padding: 20px 0;
     text-align: center;
+  }
+
+  .main-footer__item:first-child {
+    width: 10%;
+  }
+
+  .main-footer__item:nth-child(3) {
+  }
+
+  .main-footer__item:nth-child(4) {
+    flex-grow: 2;
   }
 }
 
