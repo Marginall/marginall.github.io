@@ -4,6 +4,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
+  background-color: #879eb0;
 }
 
 a {
@@ -22,7 +23,6 @@ img {
   width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #879eb0;
 }
 
 .main-header .container {
