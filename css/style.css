@@ -22,6 +22,7 @@ img {
 .wrapper {
   width: 320px;
   margin: 0 auto;
+  outline: 1px solid red;
 }
 
 .main-header .container {
@@ -116,7 +117,7 @@ img {
 
 @media (min-width: 768px) {
   .wrapper {
-    max-width: 768px;
+    width: 768px;
   }
 
   .main-header__photo {
@@ -169,7 +170,7 @@ img {
 
 @media (min-width: 1024px) {
   .wrapper {
-    max-width: 1024px;
+    width: 1024px;
   }
 
   .main-header .container {
@@ -202,7 +203,7 @@ img {
 
 @media (min-width: 1200px) {
   .wrapper {
-    max-width: 1160px;
+    width: 1160px;
     padding: 20px;
   }
 }
