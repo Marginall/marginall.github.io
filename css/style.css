@@ -20,7 +20,7 @@ img {
 }
 
 .wrapper {
-  width: 320px;
+  max-width: 767px;
   margin: 0 auto;
   outline: 1px solid red;
 }
