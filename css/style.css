@@ -172,10 +172,9 @@ img {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .wrapper {
-    width: 1150px;
-    padding: 25px;
+    width: 1004px;
   }
 
   .main-header .container {
@@ -202,7 +201,7 @@ img {
   }
 
   .catalog__item {
-    width: 350px;
+    width: 300px;
     margin-bottom: 20px;
   }
 }
