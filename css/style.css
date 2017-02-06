@@ -1,5 +1,4 @@
 body {
-  width: 100%;
   box-sizing: border-box;
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -117,7 +116,7 @@ img {
 
 @media (min-width: 768px) {
   .wrapper {
-    width: 768px;
+    max-width: 768px;
   }
 
   .main-header__photo {
@@ -170,7 +169,7 @@ img {
 
 @media (min-width: 1024px) {
   .wrapper {
-    width: 1024px;
+    max-width: 1024px;
   }
 
   .main-header .container {
@@ -203,7 +202,7 @@ img {
 
 @media (min-width: 1200px) {
   .wrapper {
-    width: 1160px;
+    max-width: 1160px;
     padding: 20px;
   }
 }
