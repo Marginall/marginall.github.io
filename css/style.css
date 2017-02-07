@@ -25,7 +25,6 @@ img {
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
-  padding: 1% 0;
 }
 
 .main-header,
@@ -126,7 +125,7 @@ main,
 @media (min-width: 768px) {
   .wrapper {
     width: 98%;
-    padding: 1%;
+    padding: 0 1%;
   }
 
   .main-header__photo {
@@ -180,6 +179,10 @@ main,
 }
 
 @media (min-width: 1024px) {
+
+  .wrapper {
+    padding: 1%;
+  }
 
   .main-header .container {
     display: flex;
