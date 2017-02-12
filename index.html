@@ -4,7 +4,66 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0/">
     <title>My Portfolio</title>
-    <link property=stylesheet href="css/normalize.css" rel="stylesheet">
+    <style>
+    body {
+      box-sizing: border-box;
+      font-family: "Opensans", "Arial", sans-serif;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      background-color: #879eb0;
+    }
+
+    a {
+      font: inherit;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .main-header,
+    main,
+    .main-footer {
+      flex-grow: 1;
+    }
+
+    .main-header .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+    }
+
+    .main-header__text {
+      flex-grow: 1;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .main__title {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      color: #fff;
+      font-size: 42px;
+      text-align: center;
+    }
+    </style>
     <link property=stylesheet href="css/style.css" rel="stylesheet">
   </head>
   <body>
