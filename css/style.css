@@ -1,9 +1,27 @@
+@font-face {
+  font-family: "Opensans";
+  src:
+    url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Opensans";
+  src:
+    url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
   box-sizing: border-box;
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: "Opensans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: 400;
   background-color: #879eb0;
 }
 
