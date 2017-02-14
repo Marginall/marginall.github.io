@@ -151,6 +151,7 @@ main,
 
   .catalog__title {
     display: inline-block;
+    margin-bottom: 5px;
   }
 
   .catalog {
