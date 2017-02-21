@@ -12,3 +12,12 @@ navBtn.addEventListener("click", function() {
       navMain.classList.remove("main-header__nav--show");
     }
 });
+
+$(function(){
+
+	$("#video__play").click(function(){
+		var dataYoutube = $(this).parents('.video-responsive').attr('data-youtube');
+		$(this).parents('.video-responsive').html('<iframe width="100%" height="100%" class="iframe" src="https://www.youtube.com/embed/'+ dataYoutube +'?autoplay=1" frameborder="0" allowfullscreen></iframe>')
+	});
+
+});

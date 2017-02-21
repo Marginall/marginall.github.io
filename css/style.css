@@ -22,7 +22,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
-  background-color: #879eb0;
+  background: #879eb0 url("../img/fon.png") repeat;
 }
 
 a {
@@ -62,7 +62,7 @@ main,
 .main-header__text {
   flex-grow: 1;
   text-align: center;
-  color: #fff;
+  color: #000;
   font-size: 18px;
 }
 
@@ -70,7 +70,7 @@ main,
   width: 100%;
   margin-top: 20px;
   margin-bottom: 40px;
-  color: #fff;
+  color: #000;
   font-size: 42px;
   text-align: center;
 }
