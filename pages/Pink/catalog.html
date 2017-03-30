@@ -107,7 +107,7 @@
     <div class="header__wrap header__wrap--fix">
       <div class="header__top-menu">
         <div class="container">
-          <a class="header__logo" href="#">
+          <a class="header__logo" href="index.html">
             <svg class="header__logo-icon header__logo-icon--mobile" width="75" height="25"><use class="icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile"></use></svg>
             <svg class="header__logo-icon header__logo-icon--tablet" width="150" height="48"><use class="icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet" x="0" y="0"></use></svg>
             <svg class="header__logo-icon header__logo-icon--desktop" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -181,8 +181,8 @@
       </div>
       <nav class="header__nav nav nav--closed nav--no-js">
         <ul class="nav__lists">
-          <li class="nav__item"><a class="nav__item-link" href="#">Главная</a></li>
-          <li class="nav__item"><a class="nav__item-link" href="catalog.html">Фотографии</a></li>
+          <li class="nav__item"><a class="nav__item-link" href="index.html">Главная</a></li>
+          <li class="nav__item"><a class="nav__item-link" href="#">Фотографии</a></li>
           <li class="nav__item"><a class="nav__item-link" href="#">Конкурс</a></li>
           <li class="nav__item"><a class="nav__item-link" href="#">HTML Academy</a></li>
         </ul>
@@ -190,231 +190,231 @@
     </div>
   </header>
   <main class="content">
-    <section class="intro">
-      <div class="container container--intro">
-        <h1 class="intro__title">Взгляните на жизнь иначе!</h1>
-        <picture>
-    			<source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
-    			<source media="(min-width: 768px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
-    			<img class="intro__img" src="img/iphone-hand-mobile.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Photo">
-        </picture>
-      </div>
+    <section class="intro intro--inner-page">
       <div class="container">
-        <div class="intro__promo-block">
-          <a class="btn intro__btn" href="#">Скачать приложение</a>
-          <div class="intro__icons">
-            <svg class="intro__icon intro__icon--apple" width="47" height="56"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-apple"></use></svg>
-            <svg class="intro__icon intro__icon--andr" width="43" height="47"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-android"></use></svg>
-            <svg class="intro__icon" width="44" height="41" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            	 width="43.922px" height="41.992px" viewBox="0 0 43.922 41.992" enable-background="new 0 0 43.922 41.992" xml:space="preserve">
-            <g>
-            	<path id="path5058" fill="#F05423" d="M20.874,19.953H0V0h20.874V19.953z"/>
-            	<path id="path5060" fill="#84C441" d="M43.922,19.953H23.049V0h20.873V19.953z"/>
-            	<path id="path5062" fill="#2DABE2" d="M20.873,41.992H0V22.04h20.873V41.992z"/>
-            	<path id="path5064" fill="#F9BC15" d="M43.922,41.992H23.049V22.04h20.873V41.992z"/>
-            </g>
-            </svg>
-          </div>
-          <p class="intro__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-        </div>
+        <h1 class="intro__title intro__title--inner-page">Фотографии пользователей</h1>
       </div>
-    </section>
-    <section class="features">
-      <div class="features__title-block">
+      <div class="intro__text-block">
         <div class="container">
-         <h2 class="features__title">Устали от серости мегаполиса?</h2>
-         <h2 class="features__title">Нам есть, что вам предложить!</h2>
+          <p class="intro__text--inner-page">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         </div>
       </div>
-      <div class="features__list-wrap">
+    </section>
+    <div class="post-wrap">
+      <div class="post post--top">
+        <div class="container container--top">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/panorama-desktop.jpg, img/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/panorama-tablet.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+            <img class="post__img" src="img/panorama-mobile.jpg" srcset="img/panorama-mobile@2x.jpg" alt="Picture">
+          </picture>
+        </div>
         <div class="container">
-          <ul class="features__lists">
-            <li class="features__item">
-              <h3 class="features__item-title">Поднимает настроение</h3>
-              <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="features__item">
-              <h3 class="features__item-title">Меняет мир вокруг</h3>
-              <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="features__item">
-              <h3 class="features__item-title">Заводить новых друзей</h3>
-              <p class="features__item-text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
-          <picture class="features__image features__image--desktop">
-            <img src="img/iphone-screen-desktop-2@1x.png" srcset="img/iphone-screen-desktop-2@2x.png 2x" alt="Picture">
-          </picture>
-          <picture class="features__image features__image--desktop">
-            <img src="img/iphone-screen-desktop-1@2x.png" srcset="img/iphone-screen-desktop-1@2x.png 2x" alt="Picture">
-          </picture>
-          <picture class="features__image">
-            <source media="(min-width: 960px)" srcset="img/iphone-screen-desktop-3@1x.png 1x, img/iphone-screen-desktop-3@2x.png 2x">
-            <source media="(min-width: 660px)" srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@1x.png 2x">
-            <img src="img/iphone-screen-mobile.png" srcset="img/iphone-screen-mobile.png 2x" alt="Picture">
-          </picture>
+          <div class="post__text-block">
+            <div class="post__author-block">
+              <span class="post__author">Анна</span>
+              <time class="post__date" datetime="2013-09-19">19 сентября</time>
+            </div>
+            <p class="post__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <div class="post__likes">
+              <svg class="post-icon" width="20" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+              <span class="post__likes-item">Нравится:&nbsp;215</span>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="news">
-      <div class="container">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/24-desktop.png">
-          <img class="news__img" src="img/24.png" alt="Picture">
-        </picture>
-        <div class="news__text-block">
-          <h2 class="news__title">Эффект на 24 часа</h2>
-          <p class="news__text">Британские ученые провели исследования
-            и доказали, что положительный эффект
-            от использования приложения длится
-            целые сутки!
-          </p>
-          <a class="news__link" href="#">Узнать больше об исследовании</a>
+      <div class="post-block">
+        <div class="post">
+          <div class="container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg, img/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+              <img class="post__img" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg" alt="Picture">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="post__text-block">
+              <div class="post__author-block">
+                <span class="post__author">Левон</span>
+                <time class="post__date" datetime="2013-09-19">19 сентября</time>
+              </div>
+              <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="post__likes">
+                <svg class="post-icon" width="20" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+                <span class="post__likes-item">Нравится:&nbsp;356</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg, img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+              <img class="post__img" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg" alt="Picture">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="post__text-block">
+              <div class="post__author-block">
+                <span class="post__author-block">Антон</span>
+                <time class="post__date" datetime="2013-09-19">19 сентября</time>
+              </div>
+              <p class="post__text">Соседи будут рады!</p>
+              <div class="post__likes">
+                <svg class="post-icon" width="20" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+                <span class="post__likes-item">Нравится:&nbsp;666</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg, img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+              <img class="post__img" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg" alt="Picture">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="post__text-block">
+              <div class="post__author-block">
+                <span class="post__author">Борис</span>
+                <time class="post__date" datetime="2013-09-19">19 сентября</time>
+              </div>
+              <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="post__likes">
+                <svg class="post-icon" width="20" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+                <span class="post__likes-item">Нравится:&nbsp;219</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg, img/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+              <img class="post__img" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg" alt="Picture">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="post__text-block">
+              <div class="post__author-block">
+                <span class="post__author">Сергей</span>
+                <time class="post__date" datetime="2013-09-19">19 сентября</time>
+              </div>
+              <p class="post__text">Самая кубанская в мире!</p>
+              <div class="post__likes">
+                <svg class="post-icon" width="20" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+                <span class="post__likes-item">Нравится:&nbsp;4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-5-desktop.jpg, img/photo-5-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-5-tablet.jpg 1x, img/photo-5-tablet@2x.jpg 2x">
+              <img class="post__img" src="img/photo-5-mobile.jpg" srcset="img/photo-5-mobile@2x.jpg" alt="Picture">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="post__text-block">
+              <div class="post__author-block">
+                <span class="post__author">Максим</span>
+                <time class="post__date" datetime="2013-09-19">19 сентября</time>
+              </div>
+              <p class="post__text">Где снег-то?</p>
+              <div class="post__likes">
+                <svg class="post-icon" width="20" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+                <span class="post__likes-item">Нравится:&nbsp;150</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-6-desktop.jpg, img/photo-6-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-6-tablet.jpg 1x, img/photo-6-tablet@2x.jpg 2x">
+              <img class="post__img" src="img/photo-6-mobile.jpg" srcset="img/photo-6-mobile@2x.jpg" alt="Picture">
+            </picture>
+          </div>
+          <div class="container">
+            <div class="post__text-block">
+              <div class="post__author-block">
+                <span class="post__author">Надежда</span>
+                <time class="post__date" datetime="2013-09-19">19 сентября</time>
+              </div>
+              <p class="post__text">Всем GM и взаимные лайки!</p>
+              <div class="post__likes">
+                <svg class="post-icon" width="20" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-heart"></use></svg>
+                <span class="post__likes-item">Нравится:&nbsp;2560</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="review">
-      <div class="container container--review">
-        <div class="slider slider slider_count_3">
-          <input name="imagetape" id="imagetape1" class="slider__radio" type="radio">
-          <input name="imagetape" id="imagetape2" class="slider__radio" type="radio">
-          <input name="imagetape" id="imagetape3" class="slider__radio" type="radio">
-          <div class="slider__item review__item">
-            <p class="review__author">Николай Петров</p>
-            <p class="review__author-descr">25 лет, водитель трамвая</p>
-            <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </div>
-          <div class="slider__item review__item">
-            <p class="review__author">Иван Вакуленко</p>
-            <p class="review__author-descr">25 лет, водитель трамвая</p>
-            <p class="review__text">« В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.»</p>
-          </div>
-          <div class="slider__item review__item">
-            <p class="review__author">Георгий Меньшов</p>
-            <p class="review__author-descr">25 лет, водитель трамвая</p>
-            <p class="review__text">«Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.»</p>
-          </div>
-          <div class="slider__number-list">
-            <label onclick="javascript:ami_gadget_image_tape_setSlideInIE(this);" data-ami-number="1" class="slider__number" for="imagetape1">
-              <p class="slider__number-after"></p>
+    </div>
+    <section class="upload">
+      <div class="upload__text-block">
+        <div class="container">
+          <p class="upload__text">Затмите их всех!</p>
+          <p class="upload__text">Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+      </div>
+      <form class="upload__form" id="form" enctype="multipart/form-data">
+        <div class="container">
+          <div class="upload__wrap modal">
+            <div class="upload__images"></div>
+            <label class="upload__file-block">
+              <input class="upload__photo" id="uploadPhoto" type="file" name="images">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-7-desktop.jpg, img/photo-7-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-7-tablet.jpg 1x, img/photo-7-tablet@2x.jpg 2x">
+                <img class="upload__img-bg" id="img-bg" src="img/photo-7-mobile.jpg" srcset="img/photo-7-mobile@2x.jpg" alt="Picture">
+              </picture>
             </label>
-            <label onclick="javascript:ami_gadget_image_tape_setSlideInIE(this);" data-ami-number="2" class="slider__number" for="imagetape2">
-              <p class="slider__number-after"></p>
-            </label>
-            <label onclick="javascript:ami_gadget_image_tape_setSlideInIE(this);" data-ami-number="3" class="slider__number" for="imagetape3">
-              <p class="slider__number-after"></p>
-            </label>
           </div>
-          <div class="slider__controls" id=controls>
-            <label for="imagetape1"></label>
-            <label for="imagetape2"></label>
-            <label for="imagetape3"></label>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="price">
-      <div class="container container--price">
-        <div class="price__slider">
-          <input name="pricetape" id="pricetape1" class="price__radio" type="radio">
-          <input name="pricetape" id="pricetape2" class="price__radio" type="radio">
-          <input name="pricetape" id="pricetape3" class="price__radio" type="radio">
-          <div class="price__controls">
-            <label class="price__control" for="pricetape1"></label>
-            <label class="price__control" for="pricetape2"></label>
-            <label class="price__control" for="pricetape3"></label>
-          </div>
-          <div class="price__slider-wrap">
-            <table class="price__items">
-              <tr class="price__row">
-                <td class="price__item price__item--title"></td>
-                <td class="price__item price__item--title">
-                  <span class="price__title">База</span>
-                  <span class="price__title price__title--text">1,99 USD</span>
-                </td>
-                <td class="price__item price__item--title price__item--hit">
-                  <span class="price__title">Стандарт</span>
-                  <span class="price__title price__title--text">3,99 USD</span>
-                </td>
-                <td class="price__item price__item--title">
-                  <span class="price__title">Анлим</span>
-                  <span class="price__title price__title--text">9,99 USD</span>
-                </td>
-              </tr>
-              <tr class="price__row">
-                <td class="price__item">Розовый фильтр</td>
-                <td class="price__item">
-                  <span class="price__text">Розовый фильтр</span>
-                  <span class="price__icon"></span>
-                </td>
-                <td class="price__item">
-                  <span class="price__text">Розовый фильтр</span>
-                  <span class="price__icon"></span>
-                </td>
-                <td class="price__item">
-                  <span class="price__text">Розовый фильтр</span>
-                  <span class="price__icon"></span>
-                </td>
-              </tr>
-              <tr class="price__row">
-                <td class="price__item">Смайлики</td>
-                <td class="price__item">
-                  <span class="price__text">Смайлики</span>
-                  <span class="price__icon"></span>
-                </td>
-                <td class="price__item">
-                  <span class="price__text">Смайлики</span>
-                  <span class="price__icon"></span>
-                </td>
-                <td class="price__item">
-                  <span class="price__text">Смайлики</span>
-                  <span class="price__icon"></span>
-                </td>
-              </tr>
-              <tr class="price__row">
-                <td class="price__item">Комментарии</td>
-                <td class="price__item">
-                  <span class="price__text">Комментарии</span>
-                  <span class="price__icon price__icon--not"></span>
-                </td>
-                <td class="price__item">
-                  <span class="price__text">Комментарии</span>
-                  <span class="price__icon price__icon--not"></span>
-                </td>
-                <td class="price__item">
-                  <span class="price__text">Комментарии</span>
-                  <span class="price__icon"></span>
-                </td>
-              </tr>
-            </table>
+          <div class="upload__range upload-range">
+            <div class="upload-range__filter-block">
+              <div class="upload-range__block">
+                <label class="upload-range__label active" id="resizeLab" for="resize">
+                  <svg class="upload-range__icon" width="44" height="44"><use class="icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-crop"></use></svg>
+                </label>
+                <label class="upload-range__label" id="contrastLab" for="contrast">
+                  <svg class="upload-range__icon" width="48" height="43"><use class="icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-fill"></use></svg>
+                </label>
+                <label class="upload-range__label" id="brightnessLab" for="brightness">
+                  <svg class="upload-range__icon" width="32" height="32"><use class="icon" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-contrast"></use></svg>
+                </label>
+              </div>
+              <div class="upload-range__block upload-range__block--last">
+                <input class="filter filter--show" id="resize" type="range" min="0" max="100" value="0" step="any">
+                <input class="filter" id="contrast" type="range" min="0" max="1000" value="100" step="any">
+                <input class="filter brightness" id="brightness" type="range" min="0" max="100" value="100" step="any">
+              </div>
+            </div>
+            <div class="upload__btn-block">
+              <button class="btn btn--upload" id="reset" type="reset">Отмена</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="contacts">
-      <div class="container">
-        <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <h3 class="contacts__item-title">Звоните:</h3>
-            <p class="contacts__item-text">+7 (812) 555-66-66</p>
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__item-title">Пишите:</h3>
-            <p class="contacts__item-text">mail@htmlacademy.ru</p>
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__item-title">Приезжайте в гости:</h3>
-            <p class="contacts__item-text">ул. Большая Конюшенная, 19/8</p>
-          </li>
-        </ul>
-      </div>
-      <div class="map" id="map-canvas"></div>
+        <div class="container container--text-field">
+          <div class="text-field">
+            <label class="text-field__label"><input class="text-field__input" name="name" type="text" placeholder="Ваше имя.."></label>
+            <textarea class="text-field__area" name="text">Напишите пару слов..</textarea>
+          </div>
+          <button class="btn btn--upload btn--submit" id="reset" type="submit">Запостить</button>
+        </div>
+      </form>
     </section>
   </main>
-  <footer class="footer footer--main-page">
+  <footer class="footer">
     <div class="container">
-      <div class="footer__logo">
+      <div class="footer__logo"><a href="index.html">
         <svg class="footer__logo-icon" width="150" height="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-mobile"></use></svg>
         <svg class="footer__logo-icon footer__logo-icon--desktop" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           	 width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
@@ -475,7 +475,7 @@
           			c1.519,0,2.749,1.229,2.749,2.748C7.985,35.303,9.215,34.072,10.734,34.072z"/>
           	</g>
           </g>
-        </svg>
+        </svg></a>
       </div>
       <div class="social__list">
         <a class="social__item" href="#">
@@ -495,8 +495,7 @@
     </div>
   </footer>
   <script src="js/picturefill.min.js" async></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2DgfQO4Gov7KJ3k5UnHYdtkX2NXsI2CE"></script>
-  <script src="js/map.js"></script>
+  <script async src="js/jquery-2.1.3.min.js"></script>
   <script src="js/tap.min.js"></script>
   <script async src="js/scripts.min.js"></script>
 </body>
