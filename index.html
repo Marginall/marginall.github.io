@@ -2,52 +2,57 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
-    <link property=stylesheet href="css/normalize.css" rel="stylesheet">
-    <link property=stylesheet href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
       <header class="main-header">
         <div class="container">
-          <img class="main-header__photo" src="img/Picture.jpg" width="590" height="200" alt="Picture">
-          <div class="main-header__text">
-            <p>Front-end developer</p>
-            <p>Skills: HTML5 CSS3 jQuery</p>
-            <p>Less BEM Gulp Git ...</p>
+          <div class="row">
+            <div class="col-md-7 col-sm-12 col-xs-12">
+              <img class="main-header__photo" src="img/Picture.jpg" width="590" height="200" alt="Picture">
+            </div>
+            <div class="col-md-5 col-sm-12 col-xs-12 main-header__text">
+              <p>Front-end developer</p>
+              <p>Skills: HTML5 CSS3 jQuery</p>
+              <p>Less BEM Gulp Git ...</p>
+            </div>
           </div>
         </div>
       </header>
       <main>
         <div class="container">
           <h1 class="main__title">Мои работы:</h1>
-          <div class="catalog">
-            <section class="catalog__item">
+          <div class="row">
+            <section class="col-md-4 col-sm-6 col-xs-12 catalog__item">
               <div class="catalog__title">Sedona</div>
               <div class="catalog__content">
                 <a class="catalog__item-link" href="pages/Sedona/index.html"><img class="catalog__item-img" src="img/Sedona.jpg" width="300" height="300" alt="My-Work"></a>
               </div>
             </section>
-            <section class="catalog__item">
+            <section class="col-md-4 col-sm-6 col-xs-12 catalog__item">
               <div class="catalog__title">Gllacy</div>
               <div class="catalog__content">
                 <a class="catalog__item-link" href="pages/Gllacy/index.html"><img class="catalog__item-img" src="img/Gllacy.jpg" width="300" height="300" alt="My-Work"></a>
               </div>
             </section>
-            <section class="catalog__item">
+            <section class="col-md-4 col-sm-6 col-xs-12 catalog__item">
               <div class="catalog__title">Device</div>
               <div class="catalog__content">
                 <a class="catalog__item-link" href="pages/Device/index.html"><img class="catalog__item-img" src="img/Device.jpg" width="400" height="300" alt="My-Work"></a>
               </div>
             </section>
-            <section class="catalog__item">
+            <section class="col-md-4 col-sm-6 col-xs-12 catalog__item">
               <div class="catalog__title">Mishka</div>
               <div class="catalog__content">
                 <a class="catalog__item-link" href="pages/Mishka/index.html"><img class="catalog__item-img" src="img/Mishka.jpg" width="300" height="300" alt="My-Work"></a>
               </div>
             </section>
-            <section class="catalog__item">
+            <section class="col-md-4 col-sm-6 col-xs-12 catalog__item">
               <div class="catalog__title">Pink</div>
               <div class="catalog__content">
                 <a class="catalog__item-link" href="pages/Pink/index.html"><img class="catalog__item-img" src="img/pink.jpg" width="300" height="300" alt="My-Work"></a>
@@ -58,14 +63,15 @@
       </main>
       <footer class="main-footer">
         <div class="container">
-          <div class="main-footer__contacts">
-            <a class="main-footer__item" href="https://www.facebook.com/profile.php?id=100007529590863">Facebook</a>
-            <a class="main-footer__item">skype: mistmee1</a>
-            <a class="main-footer__item" href="mailto:mistmee@mail.ru">email: mistmee@mail.ru</a>
-            <p class="main-footer__item">Tel: +380501304298</p>
+          <div class="row main-footer__contacts">
+            <div class="col-md-3 col-sm-6 col-xs-12"><a class="main-footer__item" href="https://www.facebook.com/profile.php?id=100007529590863">Facebook</a></div>
+            <div class="col-md-3 col-sm-6 col-xs-12"><a class="main-footer__item">skype: mistmee1</a></div>
+            <div class="col-md-3 col-sm-6 col-xs-12"><a class="main-footer__item">mistmee@mail.ru</a></div>
+            <div class="col-md-3 col-sm-6 col-xs-12"><p class="main-footer__item">Tel: +380501304298</p></div>
           </div>
         </div>
       </footer>
     </div>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -18,6 +18,7 @@
 
 body {
   box-sizing: border-box;
+  color: #000;
   font-family: "Opensans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -27,7 +28,7 @@ body {
 
 a {
   font: inherit;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -37,200 +38,81 @@ img {
   height: auto;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.main-header,
-main,
-.main-footer {
-  flex-grow: 1;
-}
-
-.main-header .container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
+.main-header {
+  margin-bottom: 50px;
+  padding-top: 20px;
 }
 
 .main-header__text {
-  flex-grow: 1;
+  padding-top: 120px;
   text-align: center;
-  color: #000;
-  font-size: 18px;
 }
 
 .main__title {
-  width: 100%;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  color: #000;
-  font-size: 42px;
+  margin-bottom: 70px;
   text-align: center;
 }
 
-.catalog {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 30px;
+.catalog__title {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 10px 5px;
+  border-radius: 10px;
+}
+
+.catalog__item:hover .catalog__title {
+  background-color: #fff;
+  transition: all .5s ease;
 }
 
 .catalog__item {
-  width: 48%;
-  min-width: 300px;
-  margin: auto;
-  margin-bottom: 20px;
-  border-radius: 10px;
+  margin-bottom: 50px;
 }
 
-.catalog__title {
-  display: none;
-  vertical-align: top;
-  padding: 5px 10px;
-  border-radius: 10px;
+.catalog__item-link {
+  display: block;
 }
 
 .catalog__item-img {
-  width: 298px;
-  height: 300px;
-  margin: 0 auto;
-  border: 1px solid #000;
-  border-radius: 10px;
-}
-
-.main-footer__contacts {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  color: #fff;
-  background-color: #3e6583;
   border-radius: 10px;
 }
 
 .main-footer__item {
   display: block;
-  width: 40%;
-  padding: 20px 15px;
+  margin: 0;
+  padding: 5px 0 5px;
   text-align: center;
-  font-size: 18px;
+  border-radius: 15px;
 }
 
 .main-footer__item:hover {
-  background-color: #628baa;
-  border-radius: 10px;
-  transition-duration: 1s;
+  text-decoration: none;
+  background-color: #fff;
+  transition: all .5s ease;
 }
 
-.main-footer__contacts p {
-  margin: 0;
+.main-footer {
+  padding: 50px 0 50px;
 }
 
-@media (min-width: 768px) {
-  .wrapper {
-    width: 98%;
-    padding: 0 1%;
-  }
-
-  .main-header__photo {
-    width: 768px;
-    height: 300px;
-    margin: auto;
-    border-radius: 10px;
-  }
-
-  .catalog__title {
-    display: inline-block;
-    margin-bottom: 5px;
-  }
-
-  .catalog {
-    justify-content: flex-start;
-    margin-bottom: 50px;
-  }
-
-  .catalog__item {
-    flex-grow: 0;
-    width: 300px;
-  }
-
-  .catalog__item-img {
-    width: 100%;
-  }
-
-  .catalog__item:hover .catalog__title {
-    background-color: #fff;
-    transition-duration: 1s;
-  }
-
-  .main-footer__contacts {
-    flex-wrap: nowrap;
-    align-items: center;
-    width: auto;
-    min-height: 84px;
-    padding: 0 10px;
-  }
-
-  .main-footer__item {
-    flex-grow: 1;
-    width: 25%;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 16px;
-  }
-
-  .main-footer__item:first-child {
-    width: 15%;
-  }
-}
-
-@media (min-width: 1024px) {
-
-  .wrapper {
-    padding: 1%;
-  }
-
-  .main-header .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 60px;
-  }
-
-  .main-header__photo {
-    flex-grow: 1;
-    width: 50%;
+@media (max-width: 768px) {
+  .main-header {
+    margin: 0;
   }
 
   .main-header__text {
-    flex-grow: 1;
+    padding-top: 30px;
   }
 
-  .catalog {
-    justify-content: space-between;
+  .main__title {
+    margin-bottom: 30px;
   }
 
   .catalog__item {
-    width: 300px;
     margin-bottom: 20px;
   }
-}
 
-@media (min-width: 1200px) {
-  .wrapper {
-    max-width: 1160px;
-    padding: 20px;
+  .main-footer {
+    padding: 20px 0 20px;
   }
 }
