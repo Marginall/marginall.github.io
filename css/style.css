@@ -85,7 +85,7 @@ img {
   border-radius: 15px;
 }
 
-.main-footer__item:hover {
+.main-footer .main-footer__item:hover {
   color: #000;
   text-decoration: none;
   background-color: #fff;
