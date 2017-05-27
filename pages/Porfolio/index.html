@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>landing</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+
+</head>
+
+<body class="page">
+	<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+		<symbol id="border-2" viewBox="0 0 658 476"><path
+			d="M577 0c-1 1.9-1.6 4.1-3.1 5.5-38.9 39.1-77.8 78.2-116.8 117.1-3.4 3.4-3.3 5.7 0 9 33.3 33.4 66.5 66.9 99.7 100.4 5.2 5.3 5.2 6.4-.1 11.8-33.2 33.5-66.3 67.1-99.6 100.5-3.4 3.4-3.4 5.6 0 9 37.7 37.7 75.2 75.5 112.8 113.4 2.7 2.7 4.7 6.1 7.1 9.2h-31c-.7-1.6-1.1-3.5-2.3-4.6-33.6-34.2-67.4-68.3-101-102.5-3.3-3.4-5.7-3.3-9 .1-31.4 31.9-63 63.7-94.4 95.6-8.1 8.2-8 8.3-15.9.2-31.4-31.7-62.8-63.5-94.1-95.2-4.8-4.9-5.5-4.9-10.4 0-33.7 33.9-67.4 67.8-101 101.7-1.2 1.2-1.9 3-2.8 4.6h-30c.7-1.8 1-3.9 2.2-5.2 38.6-38.9 77.4-77.6 116.1-116.4 4.9-4.9 4.8-6 0-11-33.1-33.3-66.2-66.7-99.3-100-4.9-4.9-4.9-6.1-.1-11 33-33.2 66-66.4 99-99.5 5.4-5.4 5.4-6.3.1-11.7-36.8-37-73.6-73.9-110.2-111-3-3-8.1-4.6-7.7-10.3h30c.9 1.5 1.6 3.3 2.8 4.6 33.6 33.9 67.3 67.8 101 101.7 4.9 4.9 5.5 4.9 10.4.1 31.5-31.8 63-63.7 94.5-95.5 7.6-7.7 7.5-7.7 15.3.2 31.6 32 63.2 64 94.8 95.9 4.1 4.2 4.9 4.2 9.3-.2 33.6-34 67.2-68 100.7-102.1 1.1-1.2 1.5-3.1 2.3-4.6 10 .2 20.4.2 30.7.2zm-46.3 238c-1.5-2.1-2.5-4.1-3.9-5.5-31.2-31.5-62.4-62.9-93.6-94.4-32.2-32.4-64.4-64.7-96.5-97.1-6-6.1-5.9-6.1-12.1.1C282 84 239.4 127 196.9 169.9c-20.8 20.9-41.5 41.8-62.3 62.7-4.9 4.9-4.8 6 .1 11 5.9 5.9 11.7 11.8 17.6 17.7 57.6 58 115.2 116.1 172.8 174.1 5.6 5.7 5.7 5.6 11.4-.1 38.2-38.5 76.5-77 114.7-115.6l75.3-75.9c1.5-1.6 2.6-3.6 4.2-5.8zM0 231l49.4.3c1.7 0 3.7-.5 4.9.3 1.6.9 3.3 2.8 3.4 4.5.1 1.3-1.9 3.4-3.4 3.9-1.9.7-4.3.3-6.4.3-16-.1-32-.1-47.9-.2V231zM658 240c-17.5.1-35 .1-52.4.2-3 0-5.4-.6-5.5-4.2-.1-3.8 2.3-4.7 5.6-4.7h47.4c1.7 0 3.3-.2 5-.3-.1 3-.1 6-.1 9z"/></symbol>
+		<symbol id="border" viewBox="0 0 604 351"><path
+			d="M299 351c-.4-1-.5-2.3-1.2-3.1-24.9-24.8-49.9-49.4-74.8-74.2-4.2-4.1-6.1-4.2-10.3.1-23.6 23.5-47.1 47.1-70.6 70.6-4.5 4.5-6.4 4.6-10.7.3-5.2-5.1-5.2-6.6-.4-11.4l71-71c4-4 4-5.9-.1-9.9-20-20-40-40.1-60-60.1-4.4-4.3-8.8-8.6-13.5-12.6-3.5-3-3.4-5.2 0-8.5 18.8-18.4 37.5-36.9 56.2-55.4 5.9-5.9 11.8-11.8 17.7-17.6 3.5-3.5 3.6-5.7.1-9.3-23.6-23.7-47.3-47.4-71-71-5.3-5.3-3.9-12.2 3.5-14.4 1.9-.6 5.2 1 6.8 2.7 19.7 19.4 39.2 39 58.7 58.6 4.4 4.4 8.7 8.7 13.1 13 3.4 3.4 5.8 3.3 9.3-.2 23.6-23.7 47.3-47.4 70.9-71.1 2-2 3.7-4.3 5.5-6.5h6c.4 1 .5 2.3 1.3 3.1 24.9 24.8 49.9 49.4 74.8 74.2 4.1 4 6.1 4.1 10 .3l71-71c4.5-4.5 6.5-4.6 10.8-.3 5.1 5.1 5.2 6.6.4 11.4l-71 71c-4 4-4 5.9 0 9.9 21 20.9 41.9 41.9 62.9 62.8 3.4 3.4 6.9 6.8 10.6 9.9 3.5 3 3.3 5.2 0 8.4-18.8 18.4-37.5 36.9-56.2 55.4l-17.7 17.7c-3.5 3.5-3.6 5.7-.1 9.3 23.7 23.7 47.4 47.3 70.9 71.1 1.8 1.8 4.2 5.5 3.5 6.9-1.4 3.1-4.4 5.9-7.5 7.5-1.4.7-4.9-1.4-6.6-3.1-23.8-23.5-47.4-47.2-71.1-70.9-3.8-3.8-6-3.8-9.6-.1-23.6 23.7-47.3 47.4-70.9 71.1-2 2-3.7 4.3-5.5 6.5-2.2-.1-4.2-.1-6.2-.1zm156.7-175.6c-1.7-2.2-3-4.1-4.6-5.7-48-48.1-96-96.2-144-144.2-4.4-4.4-5.8-4.4-10.2 0-48 48.1-96 96.1-144.1 144.2-5.1 5.1-5 6.6.2 11.8 48 48.1 96 96.2 144 144.2 4.1 4.1 5.7 4.1 9.9 0 27.5-27.6 55.1-55.1 82.6-82.7 20.6-20.6 41.2-41.2 61.8-61.9 1.6-1.6 2.8-3.6 4.4-5.7zM0 169c2.3-.2 4.6-.5 7-.5h74.4c1.3 0 2.8-.2 4 .2 1 .4 1.8 1.6 2.7 2.4-.9.8-1.6 2-2.7 2.4-1.4.4-3 .2-4.5.2H5c-1.7 0-3.3.2-5 .3v-5zM604 174c-8.6-.1-17.3-.3-25.9-.3h-55.5c-1.5 0-3.1.1-4.5-.3-.9-.3-2-1.5-2-2.3 0-.8 1.1-1.8 2-2.3.8-.4 1.9-.3 2.9-.3h77.9c1.7 0 3.3.3 5 .5.1 1.7.1 3.3.1 5z"/></symbol>
+		<symbol id="logo" viewBox="0 0 279.04353 279.3052"><path
+			d="M275.312 146.593c-8.586 7.7-14.722 14.624-22.436 20.95-10.532 9.948-20.617 20.368-30.858 30.62-4.849 4.856-4.697 9.829.307 14.789 17.863 17.706 35.743 35.396 53.536 53.172 1.455 1.454 3.134 3.489 3.182 5.295.04 1.504-2.162 3.068-3.877 5.248-3.553-2.883-6.274-4.737-8.575-7.015-17.279-17.111-34.447-34.334-51.714-51.456-5.096-5.053-7.098-5.186-12.113-.241-20.511 20.223-40.877 40.595-61.412 60.793-.712.7-3.265.755-3.945.084-20.258-20.01-40.318-40.218-60.579-60.225-5.972-5.897-7.534-5.75-13.611.265-17.16 16.988-34.203 34.093-51.338 51.106-1.754 1.74-3.605 3.69-5.801 4.58-1.642.665-3.913-.224-5.904-.421.197-1.984.163-4.032.687-5.926.273-.985 1.519-1.71 2.346-2.53 17.736-17.595 35.475-35.187 53.212-52.78 4.98-4.94 5.098-9.921.232-14.794-14.946-14.964-29.856-29.966-44.967-44.762-2.303-2.255.511-.51-2.303-2.255-6.28-3.897-8.348-17.838-2.059-21.001 17.951-16.731 10.683-9.768 17.951-16.731 10.702-10.253 21.083-20.842 31.552-31.337 4.622-4.633 4.531-9.81-.172-14.471-17.74-17.59-35.498-35.16-53.248-52.74-.828-.82-2.055-1.517-2.379-2.507C.41 10.422.313 8.372 0 6.39c2.116-.238 4.463-1.154 6.288-.534 2.052.697 3.76 2.65 5.399 4.279 17.368 17.25 34.664 34.575 52.046 51.81 5.337 5.293 7.171 5.476 12.509.245 17.367-17.018 34.546-34.227 51.787-51.373 3.068-3.051 6.266-5.998 9.064-9.283 1.827-2.146 2.603-1.948 4.555.012a9130.492 9130.492 0 0 0 60.885 60.6c5.325 5.252 7.081 5.134 12.467-.2 17.159-16.992 34.228-34.077 51.362-51.095 1.763-1.751 3.504-3.825 5.681-4.761 1.801-.775 4.23-.09 6.38-.052-.342 2.237.119 5.232-1.158 6.587-7.421 7.876-15.254 15.363-22.943 22.987-10.881 10.79-21.797 21.545-32.615 32.397-4.459 4.473-4.329 9.502.232 14.069 14.947 14.966 29.863 29.964 44.979 44.757 2.3 2.25 10.291 9.25 12.124 12.582m-13.051.579c-1.569-2.103-2.722-4.1-4.293-5.683-13.85-13.954-27.759-27.85-41.68-41.731-24.649-24.58-49.265-49.194-74.018-73.67-6.012-5.944-7.286-5.914-13.166-.105-22.51 22.24-44.909 44.592-67.314 66.938-16.279 16.235-32.466 32.563-48.78 48.763-3.556 3.53-4.498 6.73-.584 10.64 20.499 20.479 40.908 41.048 61.393 61.54 16.838 16.844 33.866 33.5 50.566 50.479 10.677 10.855 11.796 10.85 22.37.124 19.642-19.926 39.564-39.575 59.357-59.352 17.561-17.547 35.123-35.093 52.622-52.702 1.333-1.343 2.165-3.185 3.527-5.241z"/><path
+			d="M105.269 146.543c-.193-12.293 1.043-21.14 10.133-27.58 5.417-3.838 10.479-5.383 16.696-3.768 1.449.376 2.874.844 4.319 1.239 8.286 2.265 8.763 1.86 8.963-6.7.148-6.297 4.142-10.337 8.788-13.741.848-.621 3.226-.398 3.92.347.765.82.95 2.954.423 4.053-1.209 2.518-3.19 4.654-4.521 7.127-2.378 4.416-.772 7.06 4.252 7.163 2.823.058 5.669-.37 8.474-.161 6.706.496 10.033 5.297 8.396 11.832-.241.964-.482 1.992-1.005 2.81-7.758 12.126-3.006 22.405 4.787 32.164 2.628 3.292 3.199 6.779.785 10.09-3.416 4.688-7.193 9.132-11.051 13.472-3.775 4.246-8.466 4.69-13.023 1.535-6.644-4.6-12.895-4.971-19.892-.505-6.036 3.853-9.435 2.766-14.575-2.194-11.286-10.891-16.966-23.931-15.869-37.183z"/></symbol>
+	</svg>
+	<header class="header" id="header">
+		<div class="header__logo">
+			<svg class="header__logo-icon" width="37" height="38"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg>
+			<div class="header__logo-wrap">
+				<span class="header__logo-text header__logo-text--top">Mike</span>
+				<span class="header__logo-decor"></span>
+				<span class="header__logo-text">web designer</span>
+			</div>
+		</div>
+		<div class="header__flex">
+			<div class="header__flex-center">
+				<div class="container">
+					<div class="row">
+						<div class="wrapper col-md-12 col-sm-12">
+							<h1 class="header-title">I AM MIKE TAYLOR</h1>
+							<span class="header__text header__text--decor">Web desinger</span>
+							<div class="header__decor">
+								<svg class="header__logo-icon" width="140" height="80"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#border"></use></svg>
+							</div>
+							<p class="header__text header__text--tagline">We Know It Works</p>
+							<p class="header__text header__text--descr">MAURIS VESTIBULUM NULLA ET SAPIEN PRAESENT IMPERDIET JUSTO AT SEM NULLAM TINCID ULTRICIES ELIT PROIN LECTUS ANTE FERMENTUM SED BIBENDUM AC RUTRUM</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container container--bottom">
+			<div class="row header__bottom-line">
+				<div class="col-md-2 col-sm-2 header__bottom-logo">
+					<span>Mike</span>
+					<span class="header__logo-decor"></span>
+				</div>
+				<nav class="col-md-10 col-sm-12 header__nav">
+					<ul class="header__nav-list">
+						<li class="header__nav-item"><a class="header__nav-link" href="#header">Home</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#features">Intro</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#promo">About</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#about">Services</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#team">Team</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#history">History</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#works">Works</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#form">Prices</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#map">Contact</a></li>
+						<li class="header__nav-item"><a class="header__nav-link" href="#">Blog</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="features" id="features">
+			<div class="title title--features">
+				<h2 class="title__top">HELLO & WELCOME</h2>
+				<div class="title__bottom">
+					<span>EXPLORE OUR WORLD</span>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 features__left">
+						<div class="features__item animation_2">
+							<div class="features__item-wrap">
+								<h3 class="features__item-title">URABITURE NULLA</h3>
+								<p class="features__item-text">Curabitur nulla odio bibendum sit amet facilisis sed
+		lobotis itd justo. Done csec sollicitudin facilisis</p>
+							</div>
+							<div class="features__icon-wrap">
+								<div class="features__icon-box">
+									<i class="fa fa-star-o features__icon" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+						<div class="features__item animation_2">
+							<div class="features__item-wrap">
+								<h3 class="features__item-title">ODIO BIBENDUM</h3>
+								<p class="features__item-text">Curabitur nulla odio bibendum sit amet facilisis sed
+lobotis itd justo. Done csec sollicitudin facilisis</p>
+							</div>
+							<div class="features__icon-wrap">
+								<div class="features__icon-box">
+									<i class="fa fa-heart-o features__icon features__icon--heart" aria-hidden="true"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 features__center">
+						<div class="features__logo-wrap">
+							<svg class="features__logo" width="150" height="110"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#border-2"></use></svg>
+							<div class="features__logo-decor">
+								<span>Mike</span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 features__right">
+						<div class="features__item animation_3">
+							<div class="features__icon-wrap features__icon-wrap--left">
+								<div class="features__icon-box">
+									<i class="fa fa-laptop features__icon features__icon--laptop" aria-hidden="true"></i>
+								</div>
+							</div>
+							<div class="features__item-wrap">
+								<h3 class="features__item-title">CURABITURE NULLA ODIO</h3>
+								<p class="features__item-text">Curabitur nulla odio bibendum sit amet facilisis sed
+lobotis itd justo. Done csec sollicitudin facilisis</p>
+							</div>
+						</div>
+						<div class="features__item animation_3">
+							<div class="features__icon-wrap features__icon-wrap--left">
+								<div class="features__icon-box">
+									<i class="fa fa-life-ring features__icon features__icon--sircle" aria-hidden="true"></i>
+								</div>
+							</div>
+							<div class="features__item-wrap">
+								<h3 class="features__item-title">DONE CSEC SOLLICTIONAL</h3>
+								<p class="features__item-text">Curabitur nulla odio bibendum sit amet facilisis sed
+lobotis itd justo. Done csec sollicitudin facilisis</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="promo" id="promo">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 promo__wrap">
+						<p class="promo__text">LET’S BUILD YOUR NEXT DREAM PROJECT</p>
+						<p class="promo__text">We make our <span>work look good</span> & have experience in
+			the creation of brand identities for <span>print & web</span>, with a difference.</p>
+						<a class="btn promo__link" href="#">VIEW CASE STUDIES</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about" id="about">
+			<div class="title title--about">
+				<h2 class="title__top">ABOUT MiKE WORK</h2>
+				<div class="title__bottom">
+					<span>LUM ELIT SIT AMET EST AENEAN DUI</span>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<ul class="about__list">
+						<li class="col-md-3 col-sm-3 about__list-item list-item">
+							<div class="list-item__icon">
+								<div class="list-item__wrap"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+							</div>
+							<h3 class="list-item__title">Achievements</h3>
+							<p class="list-item__text">Facilisis nulla de quam sed ipsum sed urab
+itur nulla odio de bibendum sit amd facs
+ed lobortis ld justo donec eso</p>
+							<a class="list-item__link" href="#">LEARN MORE</a>
+						</li>
+						<li class="col-md-3 col-sm-3 about__list-item list-item">
+							<div class="list-item__icon">
+								<div class="list-item__wrap"><i class="fa fa-angle-left" aria-hidden="true"></i><span></span><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+							</div>
+							<h3 class="list-item__title">Clean DESIGN</h3>
+							<p class="list-item__text">Facilisis nulla de quam sed ipsum sed urab
+itur nulla odio de bibendum sit amd facs
+ed lobortis ld justo donec eso</p>
+							<a class="list-item__link" href="#">LEARN MORE</a>
+						</li>
+						<li class="col-md-3 col-sm-3 about__list-item list-item">
+							<div class="list-item__icon list-item__icon--blue">
+								<div class="list-item__wrap"><i class="fa fa-expand" aria-hidden="true"></i></div>
+							</div>
+							<h3 class="list-item__title list-item__title--blue">Retina Ready</h3>
+							<p class="list-item__text">Facilisis nulla de quam sed ipsum sed urab
+itur nulla odio de bibendum sit amd facs
+ed lobortis ld justo donec eso</p>
+							<a class="list-item__link list-item__link--blue" href="#">LEARN MORE</a>
+						</li>
+						<li class="col-md-3 col-sm-3 about__list-item list-item">
+							<div class="list-item__icon">
+								<div class="list-item__wrap"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+							</div>
+							<h3 class="list-item__title">DEONE CESC</h3>
+							<p class="list-item__text">Facilisis nulla de quam sed ipsum sed urab
+itur nulla odio de bibendum sit amd facs
+ed lobortis ld justo donec eso</p>
+							<a class="list-item__link" href="#">LEARN MORE</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="skills" id="skills">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 skills__video">
+						<h2 class="skills__title">INTRODUCTION VIDEO</h2>
+						<div class="skills__video-player" id="videoplayer"></div>
+						<p class="skills__text">Ut molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula fel
+magnal Nam rutrum congue diam. Vestibulum non lorem.</p>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<h2 class="skills__title">SKILLS WE GOT</h2>
+						<ul class="skills__list">
+							<li class="skills__item">
+								<h4 class="skills__item-title">WEB DESIGN</h4>
+								<div class="skills__line">
+									<div class="skills__line-blue">
+										<div class="skills__line-value">
+											<span class="skills__line-text">90%</span>
+											<div class="skills__line-triandle"></div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="skills__item">
+								<h4 class="skills__item-title">WEB DESIGN</h4>
+								<div class="skills__line">
+									<div class="skills__line-blue">
+										<div class="skills__line-value">
+											<span class="skills__line-text">80%</span>
+											<div class="skills__line-triandle"></div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="skills__item">
+								<h4 class="skills__item-title">MOBILE DEVELOPMENT</h4>
+								<div class="skills__line">
+									<div class="skills__line-blue">
+										<div class="skills__line-value">
+											<span class="skills__line-text">95%</span>
+											<div class="skills__line-triandle"></div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="skills__item">
+								<h4 class="skills__item-title">VIDEO GAMES</h4>
+								<div class="skills__line">
+									<div class="skills__line-blue">
+										<div class="skills__line-value">
+											<span class="skills__line-text">65%</span>
+											<div class="skills__line-triandle"></div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="skills__item">
+								<h4 class="skills__item-title">VIDEO PRODUCTION</h4>
+								<div class="skills__line">
+									<div class="skills__line-blue">
+										<div class="skills__line-value">
+											<span class="skills__line-text">70%</span>
+											<div class="skills__line-triandle"></div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="progress">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 progress__wrap">
+						<ul class="progress__list">
+							<li class="progress__item">
+								<div class="progress__item-wrap">
+									<i class="fa fa-rocket fa-rocket--black" aria-hidden="true"></i>
+									<span class="progress__item-text">167</span>
+								</div>
+								<h4 class="progress__item-title">PROJECTS LAUNCHED</h4>
+							</li>
+							<li class="progress__item progress__item--awards">
+								<div class="progress__item-wrap">
+									<i class="fa fa-trophy" aria-hidden="true"></i>
+									<span class="progress__item-text">25</span>
+								</div>
+								<h4 class="progress__item-title progress__item-title--awards">AWARDS WON</h4>
+							</li>
+							<li class="progress__item">
+								<div class="progress__item-wrap">
+									<i class="fa fa-paper-plane" aria-hidden="true"></i>
+									<span class="progress__item-text">98</span>
+								</div>
+								<h4 class="progress__item-title">PROPOSALS SENT</h4>
+							</li>
+							<li class="progress__item">
+								<div class="progress__item-wrap">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									<span class="progress__item-text">945</span>
+								</div>
+								<h4 class="progress__item-title">HOURS OF WORK</h4>
+							</li>
+							<li class="progress__item">
+								<div class="progress__item-wrap">
+									<i class="fa fa-coffee" aria-hidden="true"></i>
+									<span class="progress__item-text">256</span>
+								</div>
+								<h4 class="progress__item-title">CUPS OF COFFEE</h4>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="services">
+			<div class="title title--services">
+				<h2 class="title__top">SERVICES WE OFFER</h2>
+				<div class="title__bottom">
+					<span>LUM ELIT SIT AMET EST AENEAN DUI</span>
+				</div>
+			</div>
+			<div class=" services__slider-wrap">
+					<div class="services__slider-prev slider-prev">
+						<div class="slider__prev-item">
+							<div class="slider__prev-wrap">
+								<i class="fa fa-trophy" aria-hidden="true"></i>
+							</div>
+							<h4 class="slider__prev-title">VIDEO PRODUCTION</h4>
+						</div>
+						<div class="slider__prev-item">
+							<div class="slider__prev-wrap">
+								<i class="fa fa-trophy" aria-hidden="true"></i>
+							</div>
+							<h4 class="slider__prev-title">PHOTOGRAPHY</h4>
+						</div>
+						<div class="slider__prev-item">
+							<div class="slider__prev-wrap">
+								<i class="fa fa-trophy" aria-hidden="true"></i>
+							</div>
+							<h4 class="slider__prev-title">WEB DESIGN</h4>
+						</div>
+						<div class="slider__prev-item">
+							<div class="slider__prev-wrap">
+								<i class="fa fa-trophy" aria-hidden="true"></i>
+							</div>
+							<h4 class="slider__prev-title">iOS APPLICATIONS</h4>
+						</div>
+						<div class="slider__prev-item">
+							<div class="slider__prev-wrap">
+								<i class="fa fa-trophy" aria-hidden="true"></i>
+							</div>
+							<h4 class="slider__prev-title">SOCIAL MEDIA</h4>
+						</div>
+					</div>
+					<div class="services__slider slider">
+						<div class="slider__item">
+							<div class="slider__item-wrap">
+								<div class="slider__item-left">
+									<h2 class="slider__item-title">Video Production</h2>
+									<p class="slider__item-text">Ut molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcu eul ante. Sed tempus tempor cild  Nulla vierra ultrices magnal Nam rutrum congue diam.
+
+	Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utdi eni ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exe commodo consequat. Duis aute irure dolor reprehenderit.</p>
+									<a class="slider__item-link" href="#">LEARN MORE</a>
+								</div>
+								<div class="slider__item-right">
+									<img src="img/shakir.jpg" alt="picture">
+								</div>
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item-wrap">
+								<div class="slider__item-left">
+									<h2 class="slider__item-title">Photograpfy</h2>
+									<p class="slider__item-text">Ut molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcu eul ante. Sed tempus tempor cild  Nulla vierra ultrices magnal Nam rutrum congue diam.
+
+	Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utdi eni ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exe commodo consequat. Duis aute irure dolor reprehenderit.</p>
+									<a class="slider__item-link" href="#">LEARN MORE</a>
+								</div>
+								<div class="slider__item-right">
+									<img src="img/shakir.jpg" alt="picture">
+								</div>
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item-wrap">
+								<div class="slider__item-left">
+									<h2 class="slider__item-title">Web Design</h2>
+									<p class="slider__item-text">Ut molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcu eul ante. Sed tempus tempor cild  Nulla vierra ultrices magnal Nam rutrum congue diam.
+
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utdi eni ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exe commodo consequat. Duis aute irure dolor reprehenderit.</p>
+									<a class="slider__item-link" href="#">LEARN MORE</a>
+								</div>
+								<div class="slider__item-right">
+									<img src="img/shakir.jpg" alt="picture">
+								</div>
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item-wrap">
+								<div class="slider__item-left">
+									<h2 class="slider__item-title">iOS Applications</h2>
+									<p class="slider__item-text">Ut molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcu eul ante. Sed tempus tempor cild  Nulla vierra ultrices magnal Nam rutrum congue diam.
+
+	Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utdi eni ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exe commodo consequat. Duis aute irure dolor reprehenderit.</p>
+									<a class="slider__item-link" href="#">LEARN MORE</a>
+								</div>
+								<div class="slider__item-right">
+									<img src="img/shakir.jpg" alt="picture">
+								</div>
+							</div>
+						</div>
+						<div class="slider__item">
+							<div class="slider__item-wrap">
+								<div class="slider__item-left">
+									<h2 class="slider__item-title">Social Media</h2>
+									<p class="slider__item-text">Ut molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcu eul ante. Sed tempus tempor cild  Nulla vierra ultrices magnal Nam rutrum congue diam.
+
+	Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utdi eni ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exe commodo consequat. Duis aute irure dolor reprehenderit.</p>
+									<a class="slider__item-link" href="#">LEARN MORE</a>
+								</div>
+								<div class="slider__item-right">
+									<img src="img/shakir.jpg" alt="picture">
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</section>
+		<section class="reviews">
+			<div class="title">
+				<h2 class="title__top">Services Reviews</h2>
+				<div class="title__bottom">
+					<span>OUR CLIENTS LOVE US! READ WHAT THEY HAVE TO SAY</span>
+				</div>
+			</div>
+			<div class="reviews__wrap">
+				<div class="reviews__slider single-item one-time">
+					<div class="reviews__slider-item">
+						<div class="reviews__img-block"><img class="reviews__img" src="img/author.jpg" width="100" height="100" alt="author"></div>
+						<p class="reviews__text">Molestie ultricies quam. Donec sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcu ante sed ipsum tempus
+tempor orcide. Nulla vierra ultrices magnal Nam rutrum congue diam. Vestibulum non lorem. Aliquam ullamcorper sem.</p>
+						<div class="reviews__author-block">
+							<span class="reviews__author">Mike Taylor</span>
+							<span class="reviews__author-descr">CEO WARNET TEL</span>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="reviews__img-block"><img class="reviews__img" src="img/author.jpg" width="100" height="100" alt="author"></div>
+						<p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem eveniet aliquid ullam illo accusamus maiores, quo architecto eaque aliquam itaque tempora maxime perspiciatis accusantium fuga, tempore aspernatur dicta, voluptatibus perferendis?</p>
+						<div class="reviews__author-block">
+							<span class="reviews__author">Mike Taylor</span>
+							<span class="reviews__author-descr">CEO WARNET TEL</span>
+						</div>
+					</div>
+					<div class="reviews__slider-item">
+						<div class="reviews__img-block"><img class="reviews__img" src="img/author.jpg" width="100" height="100" alt="author"></div>
+						<p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi fuga saepe ipsa voluptatum nobis neque necessitatibus autem pariatur molestias ea quas earum id nulla, quaerat rem in illum exercitationem maiores?</p>
+						<div class="reviews__author-block">
+							<span class="reviews__author">Mike Taylor</span>
+							<span class="reviews__author-descr">CEO WARNET TEL</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="team" id="team">
+			<div class="title">
+				<h2 class="title__top">MEET MY TEAM</h2>
+				<div class="title__bottom">
+					<span>LUM ELIT SIT AMET EST AENEAN DUI</span>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-3">
+						<div class="team__item">
+							<img class="team__img" src="/img/avatar-1.jpg" width="262" height="262" alt="avatar">
+							<span class="team__name">ADAM HENRY</span>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="team__item">
+							<img class="team__img" src="/img/avatar-1.jpg" width="262" height="262" alt="avatar">
+							<span class="team__name">JOHN BLACK</span>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="team__item">
+							<img class="team__img" src="/img/avatar-2.jpg" width="262" height="262" alt="avatar">
+							<span class="team__name">ROBERT DOE</span>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="team__item">
+							<img class="team__img" src="/img/avatar-3.jpg" width="262" height="262" alt="avatar">
+							<span class="team__name">JULIA BROWN</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="design">
+			<div class="design__wrap">
+				<h2 class="design__title">one-page design UNLIMITED possibilities</h2>
+				<p class="design__text">CLEAN & MODERN TEMPLATE DESIGNED FOR YOUR BUSINESS!</p>
+			</div>
+			<div class="design__btn-block">
+				<a class="btn design__btn" href="#">FIND OUT MORE</a>
+				<a class="btn design__btn" href="#">BUY IT NOW</a>
+			</div>
+		</section>
+		<section class="history" id="history">
+			<h2 class="history__title">A Look Back At Our History</h2>
+			<p class="history__title-text">DUIS SED NISL CURABITUR AT NIBH UTAC ORCI VITAE DOLOR SCELERISQUE BLANDIT</p>
+			<div class="container history__wrap">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="history__year">
+							<span>2014</span>
+						</div>
+					</div>
+					<div class="col-md-5 col-sm-6 col-md-offset-1  history__item">
+						<div class="history__item-date">
+							<span class="history__date">13 SEP</span>
+							<h3 class="history__item-title">PROJECT DELIVERING CELEBRATION</h3>
+						</div>
+						<div class="history__item-wrap">
+							<img class="history__img" src="img/ship-1.jpg" width="100" height="100" alt="picture">
+							<p class="history__text">Curabitur nulla odio bibendum sit amet, facilisis sed idm
+lobotis id justo. Done csec sollicitudin facilisis. Phasellus odio. Suspendisse scelerisque. Donec sit amet lorem vel quam commodo euismod.</p>
+						</div>
+					</div>
+					<div class="col-md-5 col-md-offset-6 col-sm-6 col-sm-offset-6 history__item history__item--clients">
+						<div class="history__item-date history__item-date--clients">
+							<span class="history__date">25 AUG</span>
+							<h3 class="history__item-title">ANNUAL CLIENTS MEETING</h3>
+						</div>
+						<div class="history__item-wrap history__item-wrap--clients">
+							<img class="history__img" src="img/clients-1.jpg" width="100" height="100" alt="picture">
+							<img class="history__img" src="img/clients-2.jpg" width="100" height="100" alt="picture">
+							<img class="history__img" src="img/clients-3.jpg" width="100" height="100" alt="picture">
+							<img class="history__img" src="img/clients-4.jpg" width="100" height="100" alt="picture">
+						</div>
+					</div>
+					<div class="col-md-5 col-md-offset-1 col-sm-6 history__item">
+						<div class="history__item-date">
+							<span class="history__date">10 FEB</span>
+							<h3 class="history__item-title">PROJECT DELIVERING CELEBRATION</h3>
+						</div>
+						<div class="history__item-wrap">
+							<img class="history__img" src="img/ship-2.jpg" width="100" height="100" alt="picture">
+							<p class="history__text">Curabitur nulla odio bibendum sit amet, facilisis sed idm
+lobotis id justo. Done csec sollicitudin facilisis. Phasellus odio. Suspendisse scelerisque. Donec sit amet lorem vel quam commodo euismod.</p>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<a class="history__link" href="#"><span>more</span></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="works" id="works">
+			<div class="title">
+				<h2 class="title__top">RECENT WORKS</h2>
+				<div class="title__bottom">
+					<span>LUM ELIT SIT AMET EST AENEAN DUI</span>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<ul class="col-md-12 works__controls controls">
+						<li class="controls__item filter" data-filter="all">EVERYTHING</li>
+						<li class="controls__item filter" data-filter=".category-1">WEB DESIGN</li>
+						<li class="controls__item filter" data-filter=".category-2">ARTWORKS</li>
+						<li class="controls__item filter" data-filter=".category-3">PHOTOGRAPHY</li>
+						<li class="controls__item filter" data-filter=".category-4">MOBILE DEV</li>
+						<li class="controls__sort">
+							<button class="controls__sort-btn" type="button">SORT BY</button>
+							<div class="controls__sort-list">
+								<span class="controls__sort-item sort" data-sort="myorder:asc">a-z</span>
+								<span class="controls__sort-item sort" data-sort="myorder:desc">z-a</span>
+							</div>
+						</li>
+					</ul>
+					<div class="col-md-12 works__portfolio-list" id="Container">
+						<div class="col-md-3 col-sm-4 works__portfolio-item mix category-1" data-myorder="1">
+							<img class="works__img" src="img/work-1.jpg" width="293" height="250" alt="work">
+						</div>
+						<div class="col-md-3 col-sm-4 works__portfolio-item mix category-2" data-myorder="2">
+							<img class="works__img" src="img/work-2.jpg" width="293" height="250" alt="work">
+						</div>
+						<div class="col-md-3 col-sm-4 works__portfolio-item mix category-3" data-myorder="3">
+							<img class="works__img" src="img/work-3.jpg" width="293" height="250" alt="work">
+						</div>
+						<div class="col-md-3 col-sm-4 works__portfolio-item mix category-4" data-myorder="4">
+							<img class="works__img" src="img/work-4.jpg" width="293" height="250" alt="work">
+						</div>
+						<div class="col-md-3 col-sm-4 works__portfolio-item mix category-1" data-myorder="5">
+							<img class="works__img" src="img/work-4.jpg" width="293" height="250" alt="work">
+						</div>
+						<div class="col-md-3 col-sm-4 works__portfolio-item mix category-2" data-myorder="6">
+							<img class="works__img" src="img/work-3.jpg" width="293" height="250" alt="work">
+						</div>
+						<div class="col-md-3 col-sm-4 works__portfolio-item mix category-3" data-myorder="7">
+							<img class="works__img" src="img/work-2.jpg" width="293" height="250" alt="work">
+						</div>
+						<div class="col-md-3 col-sm-4 works__portfolio-item mix category-4" data-myorder="8">
+							<img class="works__img" src="img/work-1.jpg" width="293" height="250" alt="work">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="download">
+			<p class="download__text">Are You Impressed By My Work?</p>
+			<p class="download__text download__text--small">Durabitur commodo ras non urna mauris mollis auctor proin laoreet</p>
+			<div class="download__btn-block">
+				<a class="btn download__btn" href="#">DOWNLOAD NOW</a>
+				<a class="btn download__btn" href="#">GET IN TOUCH</a>
+			</div>
+		</section>
+		<section class="clients">
+			<h2 class="clients__title">Clients I’ve Worked So Far</h2>
+			<div class="container clients__list">
+				<div class="row">
+					<div class="col-md-2 col-sm-2 clients__item"></div>
+					<div class="col-md-2 col-sm-2 clients__item"></div>
+					<div class="col-md-2 col-sm-2 clients__item"></div>
+					<div class="col-md-2 col-sm-2 clients__item"></div>
+					<div class="col-md-2 col-sm-2 clients__item"></div>
+				</div>
+			</div>
+			<p class="clients__text">Ut molestie ultricies quam. Donec at sem. Praesent pretium. Maorbi quis nulla vehicula felsd laoreet. Sed ullamcorper arcuSed tempus
+tempor cild  Nulla vierra ultrices magnal Nam rutrum congue diam. Sed do eiusmod tempor incididunt ut labore</p>
+		</section>
+		<section class="mytwit">
+			<div class="mytwit__decor">
+				<i class="fa fa-twitter mytwit__icon"></i>
+			</div>
+			<h2 class="mytwit__title">LATEST FROM TWITTER</h2>
+			<p class="mytwit__text">Facilisis sed lobortis id just Donec ollicitudin facil isis nulla.  Donec eget ligula. Cum sociis natoque penatibus et magnisn part
+dil urient. Suspendisse ullamcorper ornare. Etiam gravida. Morbi nec nulla. <a href="#">http://to.ca/KsdL49HSfge</a></p>
+			<a class="btn mytwit__btn" href="#">FOLLOW ME</a>
+		</section>
+		<section class="form" id="form">
+			<div class="title">
+				<h2 class="title__top">CONTACT MiKE</h2>
+				<div class="title__bottom">
+					<span>LUM ELIT SIT AMET EST AENEAN DUI</span>
+				</div>
+			</div>
+			<p class="form__text">SEND US YOUR THOUGHTS</p>
+			<div class="container">
+				<div class="row">
+					<form class="col-md-10 col-md-offset-1 form__main" id="form__main" method="post">
+						<div class="col-md-12 form__wrap">
+							<label class="col-md-4 col-sm-4 form__label"><input class="form__input" type="text" name="name" placeholder="YOUR NAME"></label>
+							<label class="col-md-4 col-sm-4 form__label"><input class="form__input" type="email" name="mail" placeholder="YOUR EMAIL"></label>
+							<label class="col-md-4 col-sm-4 form__label"><input class="form__input" type="text" name="subject" placeholder="SUBJECT" value=""></label>
+						</div>
+						<div class="col-md-12"><textarea class="form__area" name="text" placeholder="YOUR MESSAGE"></textarea></div>
+						<div class="col-md-12"><button class="btn form__btn" type="submit" name="submit">SEND MESSAGE</button></div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<div class="map" id="map">
+					<img class="map__img" src="img/map.jpg" width="1110" height="542" alt="map">
+		</div>
+		<footer class="footer">
+			<div class="footer__icons">
+				<a class="footer__icon-link" href="#">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+				<a class="footer__icon-link" href="#">
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+				</a>
+				<a class="footer__icon-link" href="#">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a class="footer__icon-link" href="#">
+					<i class="fa fa-youtube-play" aria-hidden="true"></i>
+				</a>
+				<a class="footer__icon-link" href="#">
+					<i class="fa fa-vimeo-square" aria-hidden="true"></i>
+				</a>
+				<a class="footer__icon-link" href="#">
+					<i class="fa fa-dribbble" aria-hidden="true"></i>
+				</a>
+			</div>
+			<nav class="footer__nav">
+				<ul class="footer__list">
+					<li class=""><a class="footer__nav-link" href="#">HOME</a></li>
+					<li class=""><a class="footer__nav-link" href="#">INTRO</a></li>
+					<li class=""><a class="footer__nav-link" href="#">ABOUT</a></li>
+					<li class=""><a class="footer__nav-link" href="#">SERVICES</a></li>
+					<li class=""><a class="footer__nav-link" href="#">TEAM</a></li>
+					<li class=""><a class="footer__nav-link" href="#">HISTORY</a></li>
+					<li class=""><a class="footer__nav-link" href="#">WORKS</a></li>
+					<li class=""><a class="footer__nav-link" href="#">PRICES</a></li>
+					<li class=""><a class="footer__nav-link" href="#">CONTACT</a></li>
+					<li class=""><a class="footer__nav-link" href="#">BLOG</a></li>
+				</ul>
+				<div class="footer__decor">
+					<div class="footer__decor-item"></div>
+				</div>
+			</nav>
+			<p class="footer__copyright">© Marginal 2017</p>
+		</footer>
+	</main>
+	<link rel="stylesheet" href="css/style.min.css">
+	<link href="css/bootstrap-grid.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.malihu.PageScroll2id.min.js"></script>
+	<script type="text/javascript" src="js/waypoints.min.js"></script>
+	<script type="text/javascript" src="js/animate-css.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/uppod-0.12.9.js"></script>
+	<script type="text/javascript" src="js/mixitup.min.js"></script>
+	<script type="text/javascript" src="js/scripts.min.js"></script>
+	<script type="text/javascript">
+		this.player = new Uppod({m:"video",uid:"videoplayer",file:"https://youtu.be/WxO2p9AO3_0",poster:"img/bg-2.jpg"});
+	</script>
+</body>
+</html>
