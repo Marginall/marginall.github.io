@@ -24,370 +24,6 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 	<!-- Critical CSS -->
-<style>
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-p,
-h1 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-a {
-  padding: 0;
-  border: none;
-  outline: none;
-}
-
-::-webkit-input-placeholder {
-  font-weight: 400;
-  text-transform: none;
-}
-
-::-moz-placeholder {
-  font-weight: 400;
-  text-transform: none;
-}
-
-:-moz-placeholder {
-  font-weight: 400;
-  text-transform: none;
-}
-
-:-ms-input-placeholder {
-  font-weight: 400;
-  text-transform: none;
-}
-
-.page {
-  width: 100%;
-  min-width: 320px;
-  color: #fff;
-  font-size: 1.4rem;
-  line-height: 1.75;
-  font-family: "Opensans", sans-serif;
-  overflow-x: hidden;
-}
-
-.header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  min-height: 70rem;
-  height: 100vh;
-  background: black url("../img/bg-1.jpg") no-repeat center;
-  background-size: cover;
-}
-
-.header .container--bottom {
-  width: 100%;
-}
-
-.header__logo {
-  position: absolute;
-  left: 10%;
-  top: 15%;
-}
-
-.header__logo-icon {
-  fill: #fff;
-}
-
-.header__logo-wrap {
-  padding-left: .5rem;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.header__logo-text {
-  display: block;
-  font-family: "Varela", sans-serif;
-  font-size: 1.3rem;
-  line-height: 2rem;
-  letter-spacing: -0.1em;
-  text-transform: uppercase;
-}
-
-.header__logo-text--top {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 2.6rem;
-  font-weight: 800;
-  font-family: inherit;
-  line-height: 2rem;
-  letter-spacing: 0;
-}
-
-.header__logo-decor {
-  position: relative;
-  display: inline-block;
-  padding: 10px;
-  vertical-align: top;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-}
-
-.header__logo-decor::after {
-  position: absolute;
-  content: '';
-  left: -8px;
-  bottom: 2px;
-  border: 7px solid transparent;
-  border-right: 6px solid #196fc0;
-}
-
-.header__flex {
-  width: auto;
-  margin: auto;
-  text-align: center;
-}
-
-.header__flex-center {
-  margin: auto;
-}
-
-.header-title {
-  margin-bottom: 3rem;
-  font-size: 4rem;
-  line-height: 4rem;
-  font-weight: 700;
-  letter-spacing: -.05em;
-}
-
-.header__text {
-  font-weight: 300;
-  font-size: 1.4rem;
-  font-family: "Varela", sans-serif;
-}
-
-.header__text--decor {
-  position: relative;
-  display: block;
-  margin-bottom: 4rem;
-  padding-bottom: .7rem;
-  font-size: 1.8rem;
-  font-family: inherit;
-  line-height: 1.4rem;
-  letter-spacing: -.05em;
-  text-transform: uppercase;
-}
-
-.header__text--decor::after {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  content: "";
-  display: block;
-  width: 12rem;
-  height: 1px;
-  margin-left: -6rem;
-  background-color: #fff;
-}
-
-.header__text--tagline {
-  margin-bottom: 3rem;
-  font-size: 3rem;
-  line-height: 3.6rem;
-}
-
-.header__text--descr {
-  max-width: 66rem;
-  margin: 0 auto;
-}
-
-.header__decor {
-  position: relative;
-  display: inline-block;
-  margin: 0 auto;
-  margin-bottom: 1.5rem;
-}
-
-.header__decor::before {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 25%;
-  content: "M";
-  display: block;
-  font-size: 2.1rem;
-}
-
-.header__nav-item {
-  display: inline-block;
-}
-
-.header__bottom-logo {
-  position: relative;
-  padding: 2.3rem 0 2rem;
-  padding-right: 3rem;
-  font-size: 2.6rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  text-align: right;
-  background-color: #004b91;
-}
-
-.header__bottom-logo .header__logo-decor::after {
-  bottom: -9px;
-  border-right: 6px solid #fff;
-}
-
-.header__nav {
-  padding-right: 21.5rem;
-  text-align: right;
-  background-color: #196fc0;
-}
-
-.header__nav ul {
-  margin-bottom: 0;
-}
-
-.header__nav-link {
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  display: block;
-  padding: 3.6rem 1.5rem 3rem;
-  color: #fff;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: -.02em;
-}
-
-.controls__sort-list {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: none;
-  width: 11.5rem;
-  height: 100%;
-  text-align: center;
-  background-color: #fff;
-}
-
-.controls__sort-item {
-  display: block;
-  width: 100%;
-  padding: 4px 0;
-  font-size: 1.3rem;
-}
-
-.works__portfolio-item {
-  padding: 0 !important;
-}
-
-.works__img {
-  height: 25rem;
-}
-
-.mix {
-  display: none;
-}
-
-@font-face {
-  font-family: "Opensans";
-  src: url("../fonts/opensans-semibold.woff2") format("woff2"), url("../fonts/opensans-semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Opensans";
-  src: url("../fonts/opensans-regular.woff2") format("woff2"), url("../fonts/opensans-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Opensans";
-  src: url("../fonts/opensans-light.woff2") format("woff2"), url("../fonts/opensans-light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Opensans";
-  src: url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/opensans-bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Varela";
-  src: url("../fonts/varela-regular.woff2") format("woff2"), url("../fonts/varela-regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@media only screen and (max-width: 991px) {
-  .header__logo {
-    top: 7%;
-  }
-
-  .header__nav {
-    width: 100%;
-  }
-
-  .header__nav-list {
-    text-align: center;
-  }
-
-  .header__bottom-logo {
-    display: none;
-  }
-
-  .header__nav-link {
-    font-size: 1.2rem;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .header-title {
-    margin-bottom: 1rem;
-    font-size: 3rem;
-  }
-
-  .header__logo {
-    top: 3%;
-  }
-}
-
-</style>
 </head>
 
 <body class="page">
@@ -428,7 +64,7 @@ a {
 		</div>
 		<div class="container container--bottom">
 			<div class="row header__bottom-line">
-				<div class="col-md-2 col-sm-2 header__bottom-logo">
+				<div class="col-md-2 header__bottom-logo">
 					<span>Mike</span>
 					<span class="header__logo-decor"></span>
 				</div>
@@ -1061,51 +697,47 @@ dil urient. Suspendisse ullamcorper ornare. Etiam gravida. Morbi nec nulla. <a h
 		<div class="map" id="map">
 					<img class="map__img" src="img/map.jpg" width="1110" height="542" alt="map">
 		</div>
-		<footer class="footer">
-			<div class="footer__icons">
-				<a class="footer__icon-link" href="#">
-					<i class="fa fa-facebook" aria-hidden="true"></i>
-				</a>
-				<a class="footer__icon-link" href="#">
-					<i class="fa fa-instagram" aria-hidden="true"></i>
-				</a>
-				<a class="footer__icon-link" href="#">
-					<i class="fa fa-twitter" aria-hidden="true"></i>
-				</a>
-				<a class="footer__icon-link" href="#">
-					<i class="fa fa-youtube-play" aria-hidden="true"></i>
-				</a>
-				<a class="footer__icon-link" href="#">
-					<i class="fa fa-vimeo-square" aria-hidden="true"></i>
-				</a>
-				<a class="footer__icon-link" href="#">
-					<i class="fa fa-dribbble" aria-hidden="true"></i>
-				</a>
-			</div>
-			<nav class="footer__nav">
-				<ul class="footer__list">
-					<li class=""><a class="footer__nav-link" href="#">HOME</a></li>
-					<li class=""><a class="footer__nav-link" href="#">INTRO</a></li>
-					<li class=""><a class="footer__nav-link" href="#">ABOUT</a></li>
-					<li class=""><a class="footer__nav-link" href="#">SERVICES</a></li>
-					<li class=""><a class="footer__nav-link" href="#">TEAM</a></li>
-					<li class=""><a class="footer__nav-link" href="#">HISTORY</a></li>
-					<li class=""><a class="footer__nav-link" href="#">WORKS</a></li>
-					<li class=""><a class="footer__nav-link" href="#">PRICES</a></li>
-					<li class=""><a class="footer__nav-link" href="#">CONTACT</a></li>
-					<li class=""><a class="footer__nav-link" href="#">BLOG</a></li>
-				</ul>
-				<div class="footer__decor">
-					<div class="footer__decor-item"></div>
-				</div>
-			</nav>
-			<p class="footer__copyright">© Marginal 2017</p>
-		</footer>
 	</main>
-	<link href="css/bootstrap-grid.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/slick.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+	<footer class="footer">
+		<div class="footer__icons">
+			<a class="footer__icon-link" href="#">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+			</a>
+			<a class="footer__icon-link" href="#">
+				<i class="fa fa-instagram" aria-hidden="true"></i>
+			</a>
+			<a class="footer__icon-link" href="#">
+				<i class="fa fa-twitter" aria-hidden="true"></i>
+			</a>
+			<a class="footer__icon-link" href="#">
+				<i class="fa fa-youtube-play" aria-hidden="true"></i>
+			</a>
+			<a class="footer__icon-link" href="#">
+				<i class="fa fa-vimeo-square" aria-hidden="true"></i>
+			</a>
+			<a class="footer__icon-link" href="#">
+				<i class="fa fa-dribbble" aria-hidden="true"></i>
+			</a>
+		</div>
+		<nav class="footer__nav">
+			<ul class="footer__list">
+				<li class=""><a class="footer__nav-link" href="#">HOME</a></li>
+				<li class=""><a class="footer__nav-link" href="#">INTRO</a></li>
+				<li class=""><a class="footer__nav-link" href="#">ABOUT</a></li>
+				<li class=""><a class="footer__nav-link" href="#">SERVICES</a></li>
+				<li class=""><a class="footer__nav-link" href="#">TEAM</a></li>
+				<li class=""><a class="footer__nav-link" href="#">HISTORY</a></li>
+				<li class=""><a class="footer__nav-link" href="#">WORKS</a></li>
+				<li class=""><a class="footer__nav-link" href="#">PRICES</a></li>
+				<li class=""><a class="footer__nav-link" href="#">CONTACT</a></li>
+				<li class=""><a class="footer__nav-link" href="#">BLOG</a></li>
+			</ul>
+			<div class="footer__decor">
+				<div class="footer__decor-item"></div>
+			</div>
+		</nav>
+		<p class="footer__copyright">© Marginal 2017</p>
+	</footer>
 	<link rel="stylesheet" href="css/style.min.css">
 	<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
