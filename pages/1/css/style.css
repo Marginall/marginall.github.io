@@ -569,8 +569,10 @@ h3 {
   border: 1px solid #000;
 }
 
-_:-moz-tree-row(hover),.header-form__search {
-  padding-bottom: 10px;
+_::-webkit-full-page-media,_:future,:root .header-form__search {
+  height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .myClass:not(:root:root) .header-form__search {
