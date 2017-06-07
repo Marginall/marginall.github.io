@@ -573,6 +573,10 @@ _:-moz-tree-row(hover),.header-form__search {
   padding-bottom: 10px;
 }
 
+.myClass:not(:root:root) .header-form__search {
+  padding: 12px 9px;
+}
+
 .header-form-btn {
   position: absolute;
   top: 50%;
@@ -600,13 +604,13 @@ _:-moz-tree-row(hover),.header-form__search {
 
 .contacts__text--big {
   margin-right: 28px;
-  color: #181616;
+  color: #000;
   font-size: 20px;
   line-height: 40px;
 }
 
 .contacts__text--small {
-  color: #2b3056;
+  color: #000;
   font-size: 13px;
 }
 
@@ -645,7 +649,7 @@ _:-moz-tree-row(hover),.header-form__search {
   display: block;
   padding: 18px 7px;
   padding-bottom: 20px;
-  color: #171717;
+  color: #000;
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
@@ -749,7 +753,7 @@ _:-moz-tree-row(hover),.header-form__search {
   display: block;
   width: 11px;
   height: 7px;
-  margin-top: -5px;
+  margin-top: -3px;
   background: transparent url("../img/check.png") no-repeat;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -876,6 +880,37 @@ _:-moz-tree-row(hover),.header-form__search {
   align-items: center;
 }
 
+.user-block__login {
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  padding-left: 30px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.user-block__login:hover {
+  opacity: .5;
+}
+
+.user-block__login:active {
+  color: #cb944c;
+}
+
+.user-block__login::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  display: block;
+  width: 19px;
+  height: 17px;
+  margin-top: -8px;
+  background: transparent url("../img/user-icon.png") no-repeat;
+}
+
 .cart {
   position: relative;
   display: -webkit-box;
@@ -892,7 +927,7 @@ _:-moz-tree-row(hover),.header-form__search {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-left: 35px;
-  color: #252a54;
+  color: #000;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -960,6 +995,10 @@ _:-moz-tree-row(hover),.header-form__search {
   text-transform: uppercase;
 }
 
+_:-ms-fullscreen,:root .cart__items-number {
+  padding-top: 4px;
+}
+
 .cart__text {
   font-size: 14px;
   font-weight: 700;
@@ -972,37 +1011,6 @@ _:-moz-tree-row(hover),.header-form__search {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.user-block__login {
-  position: relative;
-  display: block;
-  padding: 10px 0;
-  padding-left: 30px;
-  color: #252a54;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.user-block__login:hover {
-  opacity: .5;
-}
-
-.user-block__login:active {
-  color: #cb944c;
-}
-
-.user-block__login::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  content: "";
-  display: block;
-  width: 19px;
-  height: 17px;
-  margin-top: -8px;
-  background: transparent url("../img/user-icon.png") no-repeat;
 }
 
 .slider {
