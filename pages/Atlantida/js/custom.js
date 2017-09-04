@@ -13,7 +13,7 @@ $(window).load(function(){
 	$('body').removeClass('loaded');
 });
 
-$(function(){
+$(document).ready(function(){
 	var lastScrollTop = 0;
 	$(window).scroll(function(event){
 		var st = $(this).scrollTop();
