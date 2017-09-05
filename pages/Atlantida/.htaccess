@@ -119,16 +119,6 @@ RewriteRule ^(.*)$ %1/ [R=301,L]
   AddOutputFilterByType DEFLATE text/plain
   AddOutputFilterByType DEFLATE text/xml
   AddOutputFilterByType DEFLATE img/svg+xml
-<IfModule mod_expires.c>
-  ExpiresActive on
-  ExpiresByType img/jpeg "access plus 3 day"
-  ExpiresByType img/svg "access plus 3 day"
-  ExpiresByType img/gif "access plus 3 day"
-  ExpiresByType img/png "access plus 3 day"
-  ExpiresByType text/javascript "access plus 3 day"
-  ExpiresByType text/css "access plus 3 day"
-  ExpiresByType application/javascript "access plus 3 day"
-</IfModule>
 ############################################################################
 #### Антивирус, только для 1С-Битрикс,                                  ####
 ############################################################################
@@ -140,3 +130,20 @@ RewriteRule ^(.*)$ %1/ [R=301,L]
 ############################################################################
 #### Конец общей части, далее следует собственные директивы .htaccess   ####
 ############################################################################
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType img/jpg "access 1 year"
+ExpiresByType img/jpeg "access 1 year"
+ExpiresByType img/gif "access 1 year"
+ExpiresByType img/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType img/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+## EXPIRES CACHING ##
