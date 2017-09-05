@@ -151,7 +151,10 @@ img {
 }
 
 .catalog__pages a {
-  display: block;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   font-weight: 700;
   font-size: 18px;
