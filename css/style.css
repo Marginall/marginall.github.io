@@ -43,9 +43,20 @@ img {
   padding-top: 20px;
 }
 
+.photo {
+  padding-top: 50px;
+}
+
+.main-header__photo {
+  display: flex;
+  width: auto;
+  margin-left: auto;
+  border-radius: 10px;
+}
+
 .main-header__text {
-  padding-top: 120px;
-  text-align: center;
+  padding-top: 80px;
+  text-align: left;
 }
 
 .main__title {
