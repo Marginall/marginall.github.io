@@ -38,6 +38,10 @@ img {
   height: auto;
 }
 
+.wrapper {
+  min-width: 420px;
+}
+
 .main-header {
   margin-bottom: 50px;
   padding-top: 20px;
@@ -214,8 +218,13 @@ img {
     padding-top: 30px;
   }
 
+  .photo {
+    padding-top: 0;
+  }
+
   .main__title {
     margin-bottom: 30px;
+    font-size: 22px;
   }
 
   .catalog__item {
