@@ -255,8 +255,6 @@ $(document).ready(function() {
         return false;
       });
 
-      $('.wrapper--organisation').addClass('animated slideInLeft');
-
       $('.btn--close').click(function() {
         $('.organisation').removeClass('slideInLeft slideInDown');
         $('.organisation').addClass('slideOutUp');
