@@ -34,51 +34,6 @@ $(document).ready(function() {
     }
   });
 
-    function getTimeRemaining(endtime) {
-      var t = Date.parse(endtime) - Date.parse(new Date());
-      var seconds = Math.floor((t / 1000) % 60);
-      var minutes = Math.floor((t / 1000 / 60) % 60);
-      var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-      var days = Math.floor(t / (1000 * 60 * 60 * 24));
-    	var month = Math.floor(t / (1000 * 60 * 60 * 24 * 30));
-      return {
-        'total': t,
-    		'month': month,
-        'days': days,
-        'hours': hours,
-        'minutes': minutes,
-        'seconds': seconds
-      };
-    }
-
-    function initializeClock(id, endtime) {
-      var clock = document.getElementById(id);
-    	var monthSpan = clock.querySelector('.month');
-      var daysSpan = clock.querySelector('.days');
-      var hoursSpan = clock.querySelector('.hours');
-      var minutesSpan = clock.querySelector('.minutes');
-      var secondsSpan = clock.querySelector('.seconds');
-
-      function updateClock() {
-        var t = getTimeRemaining(endtime);
-        monthSpan.innerHTML = t.month;
-        daysSpan.innerHTML = ('0' + t.days).slice(-2);
-        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-        if (t.total <= 0) {
-          clearInterval(timeinterval);
-        }
-      }
-
-      updateClock();
-      var timeinterval = setInterval(updateClock, 1000);
-    }
-
-    var deadline = new Date(Date.parse(new Date()) + 5 * 30 * 24 * 60 * 60 * 1000);
-    initializeClock('clockdiv', deadline);
-
     $('.cd-popup-trigger').on('click', function(event){
   		event.preventDefault();
       $(this).parent().find(".cd-popup").addClass('is-visible');
@@ -96,5 +51,225 @@ $(document).ready(function() {
       	if(event.which=='27'){
       		$('.cd-popup').removeClass('is-visible');
   	    }
-      });
+    });
+
+    // допустимые форматы времени:
+    // https://tools.ietf.org/html/rfc2822#page-14
+    // https://www.w3.org/TR/NOTE-datetime
+    // Напр. 1 декабря 2018, полдень по Москве:
+    var end = new Date('2018-03-01T12:00+03:00')
+      ,offset = (new Date().getTimezoneOffset())*6E4
+      ,timer
+      ,$el
+      ,key
+      ,html = ''
+    ;
+
+    // generate markup
+    html = ['years','months','days','hours','minutes','seconds']
+        .reduce( function(p,c){ return p += makeHtml(c);}, '');
+    $('.chart').html(html);
+
+    $el = { // найти один раз и запомнить
+      Y: {
+        n: $('.chart__bar--years .chart__bar-number'),
+        l: $('.chart__bar--years .chart__bar-label'),
+        b: $('.chart__bar--years') }
+      ,M: {
+        n: $('.chart__bar--months .chart__bar-number'),
+        l: $('.chart__bar--months .chart__bar-label'),
+        b: $('.chart__bar--months') }
+      ,D: {
+        n: $('.chart__bar--days .chart__bar-number'),
+        l: $('.chart__bar--days .chart__bar-label'),
+        b: $('.chart__bar--days') }
+      ,h: {
+        n: $('.chart__bar--hours .chart__bar-number'),
+        l: $('.chart__bar--hours .chart__bar-label'),
+        b: $('.chart__bar--hours') }
+      ,m: {
+        n: $('.chart__bar--minutes .chart__bar-number'),
+        l: $('.chart__bar--minutes .chart__bar-label'),
+        b: $('.chart__bar--minutes') }
+      ,s: {
+        n: $('.chart__bar--seconds .chart__bar-number'),
+        l: $('.chart__bar--seconds .chart__bar-label'),
+        b: $('.chart__bar--seconds') }
+    }
+
+    /**
+     * генерирует html одного блока
+     */
+    function makeHtml(key) {
+      return [
+        '<div class="chart__bar chart__bar--%KEY%">',
+        '  <div class="chart__bar-content timer__item"">        ',
+        '    <div class="chart__bar-number timer__circle"></div> ',
+        '    <div class="chart__bar-label smalltext"></div>  ',
+        '  </div>                                  ',
+        '</div>                                    ',
+      ].join("\n").replace(/%KEY%/g, key);
+    }
+
+    function showRemaining() {
+      var start = new Date(), r;
+
+      if( end - start < 0) return timeHasCome();
+
+      r = calendiff( start, end);
+
+      render( 'Y', r.years, ['Год','Года','Лет'], 3); // сколько максимум лет может быть?
+      render( 'M', r.months, ['Месяц','Месяца','Месяцев'], 12);
+      render( 'D', r.days, ['День','Дня','Дней'], 31);
+      render( 'h', r.hours, ['Час','Часа','Часов'], 24);
+      render( 'm', r.minutes, ['Минута','Минуты','Минут'], 60);
+      render( 's', r.seconds, ['Секунда','Секунды','Секунд'], 60);
+    }
+
+
+    /**
+     * Когда отсчёт закончился, или время уже прошло
+     */
+    function timeHasCome() {
+      if(timer) {
+        window.clearInterval( timer);
+        timer = undefined;
+      }
+      $('.timer').html('<div class="done"></div>');
+    }
+
+    function render( key, n, s, max) {
+      $el[key].n.text( ('0' + n).slice(-2));
+      $el[key].l.text( getNumEnding(n, s));
+      $el[key].b.css('height', ((n / max) * 100) + '%');
+    }
+
+
+  /**
+   * Calendar difference between two dates
+   * @param Date object dateIn start date
+   * @param Date object dateOut end date
+   * @return object with int properties
+   * "years", "months", "days", "hours", "minutes" and "seconds"
+   *
+   * https://github.com/sergiks/calendiff.js
+   *
+   * @author Sergei Sokolov <hello@sergeisokolov.com>
+   */
+  function calendiff( dateIn, dateOut) {
+      var out = {
+          years       : 0
+          ,months     : 0
+          ,days       : 0
+          ,hours      : 0
+          ,minutes    : 0
+          ,seconds    : 0
+      }
+          ,sign = 1
+          ,diff = 0
+          ,proto
+          ,monthsShift
+          ,prop
+      ;
+
+      // check input
+      proto = Object.prototype.toString.call(dateIn);
+      if( proto !== '[object Date]') {
+          dateIn = new Date( dateIn);
+          if( isNaN( dateIn.getTime())) throw 'Incorrect "In" date format';
+      }
+
+      proto = Object.prototype.toString.call(dateOut);
+      if( proto !== '[object Date]') {
+          dateOut = new Date( dateOut);
+          if( isNaN( dateOut.getTime())) throw 'Incorrect "Out" date format';
+      }
+
+
+      // check numeric difference
+      diff = dateOut.getTime() - dateIn.getTime();
+
+      if( diff === 0) {
+          return out;
+      } else if( diff < 0) {
+          sign = -1;
+          dateOut = [dateIn, dateIn = dateOut][0]; // swap the dates
+      }
+
+
+      // calculate human-readable difference
+      out.seconds += dateOut.getSeconds() - dateIn.getSeconds();
+      if( out.seconds < 0) {
+          out.seconds += 60;
+          out.minutes--;
+      }
+
+      out.minutes += dateOut.getMinutes() - dateIn.getMinutes();
+      if( out.minutes < 0) {
+          out.minutes += 60;
+          out.hours--;
+      }
+
+      out.hours += dateOut.getHours() - dateIn.getHours();
+      if( out.hours < 0) {
+          out.hours += 24;
+          out.days--;
+      }
+
+      // complex part: a month can have various number of days
+      // when entering with a negative number of days, up to -31,
+      // it might take up to two months shift back
+      // should the preceding month only have 28, 29 or 30 days.
+      out.days += dateOut.getDate() - dateIn.getDate();
+      while( out.days < 0) {
+          monthsShift = 0;
+          out.days += new Date( dateOut.getFullYear(), dateOut.getMonth() - monthsShift, 0).getDate();
+          monthsShift++;
+          out.months--;
+      }
+
+      out.months += dateOut.getMonth() - dateIn.getMonth();
+      if( out.months < 0) {
+          out.months += 12;
+          out.years--;
+      }
+
+      out.years += dateOut.getFullYear() - dateIn.getFullYear();
+
+      // negative difference case
+      if( sign < 0)
+          for( prop in out)
+              if( out[prop]) out[prop] *= -1; // avoid -0 values
+
+      return out;
+  }
+
+  /**
+   * Функция возвращает окончание для множественного числа слова на основании числа и массива окончаний
+   * param  iNumber Integer Число на основе которого нужно сформировать окончание
+   * param  aEndings Array Массив слов или окончаний для чисел (1, 4, 5),
+   *         например ['яблоко', 'яблока', 'яблок']
+   * return String
+   */
+  function getNumEnding(iNumber, aEndings)
+  {
+    var sEnding, i;
+    iNumber = iNumber % 100;
+    if (iNumber>=11 && iNumber<=19) {
+      sEnding=aEndings[2];
+    } else {
+      i = iNumber % 10;
+      switch (i)
+      {
+        case (1): sEnding = aEndings[0]; break;
+        case (2):
+        case (3):
+        case (4): sEnding = aEndings[1]; break;
+        default: sEnding = aEndings[2];
+      }
+    }
+    return sEnding;
+  }
+
+  timer = setInterval(showRemaining, 200);
 });
