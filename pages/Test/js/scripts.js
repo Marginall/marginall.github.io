@@ -273,3 +273,84 @@ $(document).ready(function() {
 
   timer = setInterval(showRemaining, 200);
 });
+
+
+  $('.slider').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   fade: true,
+   asNavFor: '.slider-nav'
+  });
+
+  $('.slider-nav').slick({
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   centerMode: true,
+   asNavFor: '.slider',
+   dots: false,
+   centerPadding: '25px',
+   centerMode: true,
+   focusOnSelect: true,
+   prevArrow:'<button class="PrevArrow"><span></span></button>',
+   nextArrow:'<button class="NextArrow"><span></span></button>'
+  });
+
+  $('.multiple-items').slick({
+    centerPadding: '40px',
+    variableWidth: true,
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    prevArrow:'<button class="PrevArrow"><span></span></button>',
+    nextArrow:'<button class="NextArrow"><span></span></button>',
+    responsive: [
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+  $('.partners-slider').slick({
+    centerPadding: '20px',
+    variableWidth: true,
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow:'<button class="PrevArrow"><span></span></button>',
+    nextArrow:'<button class="NextArrow"><span></span></button>',
+    responsive: [
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        }
+      }
+    ]
+  });
