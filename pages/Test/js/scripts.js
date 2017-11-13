@@ -272,8 +272,11 @@ $(document).ready(function() {
   }
 
   timer = setInterval(showRemaining, 200);
-});
 
+  $('.slider').removeClass('none');
+  $('.multiple-items').removeClass('none');
+  $('.slider-nav').removeClass('none');
+  $('.partners-slider').removeClass('none');
 
   $('.slider').slick({
    lazyLoad: 'ondemand',
@@ -419,3 +422,4 @@ $(document).ready(function() {
       }
     ]
   });
+});
