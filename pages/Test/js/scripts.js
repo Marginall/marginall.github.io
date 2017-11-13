@@ -34,7 +34,7 @@ $(document).ready(function() {
     }
   });
 
-    $('.cd-popup-trigger').on('click', function(event){
+    $('.content--main  .cd-popup-trigger').on('click', function(event){
   		event.preventDefault();
       $(this).parent().find(".cd-popup").addClass('is-visible');
   	});
@@ -276,31 +276,54 @@ $(document).ready(function() {
 
 
   $('.slider').slick({
+   lazyLoad: 'ondemand',
    slidesToShow: 1,
    slidesToScroll: 1,
+   centerMode: true,
+   centerPadding: '80px',
    arrows: false,
    fade: true,
    asNavFor: '.slider-nav'
   });
 
   $('.slider-nav').slick({
-   slidesToShow: 3,
-   slidesToScroll: 1,
+   lazyLoad: 'ondemand',
+   slidesToShow: 5,
+   slidesToScroll: 5,
    centerMode: true,
    asNavFor: '.slider',
-   dots: false,
-   centerPadding: '25px',
-   centerMode: true,
-   focusOnSelect: true,
+   infinite: true,
+   centerPadding: '30px',
    prevArrow:'<button class="PrevArrow"><span></span></button>',
-   nextArrow:'<button class="NextArrow"><span></span></button>'
+   nextArrow:'<button class="NextArrow"><span></span></button>',
+   responsive: [
+     {
+       breakpoint: 1025,
+       settings: {
+         slidesToShow: 4,
+         slidesToScroll: 4,
+         infinite: true,
+         centerMode: true
+       }
+     },
+     {
+       breakpoint: 769,
+       settings: {
+         slidesToShow: 3,
+         slidesToScroll: 3,
+         infinite: true,
+         centerMode: true
+       }
+     }
+   ]
   });
 
   $('.multiple-items').slick({
-    centerPadding: '40px',
+    centerPadding: '20px',
     variableWidth: true,
     infinite: true,
     centerMode: true,
+    lazyLoad: 'progressive',
     slidesToShow: 6,
     slidesToScroll: 6,
     prevArrow:'<button class="PrevArrow"><span></span></button>',
@@ -312,20 +335,42 @@ $(document).ready(function() {
           slidesToShow: 6,
           slidesToScroll: 6,
           infinite: true,
+          centerMode: true
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 1280,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 5,
+          slidesToScroll: 5,
+          centerMode: true
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          centerMode: true
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          centerPadding: '40px',
+          centerMode: true
+        }
+      },
+      {
+        breakpoint: 641,
+        settings: {
+          autoplay: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          centerPadding: '40px',
+          centerMode: true
         }
       }
       // You can unslick at a given breakpoint now by adding:
@@ -335,6 +380,7 @@ $(document).ready(function() {
   });
 
   $('.partners-slider').slick({
+    autoplay: true,
     centerPadding: '20px',
     variableWidth: true,
     infinite: true,
@@ -345,11 +391,30 @@ $(document).ready(function() {
     nextArrow:'<button class="NextArrow"><span></span></button>',
     responsive: [
       {
-        breakpoint: 1920,
+        breakpoint: 1025,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          centerPadding: '20px',
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          centerPadding: '40px',
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          centerPadding: '10px',
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
         }
       }
     ]
