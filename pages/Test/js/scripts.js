@@ -277,6 +277,7 @@ $(document).ready(function() {
   $('.multiple-items').removeClass('none');
   $('.slider-nav').removeClass('none');
   $('.partners-slider').removeClass('none');
+  $('.gallery').removeClass('none');
 
   $('.slider').slick({
    lazyLoad: 'ondemand',
@@ -422,4 +423,83 @@ $(document).ready(function() {
       }
     ]
   });
+
+  $('.gallery').slick({
+    autoplay: true,
+    centerPadding: '20px',
+    variableWidth: true,
+    infinite: true,
+    centerMode: true,
+    lazyLoad: 'progressive',
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow:'<button class="PrevArrow"><span></span></button>',
+    nextArrow:'<button class="NextArrow"><span></span></button>'
+  });
+
+  $('.partner__form select').styler({
+    selectPlaceholder: 'Выберите рубрику'
+  });
+
+  $('.partner__check').styler();
+
+  $( '#sortpicture' ).change(function() {
+    $(".partner__btn").text("Файл выбран");
+  });
+
+  (function() {
+    var reviewForm = document.querySelector("#revForm");
+
+    if (!("FormData" in window)) {
+      return;
+    }
+
+    reviewForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      var data = new FormData(reviewForm);
+
+      request(data, function(response) {
+        console.log(response);
+      });
+    });
+
+    function request(data, fn) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("post", "handler.php?" + (new Date()).getTime());
+      xhr.addEventListener("readystatechange", function() {
+        if (xhr.readyState == 4) {
+          fn(xhr.responseText);
+        }
+      });
+      xhr.send(data);
+    }
+  })();
+
+  (function() {
+    var partnerForm = document.querySelector(".partner__form");
+
+    if (!("FormData" in window)) {
+      return;
+    }
+
+    partnerForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      var data = new FormData(partnerForm);
+
+      request(data, function(response) {
+        console.log(response);
+      });
+    });
+
+    function request(data, fn) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("post", "handler.php?" + (new Date()).getTime());
+      xhr.addEventListener("readystatechange", function() {
+        if (xhr.readyState == 4) {
+          fn(xhr.responseText);
+        }
+      });
+      xhr.send(data);
+    }
+  })();
 });

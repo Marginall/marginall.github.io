@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Главная</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="#" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<link rel="preload" href="css/style.min.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+	<script>
+		!function(e){"use strict";var t=function(t,n,r){function o(e){if(i.body)return e();setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);
+	</script>
+	<script>
+	/* Font Face Observer v2.0.13 - © Bram Stein. License: BSD-3-Clause */(function(){'use strict';var f,g=[];function l(a){g.push(a);1==g.length&&f()}function m(){for(;g.length;)g[0](),g.shift()}f=function(){setTimeout(m)};function n(a){this.a=p;this.b=void 0;this.f=[];var b=this;try{a(function(a){q(b,a)},function(a){r(b,a)})}catch(c){r(b,c)}}var p=2;function t(a){return new n(function(b,c){c(a)})}function u(a){return new n(function(b){b(a)})}function q(a,b){if(a.a==p){if(b==a)throw new TypeError;var c=!1;try{var d=b&&b.then;if(null!=b&&"object"==typeof b&&"function"==typeof d){d.call(b,function(b){c||q(a,b);c=!0},function(b){c||r(a,b);c=!0});return}}catch(e){c||r(a,e);return}a.a=0;a.b=b;v(a)}}
+	function r(a,b){if(a.a==p){if(b==a)throw new TypeError;a.a=1;a.b=b;v(a)}}function v(a){l(function(){if(a.a!=p)for(;a.f.length;){var b=a.f.shift(),c=b[0],d=b[1],e=b[2],b=b[3];try{0==a.a?"function"==typeof c?e(c.call(void 0,a.b)):e(a.b):1==a.a&&("function"==typeof d?e(d.call(void 0,a.b)):b(a.b))}catch(h){b(h)}}})}n.prototype.g=function(a){return this.c(void 0,a)};n.prototype.c=function(a,b){var c=this;return new n(function(d,e){c.f.push([a,b,d,e]);v(c)})};
+	function w(a){return new n(function(b,c){function d(c){return function(d){h[c]=d;e+=1;e==a.length&&b(h)}}var e=0,h=[];0==a.length&&b(h);for(var k=0;k<a.length;k+=1)u(a[k]).c(d(k),c)})}function x(a){return new n(function(b,c){for(var d=0;d<a.length;d+=1)u(a[d]).c(b,c)})};window.Promise||(window.Promise=n,window.Promise.resolve=u,window.Promise.reject=t,window.Promise.race=x,window.Promise.all=w,window.Promise.prototype.then=n.prototype.c,window.Promise.prototype["catch"]=n.prototype.g);}());
+	(function(){function l(a,b){document.addEventListener?a.addEventListener("scroll",b,!1):a.attachEvent("scroll",b)}function m(a){document.body?a():document.addEventListener?document.addEventListener("DOMContentLoaded",function c(){document.removeEventListener("DOMContentLoaded",c);a()}):document.attachEvent("onreadystatechange",function k(){if("interactive"==document.readyState||"complete"==document.readyState)document.detachEvent("onreadystatechange",k),a()})};function r(a){this.a=document.createElement("div");this.a.setAttribute("aria-hidden","true");this.a.appendChild(document.createTextNode(a));this.b=document.createElement("span");this.c=document.createElement("span");this.h=document.createElement("span");this.f=document.createElement("span");this.g=-1;this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
+	this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;";this.b.appendChild(this.h);this.c.appendChild(this.f);this.a.appendChild(this.b);this.a.appendChild(this.c)}
+	function t(a,b){a.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;white-space:nowrap;font-synthesis:none;font:"+b+";"}function y(a){var b=a.a.offsetWidth,c=b+100;a.f.style.width=c+"px";a.c.scrollLeft=c;a.b.scrollLeft=a.b.scrollWidth+100;return a.g!==b?(a.g=b,!0):!1}function z(a,b){function c(){var a=k;y(a)&&a.a.parentNode&&b(a.g)}var k=a;l(a.b,c);l(a.c,c);y(a)};function A(a,b){var c=b||{};this.family=a;this.style=c.style||"normal";this.weight=c.weight||"normal";this.stretch=c.stretch||"normal"}var B=null,C=null,E=null,F=null;function G(){if(null===C)if(J()&&/Apple/.test(window.navigator.vendor)){var a=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);C=!!a&&603>parseInt(a[1],10)}else C=!1;return C}function J(){null===F&&(F=!!document.fonts);return F}
+	function K(){if(null===E){var a=document.createElement("div");try{a.style.font="condensed 100px sans-serif"}catch(b){}E=""!==a.style.font}return E}function L(a,b){return[a.style,a.weight,K()?a.stretch:"","100px",b].join(" ")}
+	A.prototype.load=function(a,b){var c=this,k=a||"BESbswy",q=0,D=b||3E3,H=(new Date).getTime();return new Promise(function(a,b){if(J()&&!G()){var M=new Promise(function(a,b){function e(){(new Date).getTime()-H>=D?b():document.fonts.load(L(c,'"'+c.family+'"'),k).then(function(c){1<=c.length?a():setTimeout(e,25)},function(){b()})}e()}),N=new Promise(function(a,c){q=setTimeout(c,D)});Promise.race([N,M]).then(function(){clearTimeout(q);a(c)},function(){b(c)})}else m(function(){function u(){var b;if(b=-1!=
+	f&&-1!=g||-1!=f&&-1!=h||-1!=g&&-1!=h)(b=f!=g&&f!=h&&g!=h)||(null===B&&(b=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),B=!!b&&(536>parseInt(b[1],10)||536===parseInt(b[1],10)&&11>=parseInt(b[2],10))),b=B&&(f==v&&g==v&&h==v||f==w&&g==w&&h==w||f==x&&g==x&&h==x)),b=!b;b&&(d.parentNode&&d.parentNode.removeChild(d),clearTimeout(q),a(c))}function I(){if((new Date).getTime()-H>=D)d.parentNode&&d.parentNode.removeChild(d),b(c);else{var a=document.hidden;if(!0===a||void 0===a)f=e.a.offsetWidth,
+	g=n.a.offsetWidth,h=p.a.offsetWidth,u();q=setTimeout(I,50)}}var e=new r(k),n=new r(k),p=new r(k),f=-1,g=-1,h=-1,v=-1,w=-1,x=-1,d=document.createElement("div");d.dir="ltr";t(e,L(c,"sans-serif"));t(n,L(c,"serif"));t(p,L(c,"monospace"));d.appendChild(e.a);d.appendChild(n.a);d.appendChild(p.a);document.body.appendChild(d);v=e.a.offsetWidth;w=n.a.offsetWidth;x=p.a.offsetWidth;I();z(e,function(a){f=a;u()});t(e,L(c,'"'+c.family+'",sans-serif'));z(n,function(a){g=a;u()});t(n,L(c,'"'+c.family+'",serif'));
+	z(p,function(a){h=a;u()});t(p,L(c,'"'+c.family+'",monospace'))})})};"object"===typeof module?module.exports=A:(window.FontFaceObserver=A,window.FontFaceObserver.prototype.load=A.prototype.load);}());
+	</script>
+	<script>
+		var html = document.documentElement;
+			var regularFontA = new FontFaceObserver("Inglobal", {
+				weight: "400"
+			});
+
+			var regularFontB = new FontFaceObserver("Georgia", {
+				weight: "400"
+			});
+
+			Promise.race([
+				regularFontA.load(null, 15000),
+				regularFontB.load(null, 15000),
+			]).then(function () {
+				html.classList.add("fonts-loaded");
+				sessionStorage.fontsLoaded = true;
+			});
+	</script>
+</head>
+<body>
+	<div class="main-wrapper">
+		<header class="header">
+			<div class="wrapper wrapper--header">
+				<a href="#" class="logo"><img src="img/logo.png" width="141" height="109"></a>
+				<div class="header__wrap">
+					<h1 class="title title--header"><span class="logo-text">MISS-<span>i</span>-BULGARIA</span></h1>
+					<p class="header__text">първи интерактивен конкурс за красота</p>
+				</div>
+				<button class="header__btn" id="header-btn" type="button">
+					<div class="burger">
+						<div class="burger-brick"></div>
+						<div class="burger-brick middle"></div>
+						<div class="burger-brick"></div>
+					</div>
+				</button>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="#" class="nav__link">Конкурс</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Участие</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Етапы</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Награды</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Правила</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">За нас</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Парньори</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+					</ul>
+				</nav>
+				<nav class="nav nav--mobile animated">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="#" class="nav__link">Конкурс</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Участие</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Етапы</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Награды</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Правила</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">За нас</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Парньори</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="content content--partner partner">
+			<div class="wrapper wrapper--partner">
+				<div class="partner__wrap partner__wrap--top">
+					<div class="left-column">
+						<p class="partner__text partner__text--left"><span>Приглашаем Вас стать партнером</span><br> самого престижного онлайн конкурса красоты<br><span>“Miss- i-Bulgaria 2018”<span></p>
+						<p class="partner__text partner__text--red">О Вас узнают тысячи красавиц и их поклонники</p>
+						<div class="partner__condition">Условия</div>
+					</div>
+					<div class="right-column">
+						<p class="partner__text partner__text--right">Становясь партнером конкурса, Вы получаете возможность: </p>
+						<ul class="partner__list">
+							<li class="partner__item">размещение информации о Вашем бизнесе на страницах
+конкурса и персональной страничке Учасниц</li>
+							<li class="partner__item">быть представленным в качестве рекомендованого места
+посещения нашими красавицами конкурсантками</li>
+							<li class="partner__item">личное интервью и размещение ваших лого и многое другое</li>
+						</ul>
+						<div class="partner__price">Цены</div>
+					</div>
+				</div>
+				<p class="partner__text partner__text--center">Стать партнером конкурса очень легко, просто запоните
+форму ниже и укажите контактные данные для связи с вами.
+Наши сотрудники свяжуться с Вами течении 24 часов</p>
+				<form class="partner__form" enctype="multipart/form-data" method="post">
+					<div class="partner__form-wrap">
+						<select class="partner__categories" name="categories" required>Выберите рубрику
+							<option></option>
+							<option value="categories-1">12345</option>
+							<option value="categories-2">23456</option>
+							<option value="categories-3">34567</option>
+							<option value="categories-1">12345</option>
+							<option value="categories-2">23456</option>
+							<option value="categories-3">34567</option>
+							<option value="categories-1">12345</option>
+							<option value="categories-2">23456</option>
+							<option value="categories-3">34567</option>
+						</select>
+					</div>
+					<div class="partner__form-wrap">
+						<input id="companyName" class="partner__form-item" type="text" name="companyName" value="" placeholder="Название" required>
+						<input id="companyAdres" class="partner__form-item" type="text" name="companyAdres" value="" placeholder="Адрес" required>
+						<input id="companyPhone" class="partner__form-item" type="tel" name="companyPhone" value="" placeholder="Телефон" required>
+						<input id="companyUrl" class="partner__form-item" type="url" name="companyUrl" value="" placeholder="Сайт" required>
+					</div>
+					<div class="partner__form-wrap partner__form-wrap--upload">
+						<div class="partner__form-item">Загрузите фото</div>
+						<input class="partner__upload inputfile" id="sortpicture" type="file" name="sortpic" required>
+						<label class="partner__btn btn btn--blue" for="sortpicture">Выберите файл</label>
+					</div>
+					<div class="partner__form-wrap">
+						<textarea class="partner__form-item partner__form-item--textarea" id="companyDescr" name="companyDescr" placeholder="Описание или рекламное
+предложение"></textarea>
+					</div>
+					<div class="partner__form-wrap">
+						<p class="partner__text partner__text--form">Данные для связи с вами на
+сайте не публюкуются</p>
+						<input class="partner__form-item" id="contactName" type="text" name="contactName" value="" placeholder="Ваше имя и должность" required>
+						<input class="partner__form-item" id="contactEmale" type="mail" name="contactEmale" value="" placeholder="E-mail" required>
+						<input class="partner__form-item" id="contactPhone" type="tel" name="contactEmale" value="" placeholder="Сотовый" required>
+					</div>
+					<div class="partner__form-wrap partner__form-wrap--center checkbox">
+						<label for="partnerCheck" class="partner__text partner__text--confirmation">Отправляя форму, Вы подтверждаете
+согласие с обработкой персональных данных.</label>
+						<input class="partner__check" id="partnerCheck" type="checkbox" name="partnerCheck" value="partnerCheck" required>
+					</div>
+					<button class="btn btn--submit btn--red">Я согласен</button>
+				</form>
+			</div>
+			<div class="wrapper wrapper--social-bottom social-bottom">
+				<div class="social">
+					<p class="social-bottom__text">Connect width us</p>
+					<ul class="social__list">
+						<li class="social__item"><a href="#" class="social__link social__link--fb"></a></li>
+						<li class="social__item"><a href="#" class="social__link social__link--inst"></a></li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="wrapper wrapper--footer">
+				<a href="#" class="logo"><img src="img/logo.png" width="141" height="109"></a>
+				<div class="footer__wrap">
+					<h1 class="title"><span class="logo-text">MISS-<span>i</span>-BULGARIA</span></h1>
+					<p class="header__text">първи интерактивен конкурс за красота</p>
+				</div>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="#" class="nav__link">Конкурс</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Участие</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Етапы</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Награды</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Правила</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">За нас</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Парньори</a></li>
+						<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+	</div>
+	<div class="wrapper-outer"></div>
+	<script defer type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script defer type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+	<script defer type="text/javascript" src="js/concat.js"></script>
+	<script defer type="text/javascript" src="js/scripts.min.js"></script>
+</body>
+</html>
