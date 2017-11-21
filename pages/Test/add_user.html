@@ -154,75 +154,80 @@
 				</nav>
 			</div>
 		</header>
-		<main class="content content--partner partner">
-			<div class="wrapper wrapper--partner">
-				<div class="partner__wrap partner__wrap--top">
-					<div class="left-column">
-						<p class="partner__text partner__text--left"><span>Приглашаем Вас стать партнером</span><br> самого престижного онлайн конкурса красоты<br><span>“Miss- i-Bulgaria 2018”<span></p>
-						<p class="partner__text partner__text--red">О Вас узнают тысячи красавиц и их поклонники</p>
-						<div class="partner__condition">Условия</div>
-					</div>
-					<div class="right-column">
-						<p class="partner__text partner__text--right">Становясь партнером конкурса, Вы получаете возможность: </p>
-						<ul class="partner__list">
-							<li class="partner__item">размещение информации о Вашем бизнесе на страницах
-конкурса и персональной страничке Учасниц</li>
-							<li class="partner__item">быть представленным в качестве рекомендованого места
-посещения нашими красавицами конкурсантками</li>
-							<li class="partner__item">личное интервью и размещение ваших лого и многое другое</li>
-						</ul>
-						<div class="partner__price">Цены</div>
-					</div>
-				</div>
-				<p class="partner__text partner__text--center">Стать партнером конкурса очень легко, просто запоните
-форму ниже и укажите контактные данные для связи с вами.
-Наши сотрудники свяжуться с Вами течении 24 часов</p>
-				<form class="partner__form" enctype="multipart/form-data" method="post">
-					<div class="partner__form-wrap">
-						<select class="partner__categories" name="categories" required>Выберите рубрику
-							<option></option>
-							<option value="categories-1">12345</option>
-							<option value="categories-2">23456</option>
-							<option value="categories-3">34567</option>
-							<option value="categories-1">12345</option>
-							<option value="categories-2">23456</option>
-							<option value="categories-3">34567</option>
-							<option value="categories-1">12345</option>
-							<option value="categories-2">23456</option>
-							<option value="categories-3">34567</option>
-						</select>
-					</div>
-					<div class="partner__form-wrap">
-						<input id="companyName" class="partner__form-item" type="text" name="companyName" value="" placeholder="Название" required>
-						<input id="companyAdres" class="partner__form-item" type="text" name="companyAdres" value="" placeholder="Адрес" required>
-						<input id="companyPhone" class="partner__form-item" type="tel" name="companyPhone" value="" placeholder="Телефон" required>
-						<input id="companyUrl" class="partner__form-item" type="url" name="companyUrl" value="" placeholder="Сайт" required>
-					</div>
-					<div class="partner__form-wrap partner__form-wrap--upload">
-						<div class="partner__form-item">Загрузите фото</div>
-						<input class="partner__upload inputfile" id="sortpicture" type="file" name="sortpic" required>
-						<label class="partner__btn btn btn--blue" for="sortpicture">Выберите файл</label>
-					</div>
-					<div class="partner__form-wrap">
-						<textarea class="partner__form-item partner__form-item--textarea" id="companyDescr" name="companyDescr" placeholder="Описание или рекламное
-предложение"></textarea>
-					</div>
-					<div class="partner__form-wrap">
-						<p class="partner__text partner__text--form">Данные для связи с вами на
-сайте не публюкуются</p>
-						<input class="partner__form-item" id="contactName" type="text" name="contactName" value="" placeholder="Ваше имя и должность" required>
-						<input class="partner__form-item" id="contactEmale" type="mail" name="contactEmale" value="" placeholder="E-mail" required>
-						<input class="partner__form-item" id="contactPhone" type="tel" name="contactEmale" value="" placeholder="Сотовый" required>
-					</div>
-					<div class="partner__form-wrap partner__form-wrap--center checkbox">
-						<label for="partnerCheck" class="partner__text partner__text--confirmation">Отправляя форму, Вы подтверждаете
-согласие с обработкой персональных данных.</label>
-						<input class="partner__check" id="partnerCheck" type="checkbox" name="partnerCheck" value="partnerCheck" required>
-					</div>
-					<button class="btn btn--submit btn--red">Я согласен</button>
-				</form>
+		<main class="content questionnaire">
+			<div class="wrapper wrapper--questionnaire">
+	      <p class="questionnaire__text">Приглашаем к Участвию в фееричном конкурсе красоты “MISS-i-BULGARIA”
+Дорогие девушки, участвуйте в конкурсе, подавайте свои анкеты, добавляйте
+фотографии и выигрывайте! На сей раз конкурс проходит в рабочем режиме,
+ призы гораздо значительнее; церемония награждения – пафосное шоу,
+которое будет транслироваться в онлайн-режиме в социальных сетях.<br>
+Участвие абсолютно <strong>БЕССПЛАТНОЕ</strong></p>
+        <h2 class="title title--questionnaire">
+          <svg class="title__icon" width="45" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#crown"/></svg>
+          <span>Анкета участницы</span>
+        </h2>
+        <form id="userForm" class="user" enctype="multipart/form-data" method="post">
+          <div class="left-column">
+            <div class="user__wrap">
+              <div class="user__wrap user__wrap--sub">
+                <label class="user__foto user__foto--1 user__foto--small user__foto--top" for="userFoto1">
+                  <div class="test"></div>
+                  <span>Фото 1</span>
+                  <div class="user__wrap">
+                    <svg class="user__icon" width="25" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"/></svg>
+                      <span>Лицо</span>
+                  </div>
+                  <input id="userFoto1" type="file" name="userFoto1" value="">
+                </label>
+                <label class="user__foto user__foto--2 user__foto--small" for="userFoto2">
+                  <span>Фото 2</span>
+                  <div class="user__wrap">
+                    <svg class="user__icon" width="25" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"/></svg>
+                    <span>Доп фото</span>
+                  </div>
+                  <input id="userFoto2" type="file" name="userFoto2" value="">
+                </label>
+              </div>
+              <label class="user__foto user__foto--3" for="userFoto3">
+                <span>Фото 3</span>
+                <div class="user__wrap">
+                  <svg class="user__icon" width="25" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"/></svg>
+                  <span>Ваше фото в полный рост</span>
+                </div>
+                <input id="userFoto3" type="file" name="userFoto3" value="">
+              </label>
+            </div>
+						<ul class="user__upload-list"></ul>
+						<label class="user__upload btn btn--red" for="uploadFoto">Добавить фото
+							<input id="uploadFoto" type="file" name="uploadFoto" value="">
+						</label>
+            <p class="user__text">На своей страницче Вы сможете узнавать сколько уже за вас
+проголосовало. Только Вы будете видеть эту информаию</p>
+          </div>
+          <div class="right-column">
+            <input id="userName" class="user__field" type="text" name="userName" value="" placeholder="Имя, Фамилия">
+              <input id="userAge" class="user__field" type="text" name="userAge" value="" placeholder="Возраст">
+                <input id="userLength" class="user__field" type="text" name="userLength" value="" placeholder="Рост">
+                  <input id="userCity" class="user__field" type="text" name="userCity" value="" placeholder="Город">
+                    <input id="userEdu" class="user__field" type="text" name="userEdu" value="" placeholder="Образование">
+                      <input id="userProf" class="user__field" type="text" name="userProf" value="" placeholder="Профессия">
+          <textarea id="userText" class="user__area" name="userText" placeholder="О себе"></textarea>
+          <div class="g-recaptcha user__recaptcha" data-sitekey="ВАШ_КЛЮЧ"></div>
+          <div class="checkbox">
+            <label for="partnerCheck" class="user__text user__text--red">Сохранить анкету и принять участие в
+  конкурсе. Соглашаясь, вы подтверждате,
+  что ознакомлены и согласны с правилами
+  участия.</label>
+            <input class="partner__check" id="partnerCheck" type="checkbox" name="partnerCheck" value="partnerCheck" required>
+          </div>
+          <button class="user__submit btn btn--blue" type="submit" value="Yes">Yes</button>
+          <a href="#" class="user__reset btn btn--red">Удалить анкету</a>
+          <p class="user__text user__text--red">Удаляя анкету,вы соглашаетесь
+с правилами участвия</p>
+          </div>
+        </form>
 			</div>
-			<div class="wrapper wrapper--social-bottom social-bottom">
+      <div class="wrapper wrapper--social-bottom social-bottom">
 				<div class="social">
 					<p class="social-bottom__text">Connect width us</p>
 					<ul class="social__list">
@@ -255,6 +260,14 @@
 		</footer>
 	</div>
 	<div class="wrapper-outer"></div>
+	<script  id="image-template" type="text/html">
+		<div class="upload-images__img-wrap">
+			<img src="{{image}}" width="100" height="120" alt="{{name}}" title="{{name}}">
+		</div>
+		<a href="#" class="upload-images__del-link" title="Удалить">Удалить фото
+			<span class="icon-del"></span>
+		</a>
+  </script>
 	<script defer type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 	<script defer type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
 	<script defer type="text/javascript" src="js/concat.js"></script>

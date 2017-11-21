@@ -447,6 +447,12 @@ $(document).ready(function() {
     $(".partner__btn").text("Файл выбран");
   });
 
+  $(".user__link").click(function (event) {
+    event.preventDefault();
+    $(this).parent().parent().find(".user__img").remove();
+    $("[type='file']").val("").trigger("change");
+  });
+
   (function() {
     var reviewForm = document.querySelector("#revForm");
 
@@ -503,3 +509,182 @@ $(document).ready(function() {
     }
   })();
 });
+
+
+(function() {
+   if ("FileReader" in window) {
+
+       var form = document.querySelector("#userForm");
+       var area1 = document.querySelector(".user__foto--1");
+
+       form.querySelector("#userFoto1").addEventListener("change", function() {
+           var files = this.files;
+           for (var i = 0; i < files.length; i++) {
+               preview(files[i]);
+           }
+       });
+
+       function preview(file) {
+           if (file.type.match(/image.*/)) {
+               var reader = new FileReader();
+               reader.addEventListener("load", function(event) {
+                   var newImg = document.createElement("img");
+                   newImg.src = event.target.result;
+                   newImg.alt = file.name;
+                   newImg.setAttribute("id", "photo1");
+                   newImg.setAttribute("class", "user__img");
+                   newImg.setAttribute("width", "125");
+                   newImg.setAttribute("height", "140");
+                   area1.appendChild(newImg);
+               });
+               reader.readAsDataURL(file);
+           }
+       }
+   }
+})();
+
+(function() {
+   if ("FileReader" in window) {
+
+       var form = document.querySelector("#userForm");
+       var area2 = document.querySelector(".user__foto--2");
+
+       form.querySelector("#userFoto2").addEventListener("change", function() {
+           var files = this.files;
+           for (var i = 0; i < files.length; i++) {
+               preview(files[i]);
+           }
+       });
+
+       function preview(file) {
+           if (file.type.match(/image.*/)) {
+               var reader = new FileReader();
+               reader.addEventListener("load", function(event) {
+                   var newImg = document.createElement("img");
+                   newImg.src = event.target.result;
+                   newImg.alt = file.name;
+                   newImg.setAttribute("id", "photo2");
+                   newImg.setAttribute("class", "user__img");
+                   newImg.setAttribute("width", "125");
+                   newImg.setAttribute("height", "140");
+                   area2.appendChild(newImg);
+               });
+               reader.readAsDataURL(file);
+           }
+       }
+   }
+})();
+
+(function() {
+   if ("FileReader" in window) {
+
+       var form = document.querySelector("#userForm");
+       var area3 = document.querySelector(".user__foto--3");
+
+       form.querySelector("#userFoto3").addEventListener("change", function() {
+           var files = this.files;
+           for (var i = 0; i < files.length; i++) {
+               preview(files[i]);
+           }
+       });
+
+       function preview(file) {
+           if (file.type.match(/image.*/)) {
+               var reader = new FileReader();
+               reader.addEventListener("load", function(event) {
+                   var newImg = document.createElement("img");
+                   newImg.src = event.target.result;
+                   newImg.alt = file.name;
+                   newImg.setAttribute("id", "photo3");
+                   newImg.setAttribute("class", "user__img");
+                   newImg.setAttribute("width", "125");
+                   newImg.setAttribute("height", "140");
+                   area3.appendChild(newImg);
+               });
+               reader.readAsDataURL(file);
+           }
+       }
+   }
+})();
+
+(function() {
+  if (!("FormData" in window)) {
+    return;
+  }
+
+  if ("FileReader" in window) {
+
+      var form = document.querySelector("#userForm");
+      var areaInner = document.querySelector(".user__upload-list");
+      var template = document.querySelector("#image-template").innerHTML;
+
+      var queue = [];
+
+      userForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        var data = new FormData(userForm);
+
+        queue.forEach(function(element) {
+          data.append("images", element.file);
+        });
+
+        request(data, function(response) {
+          console.log(response);
+        });
+      });
+
+      function request(data, fn) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("post", "handler.php?" + (new Date()).getTime());
+        xhr.addEventListener("readystatechange", function() {
+          if (xhr.readyState == 4) {
+            fn(xhr.responseText);
+          }
+        });
+        xhr.send(data);
+      }
+
+      form.querySelector("#uploadFoto").addEventListener("change", function() {
+          var files = this.files;
+          for (var i = 0; i < files.length; i++) {
+              preview(files[i]);
+          }
+
+          this.value = "";
+       });
+
+      function preview(file) {
+          if (file.type.match(/image.*/)) {
+              var reader = new FileReader();
+              reader.addEventListener("load", function(event) {
+                 var html = Mustache.render(template, {
+                   "image": event.target.result,
+                   "name": file.name
+                 });
+
+                 var li = document.createElement("li");
+                 li.classList.add("upload-images__item");
+                 li.innerHTML = html;
+
+                 areaInner.appendChild(li);
+
+                 li.querySelector(".upload-images__del-link").addEventListener("click", function(event) {
+                   event.preventDefault();
+                   removePreview(li);
+                 });
+                 queue.push({
+                   "file": file,
+                   "li": li
+                 });
+              });
+              reader.readAsDataURL(file);
+          }
+      }
+
+      function removePreview(li) {
+       queue = queue.filter(function(element) {
+         return element.li != li;
+       });
+       li.parentNode.removeChild(li); }
+  }
+})();

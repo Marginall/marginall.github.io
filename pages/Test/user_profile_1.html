@@ -12,6 +12,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="#" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
@@ -154,109 +156,84 @@
 				</nav>
 			</div>
 		</header>
-		<main class="content">
-			<div class="wrapper wrapper--partner-profile partner-profile">
-				<div class="partner-profile__wrap partner-profile__wrap--main">
-	        <div class="crown crown--inner">
-	          <h2 class="crown__text crown__text--partner-title">Магазин за красота</h2>
-						<p class="crown__text crown__text--partner-profile">Магазин одежды “Зара” - выбор наших красавиц</p>
-	        </div>
-				</div>
-        <div class="left-column">
-          <img src="img/partner_foto_main.jpg" width="445" height="300" alt="Zara">
-          <div class="partner-profile__wrap partner-profile__wrap--small">
-						<svg class="partner-profile__icon" width="50" height="50"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#calendar"/></svg>
-            <span>Среда в 20.00-23.00</span>
-            <tel>0 878 91 69 55</tel>
-            <address>
-              у. Рила 52, 900, Варна,Болгария
-сайт,маил
-            </address>
+		<main class="content questionnaire-logged">
+			<div class="wrapper wrapper--questionnaire">
+	      <p class="questionnaire__text">Желаю вам максимально ярко продемонстрировать свой талант, удивить жюри своими творческими
+находками и получить заряд положительных эмоций!<br>
+Всем весеннего настроения и позитива!</p>
+        <h2 class="title title--questionnaire">
+          <svg class="title__icon" width="45" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#crown"/></svg>
+          <span>Ваша анкета</span>
+        </h2>
+        <form id="userForm" class="user" enctype="multipart/form-data" method="post">
+          <div class="left-column">
+            <div class="user__wrap">
+              <div class="user__wrap user__wrap--sub">
+                <label class="user__foto user__foto--1 user__foto--small user__foto--top" for="userFoto1">
+                  <span>Фото 1</span>
+									<img class="user__img" src="img/demo.jpg" alt="Фото1">
+                  <div class="user__wrap">
+                    <svg class="user__icon" width="25" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"/></svg>
+                    <span>Лицо</span>
+										<a class="user__link" href="#">Удалить фото</a>
+                  </div>
+                  <input id="userFoto1" type="file" name="userFoto1" value="">
+                </label>
+                <label class="user__foto user__foto--2 user__foto--small" for="userFoto2">
+                  <span>Фото 2</span>
+									<img class="user__img" src="img/demo.jpg" alt="Фото1">
+                  <div class="user__wrap">
+                    <svg class="user__icon" width="25" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"/></svg>
+                    <span>Доп фото</span>
+										<a class="user__link" href="#">Удалить фото</a>
+                  </div>
+                  <input id="userFoto2" type="file" name="userFoto2" value="">
+                </label>
+              </div>
+              <label class="user__foto user__foto--3" for="userFoto3">
+                <span>Фото 3</span>
+								<img class="user__img" src="img/demo.jpg" alt="Фото1">
+                <div class="user__wrap">
+                  <svg class="user__icon" width="25" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"/></svg>
+                  <span>Ваше фото в полный рост</span>
+									<a class="user__link" href="#">Удалить фото</a>
+                </div>
+                <input id="userFoto3" type="file" name="userFoto3" value="">
+              </label>
+            </div>
+						<ul class="user__upload-list"></ul>
+						<label class="user__upload btn btn--red" for="uploadFoto">Добавить фото
+							<input id="uploadFoto" type="file" name="uploadFoto" value="">
+						</label>
+            <p class="user__text">За Вас проголосовало уже <span id="likes">25</span> человек. <strong>Поздравляем!</strong>
+Делитесь своим профилем в соц сетях,чтобы увеличить
+количество голосов,и помните,что за вас можно голосовать
+каждый день не более одного раза каждому гостю сайта
+              <svg class="user__like" width="20" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#like"/></svg>
+            </p>
+            <div class="user__reviews">
+              <span>Ваши комментарии</span>
+            </div>
+            <p class="user__text user__text--reviews">Вы можете просматривать,отвечать на вопросы
+и удалять комментарии</p>
           </div>
-					<div class="social social--partner-profile">
-						<p class="social__text--partner-profile">Поделиться:</p>
-						<ul class="social__list">
-							<li class="social__item"><a href="#" class="social__link social__link--fb"></a></li>
-							<li class="social__item"><a href="#" class="social__link social__link--inst"></a></li>
-						</ul>
-					</div>
-        </div>
-        <div class="right-column">
-        	<p class="partner-profile__text">Zara - известный испанский бренд, занимающийся
-производством мужской, женской и детской одежды.
-Zara - одна из ведущих мировых компаний по
-производству модной одежды. Она входит в группу
-Inditex, одну из крупнейших мировых дистрибьюторских
-групп.Zara - это всегда модно и стильно.</p>
-					<p class="partner-profile__text">По всему миру открыто свыше 1500 магазинов Zara.
-Zara - известный испанский бренд, занимающийся
-производством мужской, женской и детской одежды.
-Zara - одна из ведущих мировых компаний по
-производству модной одежды. Она входит в группу
-Inditex, одну из крупнейших мировых дистрибьюторских
-групп.Zara - известный испанский бренд, занимающийся
-производством мужской, женской и детской одежды.</p>
-					<p class="partner-profile__text">Zara - это всегда модно и стильно.</p>
-        </div>
-				<h2 class="title title--inner">Галерея</h2>
-				<div class="partner-profile__slider gallery none">
-					<img src="img/partner_foto_1.jpg" alt="Zara">
-					<img src="img/partner_foto_2.jpg" alt="Zara">
-					<img src="img/partner_foto_3.jpg" alt="Zara">
-					<img src="img/partner_foto_1.jpg" alt="Zara">
-					<img src="img/partner_foto_2.jpg" alt="Zara">
-					<img src="img/partner_foto_3.jpg" alt="Zara">
-					<img src="img/partner_foto_1.jpg" alt="Zara">
-					<img src="img/partner_foto_2.jpg" alt="Zara">
-					<img src="img/partner_foto_3.jpg" alt="Zara">
-				</div>
-				<h2 class="title title--inner">Отзывы о заведении</h2>
-				<div class="partner-profile__reviews reviews">
-					<ul class="reviews__list">
-						<li class="reviews__item">
-							<p class="reviews__text">Большой выбор стильной одежды но цены часто кусаются!
-А прогулка по магазину все же доставляет удовольствие</p>
-              <svg class="reviews__icon" width="15" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pen"/></svg>
-							<span id="revAuthor" class="reviews__author">И.Портних</span>
-							<span>, опубликовано сегодня в <span id="revDate" class="reviews__date">11.21</span></span>
-						</li>
-						<li class="reviews__item">
-							<p class="reviews__text">Большой выбор стильной одежды но цены часто кусаются!
-А прогулка по магазину все же доставляет удовольствие</p>
-              <svg class="reviews__icon" width="15" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pen"/></svg>
-							<span id="revAuthor" class="reviews__author">И.Портних</span>
-							<span>, опубликовано сегодня в <span id="revDate" class="reviews__date">11.21</span></span>
-						</li>
-						<li class="reviews__item">
-							<p class="reviews__text">Большой выбор стильной одежды но цены часто кусаются!
-А прогулка по магазину все же доставляет удовольствие</p>
-              <svg class="reviews__icon" width="15" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pen"/></svg>
-							<span id="revAuthor" class="reviews__author">И.Портних</span>
-							<span>, опубликовано сегодня в <span id="revDate" class="reviews__date">11.21</span></span>
-						</li>
-						<li class="reviews__item">
-							<p class="reviews__text">Большой выбор стильной одежды но цены часто кусаются!
-А прогулка по магазину все же доставляет удовольствие</p>
-              <svg class="reviews__icon" width="15" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pen"/></svg>
-							<span id="revAuthor" class="reviews__author">И.Портних</span>
-							<span>, опубликовано сегодня в <span id="revDate" class="reviews__date">11.21</span></span>
-						</li>
-					</ul>
-					<a href="#" class="reviews__link">Все отзывы...</a>
-					<form id="revForm" class="reviews__form">
-						<textarea class="reviews__area" id="revtext" name="revText" placeholder="Ваши комментарии"></textarea>
-						<div class="reviews__wrap">
-							<input class="reviews__field" type="text" name="revName" value="" placeholder="Ваше имя">
-							<input class="reviews__field" type="email" name="revEmail" value="" placeholder="Маил">
-							<button class="btn reviews__btn btn--blue" type="submit" value="Опубликовать">Опубликовать</button>
-						</div>
-					</form>
-				</div>
-				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d905871.0581373748!2d27.421346313733054!3d41.773112720330516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4538baaf3d7a1%3A0x5727941c71a58b7c!2z0JLQsNGA0L3QsCwg0JHQvtC70LPQsNGA0LjRjw!5e0!3m2!1sru!2sua!4v1510855374234" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
+          <div class="right-column">
+            <input id="userName" class="user__field" type="text" name="userName" value="Таня" placeholder="Имя, Фамилия">
+              <input id="userAge" class="user__field" type="text" name="userAge" value="22" placeholder="Возраст">
+                <input id="userLength" class="user__field" type="text" name="userLength" value="192" placeholder="Рост">
+                  <input id="userCity" class="user__field" type="text" name="userCity" value="Варна" placeholder="Город">
+                    <input id="userEdu" class="user__field" type="text" name="userEdu" value="Профи" placeholder="Образование">
+                      <input id="userProf" class="user__field" type="text" name="userProf" value="Парикхмахер" placeholder="Профессия">
+          <textarea id="userText" class="user__area" name="userText" placeholder="О себе">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</textarea>
+          <div class="g-recaptcha user__recaptcha" data-sitekey="ВАШ_КЛЮЧ"></div>
+          <button class="user__submit user__submit--save btn btn--blue" type="submit" value="Yes">Сохранить изменения</button>
+          <a href="#" class="user__reset btn btn--red">Удалить анкету</a>
+          <p class="user__text user__text--red">Удаляя анкету,вы соглашаетесь
+с правилами участвия</p>
+          </div>
+        </form>
 			</div>
-			<div class="wrapper wrapper--social-bottom social-bottom">
+      <div class="wrapper wrapper--social-bottom social-bottom">
 				<div class="social">
 					<p class="social-bottom__text">Connect width us</p>
 					<ul class="social__list">
@@ -288,10 +265,18 @@ Inditex, одну из крупнейших мировых дистрибьют�
 			</div>
 		</footer>
 	</div>
+	<script  id="image-template" type="text/html">
+		<div class="upload-images__img-wrap">
+			<img src="{{image}}" width="100" height="120" alt="{{name}}" title="{{name}}">
+		</div>
+		<a href="#" class="upload-images__del-link" title="Удалить">Удалить фото
+			<span class="icon-del"></span>
+		</a>
+  </script>
 	<div class="wrapper-outer"></div>
 	<script defer type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 	<script defer type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
 	<script defer type="text/javascript" src="js/concat.js"></script>
-	<script defer type="text/javascript" src="js/scripts.min.js"></script>
+	<script defer type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
