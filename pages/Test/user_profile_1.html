@@ -214,18 +214,36 @@
 и удалять комментарии</p>
           </div>
           <div class="right-column">
-            <input id="userName" class="user__field" type="text" name="userName" value="Таня" placeholder="Имя, Фамилия">
-              <input id="userAge" class="user__field" type="text" name="userAge" value="22" placeholder="Возраст">
-                <input id="userLength" class="user__field" type="text" name="userLength" value="192" placeholder="Рост">
-                  <input id="userCity" class="user__field" type="text" name="userCity" value="Варна" placeholder="Город">
-                    <input id="userEdu" class="user__field" type="text" name="userEdu" value="Профи" placeholder="Образование">
-                      <input id="userProf" class="user__field" type="text" name="userProf" value="Парикхмахер" placeholder="Профессия">
-          <textarea id="userText" class="user__area" name="userText" placeholder="О себе">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</textarea>
-          <div class="g-recaptcha user__recaptcha" data-sitekey="ВАШ_КЛЮЧ"></div>
-          <button class="user__submit user__submit--save btn btn--blue" type="submit" value="Yes">Сохранить изменения</button>
-          <a href="#" class="user__reset btn btn--red">Удалить анкету</a>
-          <p class="user__text user__text--red">Удаляя анкету,вы соглашаетесь
-с правилами участвия</p>
+            <label class="user__field">
+							<input id="userName" type="text" name="userName" value="Таня" placeholder="Имя, Фамилия" required>
+							<span class="user__field-text">Имя, Фамилия</span>
+						</label>
+            <label class="user__field">
+							<input id="userAge" type="text" name="userAge" value="22" placeholder="Возраст" required>
+							<span class="user__field-text">Возраст</span>
+						</label>
+            <label class="user__field">
+							<input id="userLength" type="text" name="userLength" value="192" placeholder="Рост" required>
+							<span class="user__field-text">Рост</span>
+            </label>
+						<label class="user__field">
+							<input id="userCity" type="text" name="userCity" value="Варна" placeholder="Город" required>
+							<span class="user__field-text">Город</span>
+						</label>
+            <label class="user__field">
+							<input id="userEdu" type="text" name="userEdu" value="Профи" placeholder="Образование" required>
+							<span class="user__field-text">Образование</span>
+						</label>
+            <label class="user__field">
+							<input id="userProf" type="text" name="userProf" value="Парикхмахер" placeholder="Профессия" required>
+							<span class="user__field-text">Профессия</span>
+						</label>
+	          <textarea id="userText" class="user__area" name="userText" placeholder="О себе" required>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</textarea>
+	          <div class="g-recaptcha user__recaptcha" data-sitekey="ВАШ_КЛЮЧ"></div>
+	          <button class="user__submit user__submit--save btn btn--blue" type="submit" value="Yes">Сохранить изменения</button>
+	          <a href="#" class="user__reset btn btn--red">Удалить анкету</a>
+	          <p class="user__text user__text--red">Удаляя анкету,вы соглашаетесь
+	с правилами участвия</p>
           </div>
         </form>
 			</div>

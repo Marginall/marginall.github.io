@@ -453,6 +453,18 @@ $(document).ready(function() {
     $("[type='file']").val("").trigger("change");
   });
 
+  $(function() {
+    $('.user__field input').on('change', function() {
+      var input = $(this);
+      if (input.val().length) {
+        input.addClass('open');
+      } else {
+        input.removeClass('open');
+      }
+    });
+  });
+
+
   (function() {
     var reviewForm = document.querySelector("#revForm");
 
