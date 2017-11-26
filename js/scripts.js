@@ -441,11 +441,6 @@ $(document).ready(function() {
     selectPlaceholder: 'Выберите рубрику'
   });
 
-  if (/iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    $('.partner__form select').styler('destroy');
-    $('.partner__form select').css('display', 'block');
-  }
-
   $('.partner__check').styler();
 
   $( '#sortpicture' ).change(function() {
