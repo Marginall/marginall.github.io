@@ -114,18 +114,18 @@
 	<div class="main-wrapper">
 		<header class="header">
 			<div class="wrapper wrapper--header">
-				<a href="#" class="logo"><img src="img/logo.png" width="141" height="109"></a>
+				<a href="#" class="logo"><img src="img/logo.png" width="141" height="109" alt="Logo"></a>
 				<div class="header__wrap">
 					<h1 class="title title--header"><span class="logo-text">MISS-<span>i</span>-BULGARIA</span></h1>
 					<p class="header__text">първи интерактивен конкурс за красота</p>
 				</div>
-				<button class="header__btn" id="header-btn" type="button">
+				<a href="#" class="header__btn" id="header-btn">
 					<div class="burger">
 						<div class="burger-brick"></div>
 						<div class="burger-brick middle"></div>
 						<div class="burger-brick"></div>
 					</div>
-				</button>
+				</a>
 				<nav class="nav">
 					<ul class="nav__list">
 						<li class="nav__item"><a href="#" class="nav__link">Конкурс</a></li>
@@ -156,7 +156,7 @@
 			<div class="wrapper wrapper--partner">
 				<div class="partner__wrap partner__wrap--top">
 					<div class="left-column">
-						<p class="partner__text partner__text--left"><span>Приглашаем Вас стать партнером</span><br> самого престижного онлайн конкурса красоты<br><span>“Miss- i-Bulgaria 2018”<span></p>
+						<p class="partner__text partner__text--left"><span>Приглашаем Вас стать партнером</span><br> самого престижного онлайн конкурса красоты<br><span>“Miss- i-Bulgaria 2018”</span></p>
 						<p class="partner__text partner__text--red">О Вас узнают тысячи красавиц и их поклонники</p>
 						<div class="partner__condition">Условия</div>
 					</div>
@@ -177,13 +177,21 @@
 Наши сотрудники свяжуться с Вами течении 24 часов</p>
 				<form class="partner__form" enctype="multipart/form-data" method="post">
 					<div class="partner__form-wrap">
-						<select name="sources" id="sources" class="custom-select sources" placeholder="Выберите категорию">
-					    <option value="1">1</option>
-					    <option value="2">2</option>
+						<select class="partner__categories" name="categories" required>
+							<option>Выберите рубрику</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
 							<option value="3">3</option>
-						 	<option value="4">4</option>
-						 	<option value="5">5</option>
-					  </select>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+						<select name="sources" id="sources" class="custom-select sources" placeholder="Выберите категорию" required>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
 					</div>
 					<div class="partner__form-wrap">
 						<input id="companyName" class="partner__form-item" type="text" name="companyName" value="" placeholder="Название" required>
@@ -203,7 +211,7 @@
 						<p class="partner__text partner__text--form">Данные для связи с вами на
 сайте не публюкуются</p>
 						<input class="partner__form-item" id="contactName" type="text" name="contactName" value="" placeholder="Ваше имя и должность" required>
-						<input class="partner__form-item" id="contactEmale" type="mail" name="contactEmale" value="" placeholder="E-mail" required>
+						<input class="partner__form-item" id="contactEmale" type="email" name="contactEmale" value="" placeholder="E-mail" required>
 						<input class="partner__form-item" id="contactPhone" type="tel" name="contactEmale" value="" placeholder="Сотовый" required>
 					</div>
 					<div class="partner__form-wrap partner__form-wrap--center checkbox">
@@ -226,7 +234,7 @@
 		</main>
 		<footer class="footer">
 			<div class="wrapper wrapper--footer">
-				<a href="#" class="logo"><img src="img/logo.png" width="141" height="109"></a>
+				<a href="#" class="logo"><img src="img/logo.png" width="141" height="109" alt="Logo"></a>
 				<div class="footer__wrap">
 					<h1 class="title"><span class="logo-text">MISS-<span>i</span>-BULGARIA</span></h1>
 					<p class="header__text">първи интерактивен конкурс за красота</p>
