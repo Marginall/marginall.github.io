@@ -546,14 +546,6 @@ $(document).ready(function() {
       xhr.send(data);
     }
   })();
-
-  //Tap
-  (function() {
-    var tapItem = document.querySelector(".user__field");
-    tapItem.addEventListener("tap", function(event) {
-      console.log("Тап по кнопке");
-    });
-  })();
 });
 
 (function() {
