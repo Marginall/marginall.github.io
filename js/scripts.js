@@ -481,6 +481,10 @@ $(document).ready(function() {
 
   $('.partner__form select').addClass('active');
 
+  if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    $('select').addClass('safari-only');
+  }
+
   $('.partner__check').styler();
 
   $( '#sortpicture' ).change(function() {
