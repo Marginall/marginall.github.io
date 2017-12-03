@@ -168,7 +168,7 @@
           <div class="left-column">
             <div class="user__wrap">
               <div class="user__wrap user__wrap--sub">
-                <label class="user__foto user__foto--1 user__foto--small user__foto--top" for="userFoto1">
+                <label class="user__foto user__foto--1 user__foto--small user__foto--top js-photo" for="userFoto1">
                   <span>Фото 1</span>
                   <div class="user__wrap">
                     <svg class="user__icon" width="25" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"/></svg>
@@ -176,7 +176,7 @@
                   </div>
                   <input id="userFoto1" type="file" name="userFoto1">
                 </label>
-                <label class="user__foto user__foto--2 user__foto--small" for="userFoto2">
+                <label class="user__foto user__foto--2 user__foto--small js-photo" for="userFoto2">
                   <span>Фото 2</span>
                   <div class="user__wrap">
                     <svg class="user__icon" width="25" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"/></svg>
@@ -185,7 +185,7 @@
                   <input id="userFoto2" type="file" name="userFoto2">
                 </label>
               </div>
-              <label class="user__foto user__foto--3" for="userFoto3">
+              <label class="user__foto user__foto--3 js-photo" for="userFoto3">
                 <span>Фото 3</span>
                 <div class="user__wrap">
                   <svg class="user__icon" width="25" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"/></svg>
@@ -211,10 +211,6 @@
 							<span class="user__field-text">Возраст</span>
 						</label>
 						<label class="user__field">
-							<input id="userLength" type="text" name="userLength" value="" placeholder="Рост" required>
-							<span class="user__field-text">Рост</span>
-						</label>
-						<label class="user__field">
 							<input id="userCity" type="text" name="userCity" value="" placeholder="Город" required>
 							<span class="user__field-text">Город</span>
 						</label>
@@ -226,19 +222,27 @@
 							<input id="userProf" type="text" name="userProf" value="" placeholder="Профессия" required>
 							<span class="user__field-text">Профессия</span>
 						</label>
-          <textarea id="userText" class="user__area" name="userText" placeholder="О себе" required></textarea>
-          <div class="g-recaptcha user__recaptcha" data-sitekey="ВАШ_КЛЮЧ"></div>
-          <div class="checkbox">
-            <label for="partnerCheck" class="user__text user__text--red">Сохранить анкету и принять участие в
-  конкурсе. Соглашаясь, вы подтверждате,
-  что ознакомлены и согласны с правилами
-  участия.</label>
-            <input class="partner__check" id="partnerCheck" type="checkbox" name="partnerCheck" value="partnerCheck" required>
-          </div>
-          <button class="user__submit btn btn--blue" type="submit" value="Yes">Yes</button>
-          <a href="#" class="user__reset btn btn--red">Удалить анкету</a>
-          <p class="user__text user__text--red">Удаляя анкету,вы соглашаетесь
-с правилами участвия</p>
+						<select class="user__field user__field--select" name="userCity" id="userCity" required>
+							<option>Город</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+	          <textarea id="userText" class="user__area" name="userText" placeholder="О себе" required></textarea>
+	          <div class="g-recaptcha user__recaptcha" data-sitekey="ВАШ_КЛЮЧ"></div>
+	          <div class="checkbox">
+	            <label for="partnerCheck" class="user__text user__text--red">Сохранить анкету и принять участие в
+	  конкурсе. Соглашаясь, вы подтверждате,
+	  что ознакомлены и согласны с правилами
+	  участия.</label>
+	            <input class="partner__check" id="partnerCheck" type="checkbox" name="partnerCheck" value="partnerCheck" required>
+	          </div>
+	          <button class="user__submit btn btn--blue" type="submit" value="Yes">Yes</button>
+	          <a href="#" class="user__reset btn btn--red">Удалить анкету</a>
+	          <p class="user__text user__text--red">Удаляя анкету,вы соглашаетесь
+	с правилами участвия</p>
           </div>
         </form>
 			</div>

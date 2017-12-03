@@ -439,42 +439,45 @@ $(document).ready(function() {
 
   $('.partner__categories').styler();
 
-      //select
-      $(".custom-select").each(function() {
-        var classes = $(this).attr("class"),
-            id      = $(this).attr("id"),
-            name    = $(this).attr("name");
-        var template =  '<div class="' + classes + '">';
-            template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
-            template += '<div class="custom-options">';
-            $(this).find("option").each(function() {
-              template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
-            });
-        template += '</div></div>';
-
-        $(this).wrap('<div class="custom-select-wrapper"></div>');
-        $(this).hide();
-        $(this).after(template);
-      });
-      $(".custom-option:first-of-type").hover(function() {
-        $(this).parents(".custom-options").addClass("option-hover");
-      }, function() {
-        $(this).parents(".custom-options").removeClass("option-hover");
-      });
-      $(".custom-select-trigger").on("click", function() {
-        $('html').one('click',function() {
-          $(".custom-select").removeClass("opened");
+  //select
+  $(".custom-select").each(function() {
+    var classes = $(this).attr("class"),
+        id      = $(this).attr("id"),
+        name    = $(this).attr("name");
+    var template =  '<div class="' + classes + '">';
+        template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+        template += '<div class="custom-options">';
+        $(this).find("option").each(function() {
+          template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
         });
-        $(this).parents(".custom-select").toggleClass("opened");
-        event.stopPropagation();
-      });
-      $(".custom-option").on("click", function() {
-        $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
-        $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
-        $(this).addClass("selection");
-        $(this).parents(".custom-select").removeClass("opened");
-        $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
-      });
+    template += '</div></div>';
+
+    $(this).wrap('<div class="custom-select-wrapper"></div>');
+    $(this).hide();
+    $(this).after(template);
+  });
+
+  $(".custom-option:first-of-type").hover(function() {
+    $(this).parents(".custom-options").addClass("option-hover");
+  }, function() {
+    $(this).parents(".custom-options").removeClass("option-hover");
+  });
+
+  $(".custom-select-trigger").on("click", function() {
+    $('html').one('click',function() {
+      $(".custom-select").removeClass("opened");
+    });
+    $(this).parents(".custom-select").toggleClass("opened");
+    event.stopPropagation();
+  });
+
+  $(".custom-option").on("click", function() {
+    $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+    $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+    $(this).addClass("selection");
+    $(this).parents(".custom-select").removeClass("opened");
+    $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+  });
 
   $('.partner__form select').addClass('active');
 
@@ -553,105 +556,52 @@ $(document).ready(function() {
     return;
   }
 
-  var pagesWithScript = ["/add_user.html", "/user_profile_1.html"];
-
-  if (pagesWithScript.indexOf(location.pathname) != -1 ) {
     if ("FileReader" in window) {
 
-        var form = document.querySelector("#userForm");
+        var userForm = document.querySelector("#userForm");
         var areaInner = document.querySelector(".user__upload-list");
-        var template = document.querySelector("#image-template").innerHTML;
 
         var queue = [];
 
-        (function() {
-               var form = document.querySelector("#userForm");
-               var area1 = document.querySelector(".user__foto--1");
+        $('.js-photo').on('change','input[type=file]',function(){
 
-               form.querySelector("#userFoto1").addEventListener("change", function() {
-                   var files = this.files;
-                   for (var i = 0; i < files.length; i++) {
-                       preview(files[i]);
-                   }
-               });
+            if (!("FormData" in window)) {
+                return;
+            }
+            var id = this.id;
+            var file = this.files[0];
+            var fileName = file.name.split('.'),
+                fileType = fileName[fileName.length - 1];
 
-               function preview(file) {
-                   if (file.type.match(/image.*/)) {
-                       var reader = new FileReader();
-                       reader.addEventListener("load", function(event) {
-                           var newImg = document.createElement("img");
-                           newImg.src = event.target.result;
-                           newImg.alt = file.name;
-                           newImg.setAttribute("id", "photo1");
-                           newImg.setAttribute("class", "user__img");
-                           newImg.setAttribute("width", "125");
-                           newImg.setAttribute("height", "140");
-                           area1.appendChild(newImg);
-                       });
-                       reader.readAsDataURL(file);
-                   }
-               }
-        })();
+            if (fileType == 'jpg' || fileType == 'png' || fileType == 'gif') {
+                if (file.type.match(/image.*/)) {
+                    if (id == 'userFoto1') {
+                        var area = document.querySelector(".user__foto--1");
+                        var attributeId = 'photo1';
+                    } else if (id == 'userFoto2') {
+                        var area = document.querySelector(".user__foto--2");
+                        var attributeId = 'photo2';
+                    } else if (id == 'userFoto3') {
+                        var area = document.querySelector(".user__foto--3");
+                        var attributeId = 'photo3';
+                    }
+                    var reader = new FileReader();
+                    reader.addEventListener("load", function(event) {
+                        var newImg = document.createElement("img");
+                        newImg.src = event.target.result;
+                        newImg.alt = file.name;
+                        newImg.setAttribute("id", attributeId);
+                        newImg.setAttribute("class", "user__img");
+                        newImg.setAttribute("width", "125");
+                        newImg.setAttribute("height", "140");
+                        area.appendChild(newImg);
+                    });
+                    reader.readAsDataURL(file);
+                }
+            }
+        });
 
-        (function() {
-               var form = document.querySelector("#userForm");
-               var area2 = document.querySelector(".user__foto--2");
-
-               form.querySelector("#userFoto2").addEventListener("change", function() {
-                   var files = this.files;
-                   for (var i = 0; i < files.length; i++) {
-                       preview(files[i]);
-                   }
-               });
-
-               function preview(file) {
-                   if (file.type.match(/image.*/)) {
-                       var reader = new FileReader();
-                       reader.addEventListener("load", function(event) {
-                           var newImg = document.createElement("img");
-                           newImg.src = event.target.result;
-                           newImg.alt = file.name;
-                           newImg.setAttribute("id", "photo2");
-                           newImg.setAttribute("class", "user__img");
-                           newImg.setAttribute("width", "125");
-                           newImg.setAttribute("height", "140");
-                           area2.appendChild(newImg);
-                       });
-                       reader.readAsDataURL(file);
-                   }
-               }
-        })();
-
-        (function() {
-               var form = document.querySelector("#userForm");
-               var area3 = document.querySelector(".user__foto--3");
-
-               form.querySelector("#userFoto3").addEventListener("change", function() {
-                   var files = this.files;
-                   for (var i = 0; i < files.length; i++) {
-                       preview(files[i]);
-                   }
-               });
-
-               function preview(file) {
-                   if (file.type.match(/image.*/)) {
-                       var reader = new FileReader();
-                       reader.addEventListener("load", function(event) {
-                           var newImg = document.createElement("img");
-                           newImg.src = event.target.result;
-                           newImg.alt = file.name;
-                           newImg.setAttribute("id", "photo3");
-                           newImg.setAttribute("class", "user__img");
-                           newImg.setAttribute("width", "125");
-                           newImg.setAttribute("height", "140");
-                           area3.appendChild(newImg);
-                       });
-                       reader.readAsDataURL(file);
-                   }
-               }
-        })();
-
-        userForm.addEventListener("submit", function(event) {
+        $('#userForm').on('submit',function(){
           event.preventDefault();
           var data = new FormData(userForm);
 
@@ -675,7 +625,7 @@ $(document).ready(function() {
           xhr.send(data);
         }
 
-        form.querySelector("#uploadFoto").addEventListener("change", function() {
+          $('#uploadFoto').on('change',function(){
             var files = this.files;
             for (var i = 0; i < files.length; i++) {
                 preview(files[i]);
@@ -686,6 +636,7 @@ $(document).ready(function() {
 
         function preview(file) {
             if (file.type.match(/image.*/)) {
+              var template = document.querySelector("#image-template").innerHTML;
                 var reader = new FileReader();
                 reader.addEventListener("load", function(event) {
                    var html = Mustache.render(template, {
@@ -718,5 +669,4 @@ $(document).ready(function() {
          });
          li.parentNode.removeChild(li); }
     }
-  }
 })();

@@ -226,10 +226,6 @@
 							<input id="userLength" type="text" name="userLength" value="192" placeholder="Рост" required>
 							<span class="user__field-text">Рост</span>
             </label>
-						<label class="user__field">
-							<input id="userCity" type="text" name="userCity" value="Варна" placeholder="Город" required>
-							<span class="user__field-text">Город</span>
-						</label>
             <label class="user__field">
 							<input id="userEdu" type="text" name="userEdu" value="Профи" placeholder="Образование" required>
 							<span class="user__field-text">Образование</span>
@@ -238,6 +234,14 @@
 							<input id="userProf" type="text" name="userProf" value="Парикхмахер" placeholder="Профессия" required>
 							<span class="user__field-text">Профессия</span>
 						</label>
+						<select class="user__field user__field--select" name="userCity" id="userCity" required>
+							<option>Город</option>
+							<option value="1">1</option>
+							<option value="2" selected>2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
 	          <textarea id="userText" class="user__area" name="userText" placeholder="О себе" required>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</textarea>
 	          <div class="g-recaptcha user__recaptcha" data-sitekey="ВАШ_КЛЮЧ"></div>
 	          <button class="user__submit user__submit--save btn btn--blue" type="submit" value="Yes">Сохранить изменения</button>
