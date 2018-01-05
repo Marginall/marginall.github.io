@@ -1,495 +1,354 @@
 <!DOCTYPE html>
-<html lang="ru">
-
-<head>
-
-	<meta charset="utf-8">
-
-	<title>Главная</title>
-	<meta name="description" content="">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#000">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#000">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-	<link rel="preload" href="css/style.min.css" as="style" onload="this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
-	<script>
-		!function(e){"use strict";var t=function(t,n,r){function o(e){if(i.body)return e();setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);
-	</script>
-	<script>
-	/* Font Face Observer v2.0.13 - © Bram Stein. License: BSD-3-Clause */(function(){'use strict';var f,g=[];function l(a){g.push(a);1==g.length&&f()}function m(){for(;g.length;)g[0](),g.shift()}f=function(){setTimeout(m)};function n(a){this.a=p;this.b=void 0;this.f=[];var b=this;try{a(function(a){q(b,a)},function(a){r(b,a)})}catch(c){r(b,c)}}var p=2;function t(a){return new n(function(b,c){c(a)})}function u(a){return new n(function(b){b(a)})}function q(a,b){if(a.a==p){if(b==a)throw new TypeError;var c=!1;try{var d=b&&b.then;if(null!=b&&"object"==typeof b&&"function"==typeof d){d.call(b,function(b){c||q(a,b);c=!0},function(b){c||r(a,b);c=!0});return}}catch(e){c||r(a,e);return}a.a=0;a.b=b;v(a)}}
-	function r(a,b){if(a.a==p){if(b==a)throw new TypeError;a.a=1;a.b=b;v(a)}}function v(a){l(function(){if(a.a!=p)for(;a.f.length;){var b=a.f.shift(),c=b[0],d=b[1],e=b[2],b=b[3];try{0==a.a?"function"==typeof c?e(c.call(void 0,a.b)):e(a.b):1==a.a&&("function"==typeof d?e(d.call(void 0,a.b)):b(a.b))}catch(h){b(h)}}})}n.prototype.g=function(a){return this.c(void 0,a)};n.prototype.c=function(a,b){var c=this;return new n(function(d,e){c.f.push([a,b,d,e]);v(c)})};
-	function w(a){return new n(function(b,c){function d(c){return function(d){h[c]=d;e+=1;e==a.length&&b(h)}}var e=0,h=[];0==a.length&&b(h);for(var k=0;k<a.length;k+=1)u(a[k]).c(d(k),c)})}function x(a){return new n(function(b,c){for(var d=0;d<a.length;d+=1)u(a[d]).c(b,c)})};window.Promise||(window.Promise=n,window.Promise.resolve=u,window.Promise.reject=t,window.Promise.race=x,window.Promise.all=w,window.Promise.prototype.then=n.prototype.c,window.Promise.prototype["catch"]=n.prototype.g);}());
-	(function(){function l(a,b){document.addEventListener?a.addEventListener("scroll",b,!1):a.attachEvent("scroll",b)}function m(a){document.body?a():document.addEventListener?document.addEventListener("DOMContentLoaded",function c(){document.removeEventListener("DOMContentLoaded",c);a()}):document.attachEvent("onreadystatechange",function k(){if("interactive"==document.readyState||"complete"==document.readyState)document.detachEvent("onreadystatechange",k),a()})};function r(a){this.a=document.createElement("div");this.a.setAttribute("aria-hidden","true");this.a.appendChild(document.createTextNode(a));this.b=document.createElement("span");this.c=document.createElement("span");this.h=document.createElement("span");this.f=document.createElement("span");this.g=-1;this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";
-	this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;";this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;";this.b.appendChild(this.h);this.c.appendChild(this.f);this.a.appendChild(this.b);this.a.appendChild(this.c)}
-	function t(a,b){a.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;white-space:nowrap;font-synthesis:none;font:"+b+";"}function y(a){var b=a.a.offsetWidth,c=b+100;a.f.style.width=c+"px";a.c.scrollLeft=c;a.b.scrollLeft=a.b.scrollWidth+100;return a.g!==b?(a.g=b,!0):!1}function z(a,b){function c(){var a=k;y(a)&&a.a.parentNode&&b(a.g)}var k=a;l(a.b,c);l(a.c,c);y(a)};function A(a,b){var c=b||{};this.family=a;this.style=c.style||"normal";this.weight=c.weight||"normal";this.stretch=c.stretch||"normal"}var B=null,C=null,E=null,F=null;function G(){if(null===C)if(J()&&/Apple/.test(window.navigator.vendor)){var a=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);C=!!a&&603>parseInt(a[1],10)}else C=!1;return C}function J(){null===F&&(F=!!document.fonts);return F}
-	function K(){if(null===E){var a=document.createElement("div");try{a.style.font="condensed 100px sans-serif"}catch(b){}E=""!==a.style.font}return E}function L(a,b){return[a.style,a.weight,K()?a.stretch:"","100px",b].join(" ")}
-	A.prototype.load=function(a,b){var c=this,k=a||"BESbswy",q=0,D=b||3E3,H=(new Date).getTime();return new Promise(function(a,b){if(J()&&!G()){var M=new Promise(function(a,b){function e(){(new Date).getTime()-H>=D?b():document.fonts.load(L(c,'"'+c.family+'"'),k).then(function(c){1<=c.length?a():setTimeout(e,25)},function(){b()})}e()}),N=new Promise(function(a,c){q=setTimeout(c,D)});Promise.race([N,M]).then(function(){clearTimeout(q);a(c)},function(){b(c)})}else m(function(){function u(){var b;if(b=-1!=
-	f&&-1!=g||-1!=f&&-1!=h||-1!=g&&-1!=h)(b=f!=g&&f!=h&&g!=h)||(null===B&&(b=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),B=!!b&&(536>parseInt(b[1],10)||536===parseInt(b[1],10)&&11>=parseInt(b[2],10))),b=B&&(f==v&&g==v&&h==v||f==w&&g==w&&h==w||f==x&&g==x&&h==x)),b=!b;b&&(d.parentNode&&d.parentNode.removeChild(d),clearTimeout(q),a(c))}function I(){if((new Date).getTime()-H>=D)d.parentNode&&d.parentNode.removeChild(d),b(c);else{var a=document.hidden;if(!0===a||void 0===a)f=e.a.offsetWidth,
-	g=n.a.offsetWidth,h=p.a.offsetWidth,u();q=setTimeout(I,50)}}var e=new r(k),n=new r(k),p=new r(k),f=-1,g=-1,h=-1,v=-1,w=-1,x=-1,d=document.createElement("div");d.dir="ltr";t(e,L(c,"sans-serif"));t(n,L(c,"serif"));t(p,L(c,"monospace"));d.appendChild(e.a);d.appendChild(n.a);d.appendChild(p.a);document.body.appendChild(d);v=e.a.offsetWidth;w=n.a.offsetWidth;x=p.a.offsetWidth;I();z(e,function(a){f=a;u()});t(e,L(c,'"'+c.family+'",sans-serif'));z(n,function(a){g=a;u()});t(n,L(c,'"'+c.family+'",serif'));
-	z(p,function(a){h=a;u()});t(p,L(c,'"'+c.family+'",monospace'))})})};"object"===typeof module?module.exports=A:(window.FontFaceObserver=A,window.FontFaceObserver.prototype.load=A.prototype.load);}());
-	</script>
-	<script>
-		var html = document.documentElement;
-			var regularFontA = new FontFaceObserver("Inglobal", {
-				weight: "400"
-			});
-
-			var regularFontB = new FontFaceObserver("Georgia", {
-				weight: "400"
-			});
-
-			Promise.race([
-				regularFontA.load(null, 15000),
-				regularFontB.load(null, 15000),
-			]).then(function () {
-				html.classList.add("fonts-loaded");
-				sessionStorage.fontsLoaded = true;
-			});
-	</script>
-</head>
-<body>
-	<div class="main-wrapper">
-		<header class="header">
-			<div class="wrapper wrapper--header">
-				<a href="#" class="logo"><img src="img/logo.png" width="141" height="109" alt="Logo"></a>
-				<div class="header__wrap">
-					<h1 class="title title--header"><span class="logo-text">MISS-<span>i</span>-BULGARIA</span></h1>
-					<p class="header__text">първи интерактивен конкурс за красота</p>
-				</div>
-				<a href="#" class="header__btn" id="header-btn">
+<html>
+  <head>
+    <title>Главная</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <style type="text/css">
+      a,input{outline:0}.header,.header__tel{-webkit-box-orient:vertical;-webkit-box-direction:normal}.header,.logo,body{position:relative}.header,.header__tel,.nav__list{-webkit-box-direction:normal}.btn,.nav__link{text-transform:uppercase}.title,a,body,input{font-family:Solomon,Arial,sans-serif}body{-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;color:#444;font-weight:400;line-height:1;font-size:16px!important;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:0;margin:0;border:0}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}a,address,div,h2,header,html,img,li,nav,p,span,ul{margin:0;padding:0;border:0;font-size:100%}header,nav{display:block}html{background-color:#fff;-webkit-text-size-adjust:none;-ms-text-size-adjust:none}input{color:#333;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-webkit-appearance:none}.btn,a{color:#444}input[type=checkbox]{border:none;outline:0;-webkit-box-shadow:none;box-shadow:none}a{text-decoration:none}ul{list-style:none}.header{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;height:100vh;background-size:100% 100%}.burger{display:none}.header__wrap{background-color:#e9eaee}.header__text{font-size:13px;line-height:21px}.header__text--adress{font-style:normal}.header__tel{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.nav__list,.promo{-webkit-flex-direction:row}.header__tel a{font-size:22px;font-weight:600}.header__tel span{font-size:13px}.logo{padding-right:25px}.logo::after{position:absolute;top:-webkit-calc(50% - 15px);top:calc(50% - 15px);right:0;content:"";display:block;width:1px;height:31px;background-color:#d7d7d7}.btn{display:inline-block;padding:7px 30px;text-align:center;font-size:14px;line-height:18px;border:none}.btn--promo{padding:40px;color:#fff;font-weight:600;letter-spacing:.1em;background-image:-webkit-linear-gradient(100deg,#1c69bf 0,#3b88dd 100%);background-image:linear-gradient(-10deg,#1c69bf 0,#3b88dd 100%);-webkit-border-radius:46px;border-radius:46px;-webkit-box-shadow:0 10px 25px rgba(22,89,164,.19);box-shadow:0 10px 25px rgba(22,89,164,.19)}.header__btn{position:absolute;top:10px;right:10px;display:block;height:52px;border:none;background-color:transparent;z-index:10}.promo,.wrapper{position:relative}.burger{width:50px;padding:10px;text-align:right}.burger-brick{height:2px;background-image:-webkit-linear-gradient(100deg,#1c69bf 0,#3b88dd 100%);background-image:linear-gradient(-10deg,#1c69bf 0,#3b88dd 100%);margin-top:6px}.burger-brick:nth-child(2){margin-bottom:-4px}.burger-brick:nth-child(3){display:inline-block;width:20px}.nav__list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.nav__link{display:block;padding:14px 10px 10px;font-size:11px;font-weight:500}.promo,.wrapper--header{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;-webkit-box-orient:horizontal;-webkit-box-direction:normal}.wrapper{max-width:980px;width:980px;min-width:400px;margin:0 auto;padding:0 20px}.wrapper--header{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding-top:25px;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.promo{display:flex;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:620px;margin-bottom:25vh}.promo__text--big{padding-top:80px;font-size:46px;font-weight:700;line-height:52px}.promo__text--small{width:410px;margin-bottom:50px;padding-top:20px;line-height:30px;letter-spacing:.08em}.promo__decor{width:auto;color:#1c69bf}.promo__decor span:first-child{position:relative;font-size:150px;font-weight:700;line-height:140px;letter-spacing:-.005em;background-image:-webkit-linear-gradient(-10deg,#1c69bf 0,#3b88dd 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.promo__decor span:last-child{font-size:22px;font-weight:700}.features,.features__item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.features{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;width:100%}.features__item{margin-right:50px}.features__item:first-child span,.features__item:nth-child(2) span{display:block;width:34px;height:34px}.features__item:last-child span{display:block;width:36px;height:32px}.features__text{width:120px;padding-left:10px;font-size:12px;letter-spacing:.1em}.title{width:100%;font-size:46px;font-weight:700;line-height:54px;text-align:center}.title--slider{width:330px;font-size:22px;font-weight:600;line-height:24px;text-align:left}.slider__text--small{width:330px;font-size:16px;line-height:24px}.popup__checkbox,.tabs__content{display:none}@media screen and (max-width:980px){.header{height:auto;padding-bottom:20px;background-color:#f2f3f6;background-position:100% 100%;background-size:contain}.wrapper{width:100%;padding:0 20px}}@media screen and (max-width:630px){.logo,.nav__item,.nav__list{width:100%}.features,.nav__list{-webkit-box-orient:vertical;-webkit-box-direction:normal}.header{height:auto;padding-top:25px;padding-bottom:185px;background-position:100% 100%;background-size:130%}.header,.header__wrap{background-color:#f2f3f6}.header__adress,.logo::after{display:none}.burger,.header__btn{display:block}.nav__list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}.nav__link{width:70%;margin:0 auto;font-size:18px;text-align:center}.nav{display:none;padding-bottom:30px}.wrapper{width:100%;padding:0 20px}.promo__text{font-size:40px}.promo__text--big{padding-top:50px;line-height:44px}.promo__text--small{margin-bottom:30px;font-size:18px;line-height:30px;letter-spacing:0;font-weight:400}.promo{margin-bottom:50px}.promo__decor{position:absolute;right:-15px;bottom:15%;width:213px;height:213px;padding-top:30px;border:1px solid rgba(0,0,0,.05);-webkit-border-radius:50%;border-radius:50%;text-align:center}.promo__decor span:first-child{width:auto;font-size:110px}.features{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.features__item{margin-right:0;margin-bottom:30px}.features__item:last-child{margin-bottom:0}.features__text{width:200px;padding-left:20px;font-weight:500}.title--slider{width:100%;margin-bottom:10px}.slider__text--small{width:100%}}@media screen and (max-width:480px){.header__text{width:50%}.promo__decor span:first-child{font-size:68px}.promo__decor{top:30%;right:40%;width:auto;height:auto;border:none}}
+    </style>
+    <link rel="preload" href="css/style.min.css" as="style" onload="this.rel='stylesheet'">
+  	<noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+    <script>
+      !function(e){"use strict";var t=function(t,n,r){function o(e){if(i.body)return e();setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrap">
+        <a href="#" class="header__btn" id="header-btn">
 					<div class="burger">
 						<div class="burger-brick"></div>
 						<div class="burger-brick middle"></div>
 						<div class="burger-brick"></div>
 					</div>
 				</a>
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item"><a href="#" class="nav__link">Конкурс</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Участие</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Етапы</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Награды</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Правила</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">За нас</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Парньори</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-					</ul>
-				</nav>
-				<nav class="nav nav--mobile animated">
-					<ul class="nav__list">
-						<li class="nav__item"><a href="#" class="nav__link">Конкурс</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Участие</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Етапы</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Награды</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Правила</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">За нас</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Парньори</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<main class="content content--main">
-			<div class="wrapper wrapper--content">
-				<div class="left-column">
-					<div class="content__wrap">
-						<div class="timer widget--countdown">
-							<p class="timer__text">До окончания срока подачи заявки
- на участие остается</p>
-							<div class="chart">
-							</div>
-						</div>
-						<div class="crown">
-							<span class="crown__text logo-text logo-text--crown">MISS-<span>i</span>-Varna 2018</span>
-						</div>
-						<div class="social social--content">
-							<a href="#" class="btn btn--social">Учавствовать</a>
-							<ul class="social__list">
-								<li class="social__item"><a href="#" class="social__link social__link--fb"></a></li>
-								<li class="social__item"><a href="#" class="social__link social__link--inst"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="contestant">
-						<div class="contestant__text-block">
-							<p class="contestant__top-text">Сега е: квалификационен регионален етап</p>
-							<p class="contestant__top-text contestant__top-text--big">Нашите участнички от ВАРНА</p>
-							<div class="contestant__select">
-								<select name="userCity" id="userCity">
-									<option>Избери друг град</option>
-									<option value="1">1</option>
-									<option value="1">1</option>
-									<option value="1">1</option>
-									<option value="1">1</option>
-									<option value="1">1</option>
-								</select>
-							</div>
-						</div>
-						<ul class="contestant__list">
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-1.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-1.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-2.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-2.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-3.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-3.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-4.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-4.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-5.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-5.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-6.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-6.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-7.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-7.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-8.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-8.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-9.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-9.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-10.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-10.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-11.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-11.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-							<li class="contestant__item">
-								<div class="contestant__wrap cd-popup-trigger">
-									<img src="img/girl-12.jpg" width="165" height="208" alt="picture">
-									<div class="contestant__text">
-										<span>Надя Герова</span>
-										<span>21 год</span>
-									</div>
-									<p class="contestant__city">Варна,21 год</p>
-								</div>
-								<a href="#" class="contestant__btn btn">Голосовать</a>
-								<div class="cd-popup" role="alert">
-									<div class="cd-popup-container">
-										<img class="cd-popup__img" src="img/girl-12.jpg" width="165" height="208" alt="picture">
-										<p class="cd-popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad vitae placeat eum a repudiandae ab sed nobis quo animi soluta reiciendis nihil, quos? Quod consequuntur nobis officiis est temporibus, perferendis.</p>
-										<ul class="cd-buttons">
-											<li><a href="#" class="btn">Голосовать</a></li>
-											<li><a href="#" class="btn">Подробнее</a></li>
-										</ul>
-										<a href="#" class="cd-popup-close img-replace"></a>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<a href="#" class="btn contestant__btn contestant__btn--big btn--red">Учавствовать</a>
-				</div>
-				<div class="right-column">
-					<div class="partners">
-						<h2 class="partners__main-title">Наши партньори</h2>
-						<ul class="partners__list">
-							<li class="partners__item partners__item--not-decor">
-								<div class="partners__wrap partners__wrap--empty">
-									<p class="partners__text">Официален фотограф: Начо Начев</p>
-									<p class="partners__text">Официален гримьор: Стелла ДеЛакруа</p>
-									<p class="partners__text">Генерален Спонсор: Банк “РАЗВИТИЕ”</p>
-								</div>
-							</li>
-							<li class="partners__item">
-								<div class="partners__wrap">
-									<h3 class="partners__title">Фитнес-центрь за красота</h3>
-									<div class="partners__img-block">
-										<img src="img/partner-1.jpg" width="262" height="142" alt="Partner">
-										<p class="partners__name">"Планета фитнес"</p>
-										<p class="partners__adress">Варна,ул Шейново 15</p>
-									</div>
-								</div>
-								<a href="#" class="partners__link btn">Подробнее</a>
-							</li>
-							<li class="partners__item">
-								<div class="partners__wrap">
-									<h3 class="partners__title">Магазин за красота</h3>
-									<div class="partners__img-block">
-										<img src="img/partner-2.jpg" width="262" height="142" alt="Partner">
-										<p class="partners__name">"BENETTON"</p>
-										<p class="partners__adress">Варна,ул Переслав 173</p>
-									</div>
-								</div>
-								<a href="#" class="partners__link btn">Подробнее</a>
-							</li>
-							<li class="partners__item">
-								<div class="partners__wrap">
-									<h3 class="partners__title">Салон за красота</h3>
-									<div class="partners__img-block">
-										<img src="img/partner-3.jpg" width="262" height="142" alt="Partner">
-										<p class="partners__name">"Кособланка"</p>
-										<p class="partners__adress">Варна,ул Дрин 23</p>
-									</div>
-								</div>
-								<a href="#" class="partners__link btn">Подробнее</a>
-							</li>
-						</ul>
-						<a href="#" class="btn partners__link partners__link--big">Стать партньором</a>
-					</div>
-				</div>
-			</div>
-			<div class="wrapper wrapper--social-bottom social-bottom">
-				<div class="social">
-					<p class="social-bottom__text">Connect with us</p>
-					<ul class="social__list">
-						<li class="social__item"><a href="#" class="social__link social__link--fb"></a></li>
-						<li class="social__item"><a href="#" class="social__link social__link--inst"></a></li>
-					</ul>
-				</div>
-			</div>
-		</main>
-		<footer class="footer">
-			<div class="wrapper wrapper--footer">
-				<a href="#" class="logo"><img src="img/logo.png" width="141" height="109" alt="Logo"></a>
-				<div class="footer__wrap">
-					<h1 class="title"><span class="logo-text">MISS-<span>i</span>-BULGARIA</span></h1>
-					<p class="header__text">първи интерактивен конкурс за красота</p>
-				</div>
-				<nav class="nav">
-					<ul class="nav__list">
-						<li class="nav__item"><a href="#" class="nav__link">Конкурс</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Участие</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Етапы</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Награды</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Правила</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">За нас</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Парньори</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-					</ul>
-				</nav>
-			</div>
-		</footer>
-	</div>
-	<div class="wrapper-outer"></div>
-	<script defer type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
-	<script defer type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
-	<script defer type="text/javascript" src="js/concat.js"></script>
-	<script defer type="text/javascript" src="js/scripts.min.js"></script>
-</body>
+        <div class="wrapper">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#" class="nav__link">Комплексное лечение</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Авторская методика</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Современный центр </a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Комфортные условия</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Наши сертификаты</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Отзывы клиентов</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="wrapper wrapper--header">
+        <div class="logo">
+          <img class="logo__img" src="img/logo.png" width="177" alt="Лого">
+        </div>
+        <p class="header__text">Клиника восстановительного лечения<br>
+  Работаем с 1996 года</p>
+        <address class="header__adress">
+          <p class="header__text header__text--adress">г.Москва, ул. Циолковского 7<br>
+  Пн-Вс: 9:00 – 21:00</p>
+        </address>
+        <div class="header__tel">
+          <a href="tel:88005004737">8(800) 500-47-37</a>
+          <span>Бесплатный звонок по России</span>
+        </div>
+        <div class="promo">
+          <p class="promo__text promo__text--big">Безоперационное лечение боли в спине и шеи — наша специализация уже более</p>
+          <p class="promo__text promo__text--small">Запишитесь на консультацию в наш центр прямо сейчас и узнайте, в чем причина вашей боли и сколько времени займет ее лечение</p>
+          <div class="promo__decor" data-text="20"><span>20</span><span>лет</span></div>
+          <a href="#" class="btn btn--promo">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a>
+        </div>
+        <ul class="features">
+          <li class="features__item">
+            <span></span>
+            <p class="features__text">Запатентованная авторская методика</p>
+          </li>
+          <li class="features__item">
+            <span></span>
+            <p class="features__text">более 12 000 довольных пациентов</p>
+          </li>
+          <li class="features__item">
+            <span></span>
+            <p class="features__text">Лечим взрослых и детей</p>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main id="main" class="content">
+      <section class="services">
+        <div class="wrapper wrapper--services">
+          <h2 class="title title--services">Комплексное лечение</h2>
+          <div class="services__wrap services__wrap--left">
+            <ul class="services__list services__list--left">
+              <h3 class="title title--small">Лечим дискомфорт
+  и боли:</h3>
+              <li class="services__item">Шея</li>
+              <li class="services__item">Грудной отдел</li>
+              <li class="services__item">Поясница</li>
+              <li class="services__item">Руки</li>
+              <li class="services__item">Ноги</li>
+            </ul>
+            <ul class="services__list services__list--left">
+              <h3 class="title title--small">Помогаем
+  с сопутствующими
+  проблемами:</h3>
+              <li class="services__item">Эстетические деформации
+  и искривления </li>
+              <li class="services__item">Проблемы со зрением</li>
+              <li class="services__item">Головные боли</li>
+              <li class="services__item">Мышечная слабость</li>
+              <li class="services__item">Онемение конечностей
+  и отеков</li>
+            </ul>
+          </div>
+          <div class="services__wrap services__wrap--right">
+            <ul class="services__list">
+              <h3 class="title title--small">Работаем со всеми
+  причинами боли:</h3>
+              <li class="services__item">Травмы</li>
+              <li class="services__item">Слабость мышц</li>
+              <li class="services__item">Искривления позвоночника</li>
+              <li class="services__item">Сидячий образ жизни</li>
+              <li class="services__item">Грыжи</li>
+              <li class="services__item">Остеохондрозы</li>
+              <li class="services__item">Возрастные изменения
+  костно-мышечной системы</li>
+              <li class="services__item">Деформации позвоночника</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="slider">
+        <div class="wrapper wrapper--slider">
+          <div class="slider__wrap single-item">
+            <div class="slider__item">
+              <p class="slider__text slider__text--big"><span class="slider__decor">100%</span> эффективность благодаря
+уникальной методике</p>
+              <div class="tabs">
+                <ul class="tabs__caption slider__tabs">
+                  <li class="slider__list-item slider__list-item--big active">Императивно-коррегирующая гимнастика</li>
+                  <li class="slider__list-item">Доступно и легко</li>
+                  <li class="slider__list-item">Полная сертификация</li>
+                  <li class="slider__list-item">Избавление от боли</li>
+                  <li class="slider__list-item">Никаких операций</li>
+                </ul>
+                <div class="tabs__content active">
+                  <h2 class="title title--slider">Императивно-коррегирующая гимнастика</h2>
+                  <p class="slider__text slider__text--small">Основа нашей методики – императивно-коррегирующая гимнастика. Она устраняет мышечную слабость и усиливает корсет позвоночника. Сильные мышцы правильно держат позвоночник, избавляя вас от боли.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorem blanditiis reiciendis porro dolor beatae eos sit voluptatibus officia ad.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">3</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">4</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">5</p>
+                </div>
+              </div>
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/slider_img_1_mob.png">
+                <img class="slider__img" src="img/slider_img_1.png" width="575" alt="">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <p class="slider__text slider__text--big"><span class="slider__decor">100%</span> эффективность благодаря
+уникальной методике</p>
+              <div class="tabs">
+                <ul class="tabs__caption slider__tabs">
+                  <li class="slider__list-item slider__list-item--big active">Императивно-коррегирующая гимнастика</li>
+                  <li class="slider__list-item">Доступно и легко</li>
+                  <li class="slider__list-item">Полная сертификация</li>
+                  <li class="slider__list-item">Избавление от боли</li>
+                  <li class="slider__list-item">Никаких операций</li>
+                </ul>
+                <div class="tabs__content active">
+                  <h2 class="title title--slider">Императивно-коррегирующая гимнастика</h2>
+                  <p class="slider__text slider__text--small">Основа нашей методики –<br> императивно-коррегирующая гимнастика. Она устраняет мышечную слабость и усиливает корсет позвоночника. Сильные мышцы правильно держат позвоночник, избавляя вас от боли.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorem blanditiis reiciendis porro dolor beatae eos sit voluptatibus officia ad.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">3</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">4</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">5</p>
+                </div>
+              </div>
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/slider_img_1_mob.png">
+                <img class="slider__img" src="img/slider_img_1.png" width="575" alt="">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <p class="slider__text slider__text--big"><span class="slider__decor">100%</span> эффективность благодаря
+уникальной методике</p>
+              <div class="tabs">
+                <ul class="tabs__caption slider__tabs">
+                  <li class="slider__list-item slider__list-item--big active">Императивно-коррегирующая гимнастика</li>
+                  <li class="slider__list-item">Доступно и легко</li>
+                  <li class="slider__list-item">Полная сертификация</li>
+                  <li class="slider__list-item">Избавление от боли</li>
+                  <li class="slider__list-item">Никаких операций</li>
+                </ul>
+                <div class="tabs__content active">
+                  <h2 class="title title--slider">Императивно-коррегирующая гимнастика</h2>
+                  <p class="slider__text slider__text--small">Основа нашей методики –<br> императивно-коррегирующая гимнастика. Она устраняет мышечную слабость и усиливает корсет позвоночника. Сильные мышцы правильно держат позвоночник, избавляя вас от боли.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorem blanditiis reiciendis porro dolor beatae eos sit voluptatibus officia ad.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">3</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">4</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">5</p>
+                </div>
+              </div>
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/slider_img_1_mob.png">
+                <img class="slider__img" src="img/slider_img_1.png" width="575" alt="">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <p class="slider__text slider__text--big"><span class="slider__decor">100%</span> эффективность благодаря
+уникальной методике</p>
+              <div class="tabs">
+                <ul class="tabs__caption slider__tabs">
+                  <li class="slider__list-item slider__list-item--big active">Императивно-коррегирующая гимнастика</li>
+                  <li class="slider__list-item">Доступно и легко</li>
+                  <li class="slider__list-item">Полная сертификация</li>
+                  <li class="slider__list-item">Избавление от боли</li>
+                  <li class="slider__list-item">Никаких операций</li>
+                </ul>
+                <div class="tabs__content active">
+                  <h2 class="title title--slider">Императивно-коррегирующая гимнастика</h2>
+                  <p class="slider__text slider__text--small">Основа нашей методики –<br> императивно-коррегирующая гимнастика. Она устраняет мышечную слабость и усиливает корсет позвоночника. Сильные мышцы правильно держат позвоночник, избавляя вас от боли.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorem blanditiis reiciendis porro dolor beatae eos sit voluptatibus officia ad.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">3</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">4</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">5</p>
+                </div>
+              </div>
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/slider_img_1_mob.png">
+                <img class="slider__img" src="img/slider_img_1.png" width="575" alt="">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <p class="slider__text slider__text--big"><span class="slider__decor">100%</span> эффективность благодаря
+уникальной методике</p>
+              <div class="tabs">
+                <ul class="tabs__caption slider__tabs">
+                  <li class="slider__list-item slider__list-item--big active">Императивно-коррегирующая гимнастика</li>
+                  <li class="slider__list-item">Доступно и легко</li>
+                  <li class="slider__list-item">Полная сертификация</li>
+                  <li class="slider__list-item">Избавление от боли</li>
+                  <li class="slider__list-item">Никаких операций</li>
+                </ul>
+                <div class="tabs__content active">
+                  <h2 class="title title--slider">Императивно-коррегирующая гимнастика</h2>
+                  <p class="slider__text slider__text--small">Основа нашей методики –<br> императивно-коррегирующая гимнастика. Она устраняет мышечную слабость и усиливает корсет позвоночника. Сильные мышцы правильно держат позвоночник, избавляя вас от боли.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorem blanditiis reiciendis porro dolor beatae eos sit voluptatibus officia ad.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">3</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">4</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">5</p>
+                </div>
+                <picture>
+                  <source media="(max-width: 630px)" srcset="img/slider_img_1_mob.png">
+                  <img class="slider__img" src="img/slider_img_1.png" width="575" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="slider__number">
+            <span>/ 5</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <div class="popup none">
+      <form class="popup__form">
+        <h2 class="title title--form">Запишитесь на консультацию</h2>
+        <p class="popup__text">Заполните поля ниже. Менеджер свяжется
+с вами в течение 12 минут.</p>
+        <label class="popup__label popup__label--user">
+          <span></span>
+          <input type="text" class="popup__input" placeholder="Введите ваше имя" required>
+        </label>
+        <label class="popup__label popup__label--phone">
+          <span></span>
+          <input type="text" class="popup__input" placeholder="Введите ваш телефон" required>
+        </label>
+        <button type="submit" class="btn btn--form">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
+        <div class="popup__wrap">
+          <input id="consent" type="checkbox" class="popup__checkbox" required>
+          <span class="popup__icon"></span>
+          <label class="popup__consent" for="consent">Нажимая на кнопку «Записаться на консультацию», я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности.</label>
+        </div>
+        <a href="#" class="popup__close"><span></span></a>
+      </form>
+    </div>
+    <div class="overlay"></div>
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script type="text/javascript" src="js/concat.js"></script>
+    <script type="text/javascript" src="js/scripts.min.js"></script>
+  </body>
 </html>
