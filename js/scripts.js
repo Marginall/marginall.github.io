@@ -20,8 +20,9 @@ $(document).ready(function() {
     }
   });
 
-  $(".menu__item > a").on("click", function() {
+  $(".menu__item > a").on("click", function(event) {
     event.preventDefault();
+    $('.menu__sublist').removeClass('position');
     if ($(this).hasClass('active')) {
       $(this).removeClass("active");
       if ($(window).width() <= '991'){
@@ -30,6 +31,7 @@ $(document).ready(function() {
         $(this).siblings('.menu__sublist').removeClass('position');
       }
     } else {
+      $('.menu__item > a').removeClass('active');
       $(this).addClass("active");
       if ($(window).width() <= '991'){
         $(this).siblings('.menu__sublist').slideDown(500);
@@ -60,6 +62,20 @@ $(document).ready(function() {
     });
   })(jQuery);
 
+  $('.tabs__caption').on('click', function(){
+    $('.filter__form')[0].reset();
+    validator.destroy();
+    setTimeout(function() {
+      $('.filter__form select').trigger('refresh');
+    }, 1)
+
+    if($('.filter__select').length !== 7){
+      $('.filter__form').addClass('justify');
+    }else{
+      $('.filter__form').removeClass('justify');
+    }
+  });
+
   (function($) {
     $(function() {
       $('ul.filter__list').on('click', 'li:not(.active)', function() {
@@ -70,7 +86,7 @@ $(document).ready(function() {
     });
   })(jQuery);
 
-  $('.login').on('click', function(){
+  $('.login').on('click', function(event){
     event.preventDefault();
     $('.popup').addClass('active');
     $('.overlay').addClass('active');
@@ -106,6 +122,11 @@ $(document).ready(function() {
 
   $("#tel").mask("+38(099) 999-9999");
 
+  jQuery.validator.setDefaults({
+    debug: true,
+    success: "valid"
+  });
+
   $('.search__form').validate({
      rules: {
       search: {
@@ -117,7 +138,7 @@ $(document).ready(function() {
         search: {
           required: "Поле обязательно к заполнению",
           minlength: "Введите не менее 2-х символов"
-    }
+        }
      }
   });
 
@@ -126,61 +147,83 @@ $(document).ready(function() {
       password: {
         required: true,
         minlength: 4
+    },
+    email: {
+      required: true,
+      email: true
     }
      },
       messages: {
         password: {
-          required: "Поле обязательно к заполнению",
           minlength: "Введите не менее 4-х символов"
+    },
+    email: {
+      required: "Поле обязательно к заполнению",
+      email: "Введите корректный email"
+      }
     }
-     }
   });
 
   $('.footer__subscription').validate({
+      rules: {
+        email: {
+          required: true,
+          email: true
+        }
+      },
       messages: {
         email: {
-          required: "Поле обязательно к заполнению"
+          required: "Поле обязательно к заполнению",
+          email: "Введите корректный email"
+      }
+    },
+    submitHandler: function(form) {
+        $.ajax({
+            url: form.action,
+            type: form.method,
+            data: $('.footer__subscription').serialize(),
+            success: function(response) {
+              $('.subscription').addClass('active');
+              $('.overlay').addClass('active');
+            }
+        });
     }
-     }
   });
 
-  $('.filter__form').validate({
+  var validator = $('.filter__form').validate({
       rules: {
-        min: {
+        price: {
           required: true,
           min: 1
         },
-        max: {
+        price: {
           required: true,
           min: 1
         }
       },
 
       messages: {
-        min: {
+        price: {
           required: "Поле обязательно к заполнению",
           min: "Введите число больше нуля"
        },
-        max: {
+        price: {
           required: "Поле обязательно к заполнению",
-          max: "Введите число больше нуля"
+          min: "Введите число больше нуля"
        }
+     },
+     submitHandler: function(form) {
+         $.ajax({
+             url: form.action,
+             type: form.method,
+             data: $('.footer__subscription').serialize(),
+             success: function(response) {
+             }
+         });
      }
   });
 
-  $(function() {
-    $('.footer__subscription').submit(function(e) {
-      var $form = $(this);
-      $.ajax({
-        type: $form.attr('method'),
-        url: $form.attr('action'),
-        data: $form.serialize()
-      }).done(function() {
-        $('.subscription').addClass('active');
-        $('.overlay').addClass('active');
-      }).fail(function() {
-      });
-      e.preventDefault();
-    });
+  $(".filter__btn--clear").click(function() {
+    validator.destroy();
   });
 });
