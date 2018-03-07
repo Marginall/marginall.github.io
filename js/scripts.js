@@ -156,6 +156,7 @@ $(document).ready(function() {
      },
       messages: {
         password: {
+          required: "Поле обязательно к заполнению",
           minlength: "Введите не менее 4-х символов"
     },
     email: {
