@@ -64,7 +64,8 @@ $(document).ready(function() {
 
   $('.tabs__caption').on('click', function(){
     $('.filter__form')[0].reset();
-    validator.destroy();
+    $('input.error').removeClass("error");
+    $('#price-error').remove();
     setTimeout(function() {
       $('.filter__form select').trigger('refresh');
     }, 1)
@@ -223,7 +224,13 @@ $(document).ready(function() {
      }
   });
 
-  $(".filter__btn--clear").click(function() {
-    validator.destroy();
-  });
+  $(function(){
+    $("[type='reset']").on("click", function(e){
+      e.preventDefault();
+      $(this).closest('.filter__form').get(0).reset();
+      $('.filter__select').trigger("refresh");
+      $('input.error').removeClass("error");
+      $('#price-error').remove();
+    });
+  })
 });
