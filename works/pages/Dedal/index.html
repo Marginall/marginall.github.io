@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Главная</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <style>
+      body{-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;font-family:Solomon,Arial,sans-serif;color:#444;font-weight:400;line-height:1;position:relative;font-size:16px!important;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}a,address,div,h2,h3,header,html,img,li,nav,p,span,ul{margin:0;padding:0;border:0;font-size:100%}body{padding:0;margin:0}body{border:0}header,nav{display:block}html{background-color:#fff;-webkit-text-size-adjust:none;-ms-text-size-adjust:none}input{outline:none}input{color:#333;font-family:Solomon,Arial,sans-serif;border-radius:0;-moz-border-radius:0;-webkit-border-radius:0;-webkit-appearance:none}input[type=checkbox]{border:none;outline:none;-webkit-box-shadow:none;box-shadow:none}a{font-family:Solomon,Arial,sans-serif;color:#444;text-decoration:none;outline:none}button{-webkit-appearance:none;outline:none}ul{list-style:none}.header{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;height:100vh;padding-bottom:30px;background:#fff url(img/header.jpg) no-repeat;background-size:100% 100%}.burger{display:none}.header__wrap{background-color:#e9eaee}.header__text{font-size:13px;line-height:21px}.header__text--adress{font-style:normal}.header__tel{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.header__tel a{font-size:22px;font-weight:600}.header__tel span{font-size:13px}.logo{position:relative;padding-right:25px}.logo::after{position:absolute;top:-webkit-calc(50% - 15px);top:calc(50% - 15px);right:0;content:"";display:block;width:1px;height:31px;background-color:#d7d7d7}.btn{display:inline-block;padding:7px 30px;color:#444;text-align:center;font-size:14px;line-height:18px;text-transform:uppercase;border:none}.btn--promo{padding:40px;color:#fff;font-weight:600;letter-spacing:.1em;background-image:-webkit-linear-gradient(100deg,#1c69bf 0%,#3b88dd 100%);background-image:linear-gradient(-10deg,#1c69bf 0%,#3b88dd 100%);-webkit-border-radius:46px;border-radius:46px;-webkit-box-shadow:0 10px 25px rgba(22,89,164,.19);box-shadow:0 10px 25px rgba(22,89,164,.19)}.header__btn{position:absolute;top:10px;right:10px;display:block;height:52px;border:none;background-color:transparent;z-index:10}.burger{width:50px;padding:10px;text-align:right}.burger-brick{height:2px;background-image:-webkit-linear-gradient(100deg,#1c69bf 0%,#3b88dd 100%);background-image:linear-gradient(-10deg,#1c69bf 0%,#3b88dd 100%);margin-top:6px}.burger-brick:nth-child(2){margin-bottom:-4px}.burger-brick:nth-child(3){display:inline-block;width:20px}.nav__list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.nav__link{display:block;padding:14px 10px 10px;font-size:11px;font-weight:500;text-transform:uppercase}.wrapper{position:relative;max-width:980px;width:980px;min-width:400px;margin:0 auto;padding:0 20px}.wrapper--header{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:100%;padding-top:25px}.wrapper--header{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.promo{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}.promo{position:relative;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:620px;margin-bottom:30px}.promo__text--big{padding-top:80px;font-size:46px;font-weight:700;line-height:52px}.promo__text--small{width:410px;margin-bottom:50px;padding-top:20px;line-height:30px;letter-spacing:.08em}.promo__decor{width:auto;color:#1c69bf}.promo__decor span:first-child{position:relative;font-size:150px;font-weight:700;line-height:140px;letter-spacing:-.005em;background-image:-webkit-linear-gradient(-10deg,#1c69bf 0%,#3b88dd 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.promo__decor span:last-child{font-size:22px;font-weight:700}.features,.features__item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.features{-webkit-align-self:flex-end;-ms-flex-item-align:end;align-self:flex-end;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;width:100%}.features__item{margin-right:50px}.features__item:first-child span{display:block;width:34px;height:34px;background:url(img/sprite.png) no-repeat -10px -10px}.features__item:nth-child(2) span{display:block;width:34px;height:34px;background:url(img/sprite.png) no-repeat -10px -64px}.features__item:last-child span{display:block;width:36px;height:32px;background:url(img/sprite.png) no-repeat -64px -10px}.features__text{width:120px;padding-left:10px;font-size:12px;letter-spacing:.1em}.title{width:100%;font-family:Solomon,Arial,sans-serif;font-size:46px;font-weight:700;line-height:54px;text-align:center}.title--slider{width:330px;font-size:22px;font-weight:600;line-height:24px;text-align:left}.title--comfort-small{margin-bottom:30px;font-size:22px;font-weight:600;line-height:26px;text-align:left}.slider__text--small{width:330px;font-size:16px;line-height:24px}.tabs__content{display:none}.popup__checkbox{display:none}.documents__close span,.documents__popup div{position:relative}.comfort__item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.comfort__wrap--left{position:relative;-webkit-flex-basis:365px;-ms-flex-preferred-size:365px;flex-basis:365px;padding:50px 50px 33px;background-color:#fff}.comfort__wrap--left::after,.comfort__wrap--left::before{position:absolute;bottom:80px;content:"";display:block;width:75%;height:1px;background-color:#e4ecf6}.comfort__wrap--left::before{display:none}.comfort__icon{display:block;margin-bottom:25px;fill:#1c69bf}.comfort__text{font-size:16px;line-height:24px}.js-tab-pane{display:none}.comfort__num{position:absolute;bottom:35px;left:173px;font-size:20px;font-weight:600}.documents__item:nth-child(3) .documents__popup{left:-100%;width:420px;height:568px;background:url(img/big_doc_3.jpg) no-repeat;background-size:contain}.documents__item:nth-child(2) .documents__popup{width:420px;height:568px;background:url(img/big_doc_2.jpg) no-repeat;background-size:contain}.documents__item:nth-child(1) .documents__popup{width:420px;height:568px;background:url(img/big_doc_1.jpg) no-repeat;background-size:contain}.go-top span{position:relative;display:block;width:100%;height:100%}.documents__number-item{display:none;font-size:20px;font-weight:600;letter-spacing:.1em}.documents__popup{position:absolute;top:0;left:50%;margin-left:-500px;display:none;z-index:9999!important}.documents__close{display:block}.documents__close{position:absolute;right:0;top:0;width:60px;height:60px;border:2px solid #1c69bf;background:0 0;-webkit-border-radius:50%;border-radius:50%}.documents__close span::after,.documents__close span::before{position:absolute;left:50%;top:50%;content:"";display:block;width:50px;height:2px;margin-left:-25px;background-color:#1c69bf}.documents__close span::after{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}.documents__close span::before{-webkit-transform:rotate(135deg);-ms-transform:rotate(135deg);transform:rotate(135deg)}.go-top{position:fixed;bottom:25px;right:10px;display:none;width:70px;height:70px;border:1px solid #3b88dd;z-index:9999}.go-top span::after,.go-top span::before{position:absolute;top:50%;left:50%;content:"";display:block;width:30px;height:2px;background-color:#3b88dd}.go-top span::before{margin-left:-25px;-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg)}.go-top span::after{margin-left:-5px;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}@font-face{font-family:'Solomon';src:url(fonts/solomon_sans_black.woff2) format("woff2"),url(fonts/solomon_sans_black.woff) format("woff");font-weight:900;font-style:normal}@font-face{font-family:'Solomon';src:url(fonts/solomon_sans_bold.woff2) format("woff2"),url(fonts/solomon_sans_bold.woff) format("woff");font-weight:700;font-style:normal}@font-face{font-family:'Solomon';src:url(fonts/solomon_sans_book.woff2) format("woff2"),url(fonts/solomon_sans_book.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:'Solomon';src:url(fonts/solomon_sans_light.woff2) format("woff2"),url(fonts/solomon_sans_light.woff) format("woff");font-weight:300;font-style:normal}@font-face{font-family:'Solomon';src:url(fonts/solomon_sans_normal.woff2) format("woff2"),url(fonts/solomon_sans_normal.woff) format("woff");font-weight:500;font-style:normal}@font-face{font-family:'Solomon';src:url(fonts/solomon_sans_semibold.woff2) format("woff2"),url(fonts/solomon_sans_semibold.woff) format("woff");font-weight:600;font-style:normal}@font-face{font-family:'Solomon';src:url(fonts/solomon_sans_thin.woff2) format("woff2"),url(fonts/solomon_sans_thin.woff) format("woff");font-weight:100;font-style:normal}@media screen and (max-width:980px){.header{height:auto;padding-bottom:20px;background-color:#f2f3f6;background-position:100% 100%;background-size:contain}.comfort__wrap img{width:100%}.wrapper{width:100%;margin:0 auto;padding:0 20px}.comfort__item{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.comfort__wrap--left{-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1;padding-left:120px;-webkit-box-shadow:0 25px 57px rgba(147,147,147,.26);box-shadow:0 25px 57px rgba(147,147,147,.26)}.comfort__wrap--left::after{left:0;bottom:80px;width:35%}.comfort__wrap--left::before{right:0;display:block;bottom:80px;width:35%}.comfort__icon{position:absolute;left:40px}.comfort__num{left:50%;margin-left:-15px;bottom:80px}}@media screen and (max-width:768px){.promo__decor span:first-child{font-size:126px}}@media screen and (max-width:630px){.header{height:auto;padding-top:25px;padding-bottom:185px;background-position:100% 100%;background-size:130%}.header,.header__wrap{background-color:#f2f3f6}.header__adress,.logo::after{display:none}.burger,.header__btn{display:block}.logo{width:100%}.nav__list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;width:100%}.nav__item{width:100%}.nav__link{width:70%;margin:0 auto;font-size:18px;text-align:center}.nav{display:none;padding-bottom:30px}.wrapper{width:100%;padding:0 20px}.promo__decor{position:static}.promo__text{font-size:40px}.promo__text--big{padding-top:50px;line-height:44px}.promo__text--small{width:60%;margin-bottom:30px;font-size:18px;line-height:30px;letter-spacing:0;font-weight:400}.promo{margin-bottom:50px}.promo__decor{width:213px;height:213px;padding-top:30px;border:1px solid rgba(0,0,0,.05);-webkit-border-radius:50%;border-radius:50%;text-align:center}.promo__decor span:first-child{width:auto;font-size:110px}.features{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.features__item{margin-right:0;margin-bottom:30px}.features__item:last-child{margin-bottom:0}.features__text{width:200px;padding-left:20px;font-weight:500}.title--slider{width:100%;margin-bottom:10px}.slider__text--small{width:100%}.comfort__wrap--left::after,.comfort__wrap--left::before{bottom:50px;width:30%}.comfort__num{bottom:42px}}@media screen and (max-width:480px){.header__text{width:50%}.promo__decor span:first-child{font-size:68px}.promo__decor{top:30%;right:40%;width:auto;height:auto;border:none}.comfort__wrap--left{padding:50px 20px 0 120px}.comfort__wrap--left::after,.comfort__wrap--left::before{bottom:52px;width:25%}.documents__popup{left:0;width:100%!important;height:400px!important;margin-left:0;background-size:contain;outline:1px solid red}}
+    </style>
+    <link rel="preload" href="css/style.min.css" as="style" onload="this.rel='stylesheet'">
+  	<noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+    <script>
+      !function(e){"use strict";var t=function(t,n,r){function o(e){if(i.body)return e();setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrap">
+        <a href="#" class="header__btn" id="header-btn">
+					<div class="burger">
+						<div class="burger-brick"></div>
+						<div class="burger-brick middle"></div>
+						<div class="burger-brick"></div>
+					</div>
+				</a>
+        <div class="wrapper">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#part1" class="nav__link">Комплексное лечение</a></li>
+              <li class="nav__item"><a href="#part2" class="nav__link">Авторская методика</a></li>
+              <li class="nav__item"><a href="#part3" class="nav__link">Современный центр </a></li>
+              <li class="nav__item"><a href="#part4" class="nav__link">Комфортные условия</a></li>
+              <li class="nav__item"><a href="#part5" class="nav__link">Наши сертификаты</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Отзывы клиентов</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="wrapper wrapper--header">
+        <div class="logo">
+          <img class="logo__img" src="img/logo.png" width="177" alt="Лого">
+        </div>
+        <p class="header__text">Клиника восстановительного лечения<br>
+  Работаем с 1996 года</p>
+        <address class="header__adress">
+          <p class="header__text header__text--adress">г.Москва, ул. Циолковского 7<br>
+  Пн-Вс: 9:00 – 21:00</p>
+        </address>
+        <div class="header__tel">
+          <a href="tel:88005004737">8(800) 500-47-37</a>
+          <span>Бесплатный звонок по России</span>
+        </div>
+        <div class="promo">
+          <p class="promo__text promo__text--big">Безоперационное лечение боли в спине и шеи — наша специализация уже более</p>
+          <p class="promo__text promo__text--small">Запишитесь на консультацию в наш центр прямо сейчас и узнайте, в чем причина вашей боли и сколько времени займет ее лечение</p>
+          <div class="promo__decor" data-text="20"><span>20</span><span>лет</span></div>
+          <a href="#" class="btn btn--promo btn--popup">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</a>
+        </div>
+        <ul class="features">
+          <li class="features__item">
+            <span></span>
+            <p class="features__text">Запатентованная авторская методика</p>
+          </li>
+          <li class="features__item">
+            <span></span>
+            <p class="features__text">более 12 000 довольных пациентов</p>
+          </li>
+          <li class="features__item">
+            <span></span>
+            <p class="features__text">Лечим взрослых и детей</p>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main id="main" class="content">
+      <section class="services" id="part1">
+        <div class="wrapper wrapper--services">
+          <h2 class="title title--services">Комплексное лечение</h2>
+          <div class="services__wrap services__wrap--left">
+            <ul class="services__list services__list--left">
+              <li class="title title--small">Лечим дискомфорт
+  и боли:</li>
+              <li class="services__item">Шея</li>
+              <li class="services__item">Грудной отдел</li>
+              <li class="services__item">Поясница</li>
+              <li class="services__item">Руки</li>
+              <li class="services__item">Ноги</li>
+            </ul>
+            <ul class="services__list services__list--left">
+              <li class="title title--small">Помогаем
+  с сопутствующими
+  проблемами:</li>
+              <li class="services__item">Эстетические деформации
+  и искривления </li>
+              <li class="services__item">Проблемы со зрением</li>
+              <li class="services__item">Головные боли</li>
+              <li class="services__item">Мышечная слабость</li>
+              <li class="services__item">Онемение конечностей
+  и отеков</li>
+            </ul>
+          </div>
+          <div class="services__wrap services__wrap--right">
+            <ul class="services__list">
+              <li class="title title--small">Работаем со всеми
+  причинами боли:</li>
+              <li class="services__item">Травмы</li>
+              <li class="services__item">Слабость мышц</li>
+              <li class="services__item">Искривления позвоночника</li>
+              <li class="services__item">Сидячий образ жизни</li>
+              <li class="services__item">Грыжи</li>
+              <li class="services__item">Остеохондрозы</li>
+              <li class="services__item">Возрастные изменения
+  костно-мышечной системы</li>
+              <li class="services__item">Деформации позвоночника</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="slider" id="part2">
+        <div class="wrapper wrapper--slider">
+          <div class="slider__wrap single-item">
+            <div class="slider__item">
+              <p class="slider__text slider__text--big"><span class="slider__decor">100%</span> эффективность благодаря
+уникальной методике</p>
+              <div class="tabs">
+                <ul class="tabs__caption slider__tabs">
+                  <li class="slider__list-item slider__list-item--big active">Императивно-коррегирующая гимнастика</li>
+                  <li class="slider__list-item">Доступно и легко</li>
+                  <li class="slider__list-item">Полная сертификация</li>
+                  <li class="slider__list-item">Избавление от боли</li>
+                  <li class="slider__list-item">Никаких операций</li>
+                </ul>
+                <div class="tabs__content active">
+                  <h2 class="title title--slider">Императивно-коррегирующая гимнастика</h2>
+                  <p class="slider__text slider__text--small">Основа нашей методики – императивно-коррегирующая гимнастика. Она устраняет мышечную слабость и усиливает корсет позвоночника. Сильные мышцы правильно держат позвоночник, избавляя вас от боли.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorem blanditiis reiciendis porro dolor beatae eos sit voluptatibus officia ad.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">3</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">4</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">5</p>
+                </div>
+              </div>
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/slider_img_1_mob.png">
+                <img class="slider__img" src="img/slider_img_1.png" width="575" alt="">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <p class="slider__text slider__text--big"><span class="slider__decor">100%</span> эффективность благодаря
+уникальной методике</p>
+              <div class="tabs">
+                <ul class="tabs__caption slider__tabs">
+                  <li class="slider__list-item slider__list-item--big active">Императивно-коррегирующая гимнастика</li>
+                  <li class="slider__list-item">Доступно и легко</li>
+                  <li class="slider__list-item">Полная сертификация</li>
+                  <li class="slider__list-item">Избавление от боли</li>
+                  <li class="slider__list-item">Никаких операций</li>
+                </ul>
+                <div class="tabs__content active">
+                  <h2 class="title title--slider">Императивно-коррегирующая гимнастика</h2>
+                  <p class="slider__text slider__text--small">Основа нашей методики –<br> императивно-коррегирующая гимнастика. Она устраняет мышечную слабость и усиливает корсет позвоночника. Сильные мышцы правильно держат позвоночник, избавляя вас от боли.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorem blanditiis reiciendis porro dolor beatae eos sit voluptatibus officia ad.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">3</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">4</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">5</p>
+                </div>
+              </div>
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/slider_img_1_mob.png">
+                <img class="slider__img" src="img/slider_img_1.png" width="575" alt="">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <p class="slider__text slider__text--big"><span class="slider__decor">100%</span> эффективность благодаря
+уникальной методике</p>
+              <div class="tabs">
+                <ul class="tabs__caption slider__tabs">
+                  <li class="slider__list-item slider__list-item--big active">Императивно-коррегирующая гимнастика</li>
+                  <li class="slider__list-item">Доступно и легко</li>
+                  <li class="slider__list-item">Полная сертификация</li>
+                  <li class="slider__list-item">Избавление от боли</li>
+                  <li class="slider__list-item">Никаких операций</li>
+                </ul>
+                <div class="tabs__content active">
+                  <h2 class="title title--slider">Императивно-коррегирующая гимнастика</h2>
+                  <p class="slider__text slider__text--small">Основа нашей методики –<br> императивно-коррегирующая гимнастика. Она устраняет мышечную слабость и усиливает корсет позвоночника. Сильные мышцы правильно держат позвоночник, избавляя вас от боли.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorem blanditiis reiciendis porro dolor beatae eos sit voluptatibus officia ad.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">3</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">4</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">5</p>
+                </div>
+              </div>
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/slider_img_1_mob.png">
+                <img class="slider__img" src="img/slider_img_1.png" width="575" alt="">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <p class="slider__text slider__text--big"><span class="slider__decor">100%</span> эффективность благодаря
+уникальной методике</p>
+              <div class="tabs">
+                <ul class="tabs__caption slider__tabs">
+                  <li class="slider__list-item slider__list-item--big active">Императивно-коррегирующая гимнастика</li>
+                  <li class="slider__list-item">Доступно и легко</li>
+                  <li class="slider__list-item">Полная сертификация</li>
+                  <li class="slider__list-item">Избавление от боли</li>
+                  <li class="slider__list-item">Никаких операций</li>
+                </ul>
+                <div class="tabs__content active">
+                  <h2 class="title title--slider">Императивно-коррегирующая гимнастика</h2>
+                  <p class="slider__text slider__text--small">Основа нашей методики –<br> императивно-коррегирующая гимнастика. Она устраняет мышечную слабость и усиливает корсет позвоночника. Сильные мышцы правильно держат позвоночник, избавляя вас от боли.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorem blanditiis reiciendis porro dolor beatae eos sit voluptatibus officia ad.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">3</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">4</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">5</p>
+                </div>
+              </div>
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/slider_img_1_mob.png">
+                <img class="slider__img" src="img/slider_img_1.png" width="575" alt="">
+              </picture>
+            </div>
+            <div class="slider__item">
+              <p class="slider__text slider__text--big"><span class="slider__decor">100%</span> эффективность благодаря
+уникальной методике</p>
+              <div class="tabs">
+                <ul class="tabs__caption slider__tabs">
+                  <li class="slider__list-item slider__list-item--big active">Императивно-коррегирующая гимнастика</li>
+                  <li class="slider__list-item">Доступно и легко</li>
+                  <li class="slider__list-item">Полная сертификация</li>
+                  <li class="slider__list-item">Избавление от боли</li>
+                  <li class="slider__list-item">Никаких операций</li>
+                </ul>
+                <div class="tabs__content active">
+                  <h2 class="title title--slider">Императивно-коррегирующая гимнастика</h2>
+                  <p class="slider__text slider__text--small">Основа нашей методики –<br> императивно-коррегирующая гимнастика. Она устраняет мышечную слабость и усиливает корсет позвоночника. Сильные мышцы правильно держат позвоночник, избавляя вас от боли.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolorem blanditiis reiciendis porro dolor beatae eos sit voluptatibus officia ad.</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">3</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">4</p>
+                </div>
+                <div class="tabs__content">
+                  <h2 class="title title--slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, voluptas.</h2>
+                  <p class="slider__text slider__text--small">5</p>
+                </div>
+                <picture>
+                  <source media="(max-width: 630px)" srcset="img/slider_img_1_mob.png">
+                  <img class="slider__img" src="img/slider_img_1.png" width="575" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="slider__number">
+            <span>/ 5</span>
+          </div>
+        </div>
+      </section>
+      <section class="methodic" id="part3">
+        <div class="wrapper wrapper--methodic">
+          <div class="methodic__wrap">
+            <p class="methodic__text">Мы гарантируем улучшение вашего самочувствия уже
+с первого сеанса благодаря <span>оригинальной авторской методике</span></p>
+            <p class="methodic__text methodic__text--small">Запишитесь на консультацию в наш центр прямо сейчас</p>
+            <button class="btn btn--methodic btn--popup">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
+          </div>
+        </div>
+      </section>
+      <section class="compartment">
+        <div class="wrapper">
+          <h2 class="title title--compartment">Современный медицинский центр</h2>
+          <div class="compartment-slider">
+            <div class="compartment-slider__item">
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/mob__1.png">
+                <source media="(max-width: 980px)" srcset="img/1.jpg">
+                <img src="img/1.png" width="940" alt="Compartment" class="compartment-slider__img">
+              </picture>
+            </div>
+            <div class="compartment-slider__item">
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/mob__2.png">
+                <source media="(max-width: 980px)" srcset="img/2.jpg">
+                <img src="img/2.png" width="940" alt="Compartment" class="compartment-slider__img">
+              </picture>
+            </div>
+            <div class="compartment-slider__item">
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/mob__1.png">
+                <source media="(max-width: 980px)" srcset="img/3.jpg">
+                <img src="img/3.png" width="940" alt="Compartment" class="compartment-slider__img">
+              </picture>
+            </div>
+            <div class="compartment-slider__item">
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/mob__2.png">
+                <source media="(max-width: 980px)" srcset="img/4.jpg">
+                <img src="img/4.png" width="940" alt="Compartment" class="compartment-slider__img">
+              </picture>
+            </div>
+            <div class="compartment-slider__item">
+              <picture>
+                <source media="(max-width: 630px)" srcset="img/mob__1.png">
+                <source media="(max-width: 980px)" srcset="img/5.jpg">
+                <img src="img/5.png" width="940" alt="Compartment" class="compartment-slider__img">
+              </picture>
+            </div>
+          </div>
+          <ul class="compartment__list">
+            <li class="compartment__list-item">
+              <svg class="compartment__icon" width="45" height="46" viewbox="0 0 512.004 512.004">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#treadmill"/>
+              </svg>
+              <h3 class="title title--compartment-small">Уникальное оборудование</h3>
+              <p class="compartment__text">Мы проводим занятия на уникальном оборудовании, разработанном под нашу методику. В центре есть все необходимые тренажеры и инвентарь.</p>
+            </li>
+            <li class="compartment__list-item">
+              <svg class="compartment__icon" width="45" height="46" viewbox="0 0 512.004 512.004">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#hospital"/>
+              </svg>
+              <h3 class="title title--compartment-small">Комфортные номера</h3>
+              <p class="compartment__text">Вы можете пройти лечение с проживанием или амбулаторно. Для пациентов из других городов мы предлагаем комфортные номера и трансфер из аэропорта и вокзала.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="comfort" id="part4">
+        <div class="wrapper">
+          <h2 class="title title--comfort">Комфортные условия лечения</h2>
+          <div class="comfort__tabs js-tabs">
+            <ul class="js-nav-tabs comfort__list">
+              <li class="comfort__list-item active"><a href="#tab1" data-toggle="tab">Гибкий график и занятия на дому</a></li>
+              <li class="comfort__list-item"><a href="#tab2" data-toggle="tab">Удобное расположение клиники</a></li>
+              <li class="comfort__list-item"><a href="#tab3" data-toggle="tab">Система абонементов</a></li>
+            </ul>
+            <div class="js-tab-content">
+              <div class="comfort__item js-tab-pane active" id="tab1">
+                <div class="comfort__wrap comfort__wrap--left">
+                  <svg class="comfort__icon" width="52" height="52" viewbox="0 0 59 59">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#calendar-3"/>
+                  </svg>
+                  <h3 class="title title--comfort-small">Удобный график
+и занятия на дому</h3>
+                  <p class="comfort__text">Мы подбираем удобный для вас график посещения клиники. Есть возможность вызова врача и индивидуальные занятия на дому.</p>
+                  <span class="comfort__num">1/3</span>
+                </div>
+                <div class="comfort__wrap">
+                  <img src="img/comfort_img_1.jpg" alt="Comfort" class="comfort__img">
+                </div>
+              </div>
+              <div class="comfort__item js-tab-pane" id="tab2">
+                <div class="comfort__wrap comfort__wrap--left">
+                  <svg class="comfort__icon" width="52" height="52" viewbox="0 0 470 470">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#i--map"/>
+                  </svg>
+                  <h3 class="title title--comfort-small">Удобное расположение
+клиники</h3>
+                  <p class="comfort__text">Клиника расположена в Москве. До нее удобно добираться на общественном транспорте.</p>
+                  <span class="comfort__num">2/3</span>
+                </div>
+                <div class="comfort__wrap">
+                  <img src="img/map.jpg" alt="Comfort" class="comfort__img">
+                </div>
+              </div>
+              <div class="comfort__item js-tab-pane" id="tab3">
+                <div class="comfort__wrap comfort__wrap--left">
+                  <svg class="comfort__icon" width="52" height="52" viewbox="0 0 512.004 512.004">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#treadmill"/>
+                  </svg>
+                  <h3 class="title title--comfort-small">Абонементная
+система посещения</h3>
+                  <p class="comfort__text">Мы предлагаем абонементную систему посещения. Она дешевле разовых занятий и подойдет для длительных курсов.</p>
+                  <span class="comfort__num">3/3</span>
+                </div>
+                <div class="comfort__wrap">
+                  <img src="img/comfort_img_3.jpg" alt="Comfort" class="comfort__img">
+                </div>
+              </div>
+              <div class="tabs-nextprev comfort__control">
+                <a class="btn btn--comfort btn-primary prev hidden"></a>
+                <a class="btn btn--comfort btn-primary next"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="documents" id="part5">
+        <div class="wrapper wrapper--documents">
+          <div class="documents__wrap documents__wrap--mob" >
+            <div class="documents__title-wrap">
+              <h2 class="title title--documents">Наша лицензия и сертификаты</h2>
+            </div>
+            <div class="documents__list">
+    	        <a href="#" class="documents__item active">
+    	            <div class="documents__wrap">
+                    <img src="img/doc_1.jpg" alt="Portfolio img">
+                  </div>
+                  <div class="documents__popup">
+                    <div>
+                      <button type="button" class="documents__close">
+                        <span></span>
+                      </button>
+                    </div>
+                  </div>
+    	        </a>
+    	        <a href="#" class="documents__item">
+    	            <div class="documents__wrap">
+                    <img src="img/doc_2.jpg" alt="Portfolio img">
+                  </div>
+                  <div class="documents__popup">
+                    <div><button type="button" class="documents__close">
+                      <span></span>
+                    </button></div>
+                  </div>
+    	        </a>
+    	        <a href="#" class="documents__item">
+    	            <div class="documents__wrap">
+                    <img src="img/doc_3.jpg" alt="Portfolio img">
+                  </div>
+                  <div class="documents__popup">
+                    <div><button type="button" class="documents__close">
+                      <span></span>
+                    </button></div>
+                  </div>
+    	        </a>
+          	</div>
+            <div class="documents__text-block">
+              <p class="documents__text">Лицензция на осуществление
+  медицинской деятельности</p>
+              <button type="button" class="documents__btn">Увеличить
+                <svg width="18" height="18" viewbox="0 0 612.009 612.01">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/symbols.svg#btn"/>
+                </svg>
+              </button>
+            </div>
+            <div class="documents__controls">
+              <button class="btn btn--documents documents__control" type="button" id="prev">1</button>
+              <div class="documents__number">
+                <span class="documents__number-item active">1/3</span>
+                <span class="documents__number-item">2/3</span>
+                <span class="documents__number-item">3/3</span>
+              </div>
+              <button class="btn btn--documents documents__control" type="button" id="next">2</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrapper wrapper--footer">
+        <p class="footer__text">Клиника восстановительного лечения
+Работаем с 1996 года</p>
+        <p class="footer__text">ООО "Научно-технический центр «Дедал-88»
+Лицензия: ЛО-77-01-014209 от 25 апреля 2017 г.</p>
+        <div class="footer__contacts">
+          <span>8 (800) 500-47-37</span>
+          <p>Бесплатный звонок по России</p>
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="go-top" id="go-top" title="Вверх"><span></span></a>
+    <div class="popup none">
+      <form class="popup__form">
+        <h2 class="title title--form">Запишитесь на консультацию</h2>
+        <p class="popup__text">Заполните поля ниже. Менеджер свяжется
+с вами в течение 12 минут.</p>
+        <label class="popup__label popup__label--user">
+          <span></span>
+          <input type="text" class="popup__input" placeholder="Введите ваше имя" required>
+        </label>
+        <label class="popup__label popup__label--phone">
+          <span></span>
+          <input type="text" class="popup__input" placeholder="Введите ваш телефон" required>
+        </label>
+        <button type="submit" class="btn btn--form">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</button>
+        <div class="popup__wrap">
+          <input id="consent" type="checkbox" class="popup__checkbox" required>
+          <span class="popup__icon"></span>
+          <label class="popup__consent" for="consent">Нажимая на кнопку «Записаться на консультацию», я даю согласие на обработку персональных данных и соглашаюсь c условиями политики конфиденциальности.</label>
+        </div>
+        <a href="#" class="popup__close"><span></span></a>
+      </form>
+    </div>
+    <div class="overlay"></div>
+    <script defer type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script defer type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script defer type="text/javascript" src="js/concat.js"></script>
+    <script defer type="text/javascript" src="js/scripts.min.js"></script>
+  </body>
+</html>
