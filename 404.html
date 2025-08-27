@@ -4,17 +4,20 @@
     <meta charset="utf-8">
     <title>Demo</title>
     <script>
-        // GitHub Pages SPA redirect
-        // https://github.com/rafgraph/spa-github-pages
-        var pathSegmentsToKeep = 2; // marginall.github.io has 2 segments
+        // Simple redirect to main page for GitHub Pages SPA
+        var segmentCount = 2; // marginall.github.io has 2 path segments
         var l = window.location;
-        l.replace(
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-            l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-            l.hash
-        );
+        
+        // Only redirect if we're not already on the main page
+        if (l.pathname !== '/marginall.github.io/') {
+            l.replace(
+                l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+                '/marginall.github.io/?/' + 
+                l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+                (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+                l.hash
+            );
+        }
     </script>
 </head>
 <body>
