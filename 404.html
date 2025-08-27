@@ -4,16 +4,15 @@
     <meta charset="utf-8">
     <title>Demo</title>
     <script>
-        // Simple redirect to main page for GitHub Pages SPA
-        var segmentCount = 2; // marginall.github.io has 2 path segments
+        // GitHub Pages SPA redirect for root domain
         var l = window.location;
         
-        // Only redirect if we're not already on the main page
-        if (l.pathname !== '/marginall.github.io/') {
+        // Redirect /forcast and other routes to /?/route format for SPA handling
+        if (l.pathname !== '/') {
             l.replace(
                 l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-                '/marginall.github.io/?/' + 
-                l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+                '/?/' + 
+                l.pathname.slice(1).replace(/&/g, '~and~') +
                 (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
                 l.hash
             );
