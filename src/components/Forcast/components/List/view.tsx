@@ -6,7 +6,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import { Fragment, useId, useState } from "react";
+import { Fragment, useId, useState, useRef, useEffect } from "react";
 import { format } from "date-fns";
 import ThermostatIcon from "@mui/icons-material/Thermostat";
 import AirIcon from "@mui/icons-material/Air";
@@ -25,6 +25,25 @@ export const List = () => {
     show: false,
   });
   const id = useId();
+  const detailsRef = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+  useEffect(() => {
+    if (showDetails.show && showDetails.id) {
+      const element = detailsRef.current[showDetails.id];
+      if (element) {
+        setTimeout(() => {
+          const elementTop =
+            element.getBoundingClientRect().top + window.pageYOffset;
+          const offset = window.innerHeight / 2;
+
+          window.scrollTo({
+            top: elementTop - offset,
+            behavior: "smooth",
+          });
+        }, 300);
+      }
+    }
+  }, [showDetails]);
 
   return forcast ? (
     <>
@@ -41,6 +60,11 @@ export const List = () => {
           in={showDetails.id === day.id && showDetails.show}
         >
           <Box
+            ref={(el) => {
+              if (el) {
+                detailsRef.current[day.id] = el as HTMLDivElement;
+              }
+            }}
             p={3}
             borderRadius={1}
             sx={{
