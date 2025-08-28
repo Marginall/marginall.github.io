@@ -48,7 +48,6 @@ export const SearchForm: React.FC = () => {
       sx={{
         backgroundColor: theme.palette.background.default,
         borderRadius: 1,
-        py: 3,
       }}
     >
       <Stack direction="row" spacing={2}>

@@ -54,7 +54,7 @@ export const UserPosition = () => {
   }
 
   return (
-    <Box sx={{ m: 1, position: "relative" }}>
+    <Box sx={{ mb: { xs: 2, md: 0 }, position: "relative" }}>
       {isLoading && (
         <CircularProgress
           color="secondary"

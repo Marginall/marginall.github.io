@@ -30,7 +30,7 @@ export const List = () => {
     <>
       <Grid2 container alignItems="stretch" spacing={{ xs: 2, sm: 3 }} mb={5}>
         {forcast.data.forecastday.map((day: ForecastdayType, index: number) => (
-          <Grid2 key={`${id}-${index}`} size={{ xs: 4, sm: 4, md: 3 }}>
+          <Grid2 key={`${id}-${index}`} size={{ xs: 12, sm: 4, md: 3 }}>
             <Day record={day} setShowDetails={setShowDetails} />
           </Grid2>
         ))}

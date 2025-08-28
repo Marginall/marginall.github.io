@@ -64,7 +64,7 @@ const MainView = () => {
               display="flex"
               flexDirection={{ xs: "column" }}
               alignItems="end"
-              spacing={2}
+              spacing={3}
               sx={{ width: { xs: "100%", sm: "auto" } }}
             >
               <Grid2>
