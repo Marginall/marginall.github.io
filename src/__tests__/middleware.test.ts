@@ -1,10 +1,12 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { configureStore } from "@reduxjs/toolkit";
 import { cityMiddleware } from "../middleware";
-import { setCity } from "../slices/citySlice";
+import { cityActions } from "../slices/citySlice";
 import { addCity, deleteCity } from "../slices/citiesSlice";
 import cityReducer from "../slices/citySlice";
 import citiesReducer from "../slices/citiesSlice";
+
+const { setCity } = cityActions;
 
 // Mock localStorage
 const localStorageMock = {

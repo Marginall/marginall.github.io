@@ -1,20 +1,18 @@
 import { Box, Button, CircularProgress } from "@mui/material";
-
 import { useLazyGetWeatherByGeoQuery } from "../../../../services/weatherApi";
-import { useDispatch } from "react-redux";
-import { setCity } from "../../../../slices/citySlice";
 import { useEffect } from "react";
+import { useActions } from "../../../../hooks/useActions";
 
 export const UserPosition = () => {
-  const dispatch = useDispatch();
+  const { setCity } = useActions();
   const [getWeatherByGeo, { data, error, isLoading }] =
     useLazyGetWeatherByGeoQuery();
 
   useEffect(() => {
     if (data) {
-      dispatch(setCity(data.data.location.name));
+      setCity(data.data.location.name);
     }
-  }, [data, dispatch]);
+  }, [data, setCity]);
 
   const clickHandler = () => {
     if (navigator.geolocation) {

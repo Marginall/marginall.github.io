@@ -1,9 +1,12 @@
 import { describe, it, expect } from "vitest";
-import cityReducer, { setCity } from "../citySlice";
+import cityReducer, { cityActions } from "../citySlice";
+import { DEFAULT_CITY } from "../../constants";
+
+const { setCity } = cityActions;
 
 describe("citySlice", () => {
   const initialState = {
-    cityName: "London",
+    cityName: DEFAULT_CITY,
   };
 
   it("should return the initial state", () => {
@@ -11,7 +14,7 @@ describe("citySlice", () => {
   });
 
   it("should handle setCity", () => {
-    const previousState = { cityName: "London" };
+    const previousState = { cityName: DEFAULT_CITY };
     const action = setCity("Kiev");
     const expectedState = { cityName: "Kiev" };
 
@@ -19,7 +22,7 @@ describe("citySlice", () => {
   });
 
   it("should handle setCity with empty string", () => {
-    const previousState = { cityName: "London" };
+    const previousState = { cityName: DEFAULT_CITY };
     const action = setCity("");
     const expectedState = { cityName: "" };
 
@@ -27,7 +30,7 @@ describe("citySlice", () => {
   });
 
   it("should handle setCity with special characters", () => {
-    const previousState = { cityName: "London" };
+    const previousState = { cityName: DEFAULT_CITY };
     const action = setCity("São Paulo");
     const expectedState = { cityName: "São Paulo" };
 

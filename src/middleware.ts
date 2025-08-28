@@ -1,15 +1,18 @@
 import { Middleware } from "@reduxjs/toolkit";
-import { setCity } from "./slices/citySlice";
-import { addCity, deleteCity } from "./slices/citiesSlice";
+import { cityActions } from "./slices/citySlice";
+import { citiesActions } from "./slices/citiesSlice";
 
 export const cityMiddleware: Middleware = (store) => (next) => (action) => {
   const result = next(action);
 
-  if (setCity.match(action)) {
+  if (cityActions.setCity.match(action)) {
     localStorage.setItem("city", action.payload);
   }
 
-  if (addCity.match(action) || deleteCity.match(action)) {
+  if (
+    citiesActions.addCity.match(action) ||
+    citiesActions.deleteCity.match(action)
+  ) {
     const state = store.getState();
     localStorage.setItem("cities", JSON.stringify(state.cities.names));
   }

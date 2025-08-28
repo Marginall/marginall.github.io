@@ -1,21 +1,20 @@
 import { Chip, Stack } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../../../store/store";
-import { setCity } from "../../../../slices/citySlice";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { deleteCity } from "../../../../slices/citiesSlice";
+import { useActions } from "../../../../hooks/useActions";
 
 export const Cities = () => {
-  const dispatch = useDispatch();
   const cities = useSelector((state: RootState) => state.cities.names);
   const currentCity = useSelector((state: RootState) => state.city.cityName);
+  const { setCity, deleteCity } = useActions();
 
   const clickHandler = (city: string) => {
-    dispatch(setCity(city));
+    setCity(city);
   };
 
   const deleteHandler = (city: string) => {
-    dispatch(deleteCity(city));
+    deleteCity(city);
   };
 
   return cities.length > 1 ? (

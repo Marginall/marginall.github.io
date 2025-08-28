@@ -7,24 +7,22 @@ import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { Icon, Stack, useTheme } from "@mui/material";
 import { API_KEY } from "../../../../constants";
-import { useDispatch } from "react-redux";
-import { setCity } from "../../../../slices/citySlice";
-import { addCity } from "../../../../slices/citiesSlice";
+import { useActions } from "../../../../hooks/useActions";
 
 export const SearchForm: React.FC = () => {
+  const { setCity, addCity } = useActions();
   const [options, setOptions] = useState<
     { label: string; id: string; key: number }[]
   >([]);
   const theme = useTheme();
-  const dispatch = useDispatch();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const query = formData.get("search")?.toString();
     if (query) {
-      dispatch(setCity(query));
-      dispatch(addCity(query));
+      setCity(query);
+      addCity(query);
     }
   };
 

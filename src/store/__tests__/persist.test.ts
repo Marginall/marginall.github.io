@@ -1,5 +1,6 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import { loadCity, loadCities } from "../persist";
+import { DEFAULT_CITY } from "../../constants";
 
 // Mock localStorage
 const localStorageMock = {
@@ -28,13 +29,13 @@ describe("persist utilities", () => {
       expect(result).toBe("Kiev");
     });
 
-    it('should return default city "London" when no city in localStorage', () => {
+    it("should return default city when no city in localStorage", () => {
       localStorageMock.getItem.mockReturnValue(null);
 
       const result = loadCity();
 
       expect(localStorageMock.getItem).toHaveBeenCalledWith("city");
-      expect(result).toBe("London");
+      expect(result).toBe(DEFAULT_CITY);
     });
 
     it("should return empty string if stored", () => {
@@ -42,16 +43,16 @@ describe("persist utilities", () => {
 
       const result = loadCity();
 
-      // Empty string is falsy, so it will return default "London"
-      expect(result).toBe("London");
+      // Empty string is falsy, so it will return default city
+      expect(result).toBe(DEFAULT_CITY);
     });
   });
 
   describe("loadCities", () => {
     beforeEach(() => {
-      // Mock loadCity to return 'London' by default
+      // Mock loadCity to return DEFAULT_CITY by default
       localStorageMock.getItem.mockImplementation((key) => {
-        if (key === "city") return "London";
+        if (key === "city") return DEFAULT_CITY;
         if (key === "cities") return null;
         return null;
       });
@@ -71,40 +72,40 @@ describe("persist utilities", () => {
 
     it("should return stored cities when they exist in localStorage", () => {
       localStorageMock.getItem.mockImplementation((key) => {
-        if (key === "city") return "London";
+        if (key === "city") return DEFAULT_CITY;
         if (key === "cities")
-          return JSON.stringify(["London", "Kiev", "Paris"]);
+          return JSON.stringify([DEFAULT_CITY, "Kiev", "Paris"]);
         return null;
       });
 
       const result = loadCities();
 
-      expect(result).toEqual(["London", "Kiev", "Paris"]);
+      expect(result).toEqual([DEFAULT_CITY, "Kiev", "Paris"]);
     });
 
     it("should prepend current city if not in stored cities array", () => {
       localStorageMock.getItem.mockImplementation((key) => {
         if (key === "city") return "Berlin";
-        if (key === "cities") return JSON.stringify(["London", "Kiev"]);
+        if (key === "cities") return JSON.stringify([DEFAULT_CITY, "Kiev"]);
         return null;
       });
 
       const result = loadCities();
 
-      expect(result).toEqual(["Berlin", "London", "Kiev"]);
+      expect(result).toEqual(["Berlin", DEFAULT_CITY, "Kiev"]);
     });
 
     it("should not duplicate city if already in stored cities", () => {
       localStorageMock.getItem.mockImplementation((key) => {
         if (key === "city") return "Kiev";
         if (key === "cities")
-          return JSON.stringify(["London", "Kiev", "Paris"]);
+          return JSON.stringify([DEFAULT_CITY, "Kiev", "Paris"]);
         return null;
       });
 
       const result = loadCities();
 
-      expect(result).toEqual(["London", "Kiev", "Paris"]);
+      expect(result).toEqual([DEFAULT_CITY, "Kiev", "Paris"]);
     });
 
     it("should handle empty cities array", () => {
@@ -141,7 +142,7 @@ describe("persist utilities", () => {
 
       const result = loadCities();
 
-      expect(result).toEqual(["London", "Kiev"]);
+      expect(result).toEqual([DEFAULT_CITY, "Kiev"]);
     });
   });
 });

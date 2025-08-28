@@ -21,5 +21,6 @@ const citiesSlice = createSlice({
   },
 });
 
+export const citiesActions = citiesSlice.actions;
 export const { addCity, deleteCity } = citiesSlice.actions;
 export default citiesSlice.reducer;

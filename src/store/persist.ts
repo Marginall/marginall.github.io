@@ -1,6 +1,8 @@
-export function loadCity(): string {
-  return localStorage.getItem("city") || "London";
-}
+import { DEFAULT_CITY } from "../constants";
+
+export const loadCity = () => {
+  return localStorage.getItem("city") || DEFAULT_CITY;
+};
 
 export function loadCities(): string[] {
   const city = loadCity();

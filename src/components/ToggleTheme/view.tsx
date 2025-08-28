@@ -1,11 +1,11 @@
 import { Box, Switch, Typography } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { toggleTheme } from "../../slices/themeSlice";
+import { useActions } from "../../hooks/useActions";
 
 export const ToggleTheme = () => {
-  const dispatch = useDispatch();
   const theme = useSelector((state: RootState) => state.theme.mode);
+  const { toggleTheme } = useActions();
 
   return (
     <Box
@@ -19,10 +19,7 @@ export const ToggleTheme = () => {
       <Typography component={"div"} variant="body2" fontWeight={500}>
         theme
       </Typography>
-      <Switch
-        checked={theme === "light"}
-        onClick={() => dispatch(toggleTheme())}
-      />
+      <Switch checked={theme === "light"} onClick={() => toggleTheme()} />
     </Box>
   );
 };

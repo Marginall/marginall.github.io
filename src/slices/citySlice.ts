@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { DEFAULT_CITY } from "../constants";
 
 interface CityState {
   cityName: string;
 }
 
 const initialState: CityState = {
-  cityName: "London",
+  cityName: DEFAULT_CITY,
 };
 
 const citySlice = createSlice({
@@ -18,5 +19,6 @@ const citySlice = createSlice({
   },
 });
 
+export const cityActions = citySlice.actions;
 export const { setCity } = citySlice.actions;
 export default citySlice.reducer;

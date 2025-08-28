@@ -1,5 +1,7 @@
 import { describe, it, expect } from "vitest";
-import themeReducer, { toggleTheme } from "../themeSlice";
+import themeReducer, { themeActions } from "../themeSlice";
+
+const { toggleTheme } = themeActions;
 
 describe("themeSlice", () => {
   const initialState = {
