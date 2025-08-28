@@ -4,7 +4,7 @@ import themeReducer from "../slices/themeSlice";
 import cityReducer from "../slices/citySlice";
 import citiesReducer from "../slices/citiesSlice";
 import { cityMiddleware } from "../middleware";
-import { loadCities, loadCity } from "./persist";
+import { loadCities, loadCity, loadTheme } from "./persist";
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +16,7 @@ export const store = configureStore({
   preloadedState: {
     city: { cityName: loadCity() },
     cities: { names: loadCities() },
+    theme: { mode: loadTheme() },
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(weatherApi.middleware).concat(cityMiddleware),

@@ -16,3 +16,8 @@ export function loadCities(): string[] {
     return [city];
   }
 }
+
+export const loadTheme = (): "light" | "dark" => {
+  const savedTheme = localStorage.getItem("theme");
+  return savedTheme === "dark" ? "dark" : "light";
+};
