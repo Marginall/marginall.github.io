@@ -1,11 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import { useGetWeatherByCityQuery } from "../../../../services/weatherApi";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../../store/store";
+import { useAppSelector } from "../../../../hooks/useAppSelector";
 
 export const Info = () => {
-  const city = useSelector((state: RootState) => state.city);
-  const { data: forcast } = useGetWeatherByCityQuery(city.cityName);
+  const { cityName } = useAppSelector((state) => state.city);
+  const { data: forcast } = useGetWeatherByCityQuery(cityName);
 
   return forcast ? (
     <Box

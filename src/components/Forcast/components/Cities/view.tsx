@@ -1,12 +1,11 @@
 import { Chip, Stack } from "@mui/material";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../../store/store";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useActions } from "../../../../hooks/useActions";
+import { useAppSelector } from "../../../../hooks/useAppSelector";
 
 export const Cities = () => {
-  const cities = useSelector((state: RootState) => state.cities.names);
-  const currentCity = useSelector((state: RootState) => state.city.cityName);
+  const cities = useAppSelector((state) => state.cities.names);
+  const { cityName: currentCity } = useAppSelector((state) => state.city);
   const { setCity, deleteCity } = useActions();
 
   const clickHandler = (city: string) => {

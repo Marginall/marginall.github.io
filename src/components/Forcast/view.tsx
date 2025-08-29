@@ -11,14 +11,13 @@ import { Info } from "./components/Info";
 import { SearchForm } from "./components/SearchForm";
 import { ToggleTheme } from "../ToggleTheme";
 import { useGetWeatherByCityQuery } from "../../services/weatherApi";
-import { useSelector } from "react-redux";
-import { RootState } from "../../store/store";
 import { Cities } from "./components/Cities";
 import { UserPosition } from "./components/UserPosition";
+import { useAppSelector } from "../../hooks/useAppSelector";
 
 export const Forcast: React.FC = () => {
-  const city = useSelector((state: RootState) => state.city);
-  const { data, error, isLoading } = useGetWeatherByCityQuery(city.cityName);
+  const { cityName } = useAppSelector((state) => state.city);
+  const { data, error, isLoading } = useGetWeatherByCityQuery(cityName);
 
   return data ? (
     <MainView />

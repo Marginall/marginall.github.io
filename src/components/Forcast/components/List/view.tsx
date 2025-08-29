@@ -13,12 +13,11 @@ import AirIcon from "@mui/icons-material/Air";
 import { ForecastdayType } from "../../../../types";
 import { Day } from "../Day";
 import { useGetWeatherByCityQuery } from "../../../../services/weatherApi";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../../store/store";
+import { useAppSelector } from "../../../../hooks/useAppSelector";
 
 export const List = () => {
-  const city = useSelector((state: RootState) => state.city);
-  const { data: forcast } = useGetWeatherByCityQuery(city.cityName);
+  const { cityName } = useAppSelector((state) => state.city);
+  const { data: forcast } = useGetWeatherByCityQuery(cityName);
   const muiTheme = useTheme();
   const [showDetails, setShowDetails] = useState({
     id: "",

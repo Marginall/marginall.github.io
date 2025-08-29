@@ -1,16 +1,15 @@
-import { useSelector } from "react-redux";
 import { Forcast } from "./components/Forcast";
 import { BrowserRouter, Routes, Route } from "react-router";
-import { RootState } from "./store/store";
 import { themeLight } from "./theme/theme-light";
 import { themeDark } from "./theme/theme-dark";
 import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
+import { useAppSelector } from "./hooks/useAppSelector";
 
 const App = () => {
-  const theme = useSelector((state: RootState) => state.theme.mode);
+  const { mode } = useAppSelector((state) => state.theme);
   return (
-    <MuiThemeProvider theme={theme === "light" ? themeLight : themeDark}>
+    <MuiThemeProvider theme={mode === "light" ? themeLight : themeDark}>
       <CssBaseline />
       <BrowserRouter>
         <Routes>
